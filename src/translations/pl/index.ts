@@ -4,9 +4,10 @@ export default {
   common: {
     date: "14 Sierpnia 2024",
     location: "Lésigny, Francja",
+    and: "i",
   },
   nav: {
-    home: "Home",
+    main: "Strona główna",
     schedule: "Harmonogram",
     form: "Formularz",
     parking: "Parking",

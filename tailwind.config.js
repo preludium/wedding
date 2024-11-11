@@ -15,6 +15,12 @@ module.exports = {
         "2xl": "1400px",
       },
     },
+    fontFamily: {
+      weddingDay: [ 'WeddingDay' ],
+      weatherSunday: [ 'WeatherSunday' ],
+      calligrapher: [ 'Calligrapher' ],
+      dhellia: [ 'Dhellia' ],
+    },
     extend: {
       colors: {
         border: "hsl(var(--border))",
@@ -52,12 +58,15 @@ module.exports = {
         },
       },
       backgroundImage: {
-        'hero': "url('assets/floral-background.jpg')",
+        'hero': "url('assets/floral-background.png')",
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      height: {
+        viewport: "calc(100dvh - 60px)",
       },
       keyframes: {
         "accordion-down": {

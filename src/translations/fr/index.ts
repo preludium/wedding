@@ -4,15 +4,15 @@ export default {
   common: {
     date: "14 août 2024",
     location: "Lésigny, France",
+    and: "et",
   },
-  // TODO
   nav: {
-    home: "Home",
-    schedule: "Schedule",
-    form: "Form",
+    main: "Principal",
+    schedule: "Calendrier",
+    form: "Formulaire",
     parking: "Parking",
-    accommodation: "Accommodation",
-    gifts: "Gifts",
+    accommodation: "Hébergement",
+    gifts: "Cadeaux",
     faq: "FAQ",
   },
   hero: {

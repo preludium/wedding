@@ -1,10 +1,11 @@
 export default {
   common: {
-    date: "15th August 2024",
+    date: "14th August 2024",
     location: "Lésigny, France",
+    and: "and",
   },
   nav: {
-    home: "Home",
+    main: "Main",
     schedule: "Schedule",
     form: "Form",
     parking: "Parking",
