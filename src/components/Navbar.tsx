@@ -22,42 +22,42 @@ interface RouteProps {
   label: string;
 }
 
-  const useRoutes = (): RouteProps[] =>{
-    const { t } = useTranslation();
-    return [
-      {
-        href: "/",
-        label: t("nav.main"),
-      },
-      {
-        href: "#schedule",
-        label: t('nav.schedule'),
-      },
-      {
-        href: "#form",
-        label: t('nav.form'),
-      },
-      {
-        href: "#parking",
-        label: t('nav.parking'),
-      },
-      {
-        href: "#accommodation",
-        label: t('nav.accommodation'),
-      },
-      {
-        href: "#gifts",
-        label: t('nav.gifts'),
-      },
-      {
-        href: "#faq",
-        label: t('nav.faq'),
-      },
-    ];
+const useRoutes = (): RouteProps[] => {
+  const { t } = useTranslation();
+  return [
+    {
+      href: "/",
+      label: t("nav.main"),
+    },
+    {
+      href: "#schedule",
+      label: t('nav.schedule'),
+    },
+    {
+      href: "#form",
+      label: t('nav.form'),
+    },
+    {
+      href: "#parking",
+      label: t('nav.parking'),
+    },
+    {
+      href: "#accommodation",
+      label: t('nav.accommodation'),
+    },
+    {
+      href: "#gifts",
+      label: t('nav.gifts'),
+    },
+    {
+      href: "#faq",
+      label: t('nav.faq'),
+    },
+  ];
 };
 
 export const Navbar = () => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isOpen, setIsOpen] = useState(false);
   const routes = useRoutes();
 
   return (

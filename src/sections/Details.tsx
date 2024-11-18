@@ -4,15 +4,16 @@ export const Details = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="container flex justify-center items-center text-center md:h-viewport">
-      <div className="flex flex-col align-center gap-16 text-5xl md:text-7xl">
-        <h1 className="font-dhellia">
+    <section className="container flex flex-col justify-around items-center text-center h-viewport-1/2 md:h-viewport">
+      <div className="flex flex-col align-center gap-16">
+        <h3 className="font-PlayfairDisplay text-5xl md:text-7xl">
           {t("hero.title")}
-        </h1>
-        <h1 className="font-dhellia font-normal">
+        </h3>
+        <h3 className="font-PlayfairDisplay italic font-normal text-3xl md:text-5xl">
           {t("common.date")}
-        </h1>
+        </h3>
       </div>
+      <p className='font-PlayfairDisplay text-3xl'>{t('common.location')}</p>
     </section>
   );
 };

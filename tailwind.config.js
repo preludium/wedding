@@ -20,6 +20,7 @@ module.exports = {
       weatherSunday: [ 'WeatherSunday' ],
       calligrapher: [ 'Calligrapher' ],
       dhellia: [ 'Dhellia' ],
+      PlayfairDisplay: [ 'Playfair Display' ],
     },
     extend: {
       colors: {
@@ -58,7 +59,8 @@ module.exports = {
         },
       },
       backgroundImage: {
-        'hero': "url('assets/floral-background.png')",
+        'floral': "url('assets/floral-background.png')",
+        'hero': "url('assets/hero-background.png')",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -67,6 +69,7 @@ module.exports = {
       },
       height: {
         viewport: "calc(100dvh - 60px)",
+        'viewport-1/2': "calc(calc(100dvh - 60px) / 2)",
       },
       keyframes: {
         "accordion-down": {

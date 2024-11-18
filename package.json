@@ -1,15 +1,5 @@
 {
   "name": "wedding",
-  "keywords": [
-    "react",
-    "typescript",
-    "shadcn",
-    "shadcn/ui",
-    "tailwind",
-    "landing-page",
-    "template",
-    "responsive-design"
-  ],
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -33,10 +23,8 @@
     "clsx": "^2.1.1",
     "lodash": "^4.17.21",
     "lucide-react": "^0.424.0",
-    "rambda": "^9.4.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "remeda": "^2.17.0",
     "tailwind-merge": "^2.5.4",
     "tailwindcss-animate": "^1.0.7"
   },

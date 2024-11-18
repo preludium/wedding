@@ -19,7 +19,23 @@ html {
 
 @font-face {
   font-family: 'Dhellia';
-  src: url('./assets/Dhellia.otf') format('truetype');
+  src: url('./assets/Dhellia.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('./assets/PlayfairDisplay/PlayfairDisplay-Regular.ttf') format('truetype'),
+  url('./assets/PlayfairDisplay/PlayfairDisplay-Medium.ttf') format('truetype'),
+  url('./assets/PlayfairDisplay/PlayfairDisplay-SemiBold.ttf') format('truetype'),
+  url('./assets/PlayfairDisplay/PlayfairDisplay-Bold.ttf') format('truetype'),
+  url('./assets/PlayfairDisplay/PlayfairDisplay-ExtraBold.ttf') format('truetype'),
+  url('./assets/PlayfairDisplay/PlayfairDisplay-Black.ttf') format('truetype'),
+  url('./assets/PlayfairDisplay/PlayfairDisplay-Italic.ttf') format('truetype'),
+  url('./assets/PlayfairDisplay/PlayfairDisplay-MediumItalic.ttf') format('truetype'),
+  url('./assets/PlayfairDisplay/PlayfairDisplay-SemiBoldItalic.ttf') format('truetype'),
+  url('./assets/PlayfairDisplay/PlayfairDisplay-BoldItalic.ttf') format('truetype'),
+  url('./assets/PlayfairDisplay/PlayfairDisplay-ExtraBoldItalic.ttf') format('truetype'),
+  url('./assets/PlayfairDisplay/PlayfairDisplay-BlackItalic.ttf') format('truetype');
 }
 
 body {
@@ -39,6 +55,10 @@ body {
   filter: blur(150px);
   will-change: transform;
   animation: shadow-slide infinite 4s linear alternate;
+}
+
+section {
+  min-height: calc(100dvh - 60px);
 }
 
 @keyframes shadow-slide {
@@ -75,6 +95,10 @@ body {
     width: 100px;
     height: 350px;
     filter: blur(60px);
+  }
+
+  section {
+    min-height: calc(calc(100dvh - 60px) / 2);
   }
 
   @keyframes shadow-slide {

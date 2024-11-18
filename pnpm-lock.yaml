@@ -41,18 +41,12 @@ importers:
       lucide-react:
         specifier: ^0.424.0
         version: 0.424.0(react@18.3.1)
-      rambda:
-        specifier: ^9.4.0
-        version: 9.4.0
       react:
         specifier: ^18.3.1
         version: 18.3.1
       react-dom:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
-      remeda:
-        specifier: ^2.17.0
-        version: 2.17.0
       tailwind-merge:
         specifier: ^2.5.4
         version: 2.5.4
@@ -1667,9 +1661,6 @@ packages:
   queue-microtask@1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
 
-  rambda@9.4.0:
-    resolution: {integrity: sha512-B7y7goUd+g0hNl5ODGUejNNERQL5gD8uANJ5Y5aHly8v0jKesFlwIe7prPfuJxttDpe3otQzHJ4NXMpTmL9ELA==}
-
   react-dom@18.3.1:
     resolution: {integrity: sha512-5m4nQKp+rZRb09LNH59GM4BxTh9251/ylbKIbpe7TpGxfJ+9kv6BLkLBXIjjspbgbnIBNqlI23tRnTWT0snUIw==}
     peerDependencies:
@@ -1719,9 +1710,6 @@ packages:
   readdirp@3.6.0:
     resolution: {integrity: sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA==}
     engines: {node: '>=8.10.0'}
-
-  remeda@2.17.0:
-    resolution: {integrity: sha512-mBsn4rGLSE788XqzOlePZiXUFNCrLIBVFl1ntzjBq8NqdsLZUQydxQ2naqNr13eBEDoictYLqKlwzhFTxgfydA==}
 
   resolve-from@4.0.0:
     resolution: {integrity: sha512-pb/MYmXstAkysRFx8piNI1tGFNQIFA3vkE3Gq4EuA1dF6gHp/+vgZqsCGJapvy8N3Q+4o7FwvquPJcnZ7RYy4g==}
@@ -1867,10 +1855,6 @@ packages:
   type-fest@0.20.2:
     resolution: {integrity: sha512-Ne+eE4r0/iWnpAxD852z3A+N0Bt5RN//NjJwRd2VFHEmrywxf5vsZlh4R6lixl6B+wz/8d+maTSAkN1FIkI3LQ==}
     engines: {node: '>=10'}
-
-  type-fest@4.26.1:
-    resolution: {integrity: sha512-yOGpmOAL7CkKe/91I5O3gPICmJNLJ1G4zFYVAsRHg7M64biSnPtRj0WNQt++bRkjYOqjWXrhnUw1utzmVErAdg==}
-    engines: {node: '>=16'}
 
   typescript@5.6.3:
     resolution: {integrity: sha512-hjcS1mhfuyi4WW8IWtjP7brDrG2cuDZukyrYrSauoXGNgx0S7zceP07adYkJycEr56BOUTNPzbInooiN3fn1qw==}
@@ -3471,8 +3455,6 @@ snapshots:
 
   queue-microtask@1.2.3: {}
 
-  rambda@9.4.0: {}
-
   react-dom@18.3.1(react@18.3.1):
     dependencies:
       loose-envify: 1.4.0
@@ -3520,10 +3502,6 @@ snapshots:
   readdirp@3.6.0:
     dependencies:
       picomatch: 2.3.1
-
-  remeda@2.17.0:
-    dependencies:
-      type-fest: 4.26.1
 
   resolve-from@4.0.0: {}
 
@@ -3693,8 +3671,6 @@ snapshots:
       prelude-ls: 1.2.1
 
   type-fest@0.20.2: {}
-
-  type-fest@4.26.1: {}
 
   typescript@5.6.3: {}
 
