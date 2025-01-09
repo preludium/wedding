@@ -24,6 +24,16 @@ module.exports = {
       PlayfairDisplay: [ 'Playfair Display' ],
     },
     extend: {
+      screens: {
+        sm: { min: '576px' },
+        '-sm': { max: '576px' },
+        md: { min: '768px' },
+        '-md': { max: '768px' },
+        lg: { min: '992px' },
+        '-lg': { max: '992px' },
+        xl: { min: '1200px' },
+        '-xl': { max: '1200px' }
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

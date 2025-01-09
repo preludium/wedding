@@ -35,7 +35,6 @@ export const Questionnaire = () => {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
   });
-  const { confirmAttendance } = form.getValues();
 
   const sendEmail = (formData: z.infer<typeof FormSchema>) => {
     setSending(true);
@@ -79,7 +78,7 @@ export const Questionnaire = () => {
                 ]}
                 required={!FormSchema.shape.confirmAttendance.isOptional()}
               />
-              {confirmAttendance === "yes" && (
+              {form.watch('confirmAttendance') === "yes" && (
                 <>
                   <RadioGroupField
                     name="transportToWeddingVenue"
