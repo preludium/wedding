@@ -89,6 +89,12 @@ export default {
     failure: "L'envoi de vos réponses a échoué. Réessayez ou contactez directement Gabriela et Francis",
     requiredField: "Ce champ est obligatoire"
   },
+  gifts: {
+    p1: "Votre présence en ce jour spécial est le plus beau cadeau et une immense joie pour nous !",
+    p2: "Cependant, si vous souhaitez célébrer davantage notre union, plutôt que des cadeaux traditionnels, nous serions reconnaissants de votre soutien à notre avenir commun sous la forme d'un virement bancaire symbolique.",
+    p3: "Nous prévoyons d'utiliser ces fonds pour meubler notre nouvelle maison.",
+    p4: "Merci d'avance pour chaque mot gentil, geste et bienveillance. Nous avons hâte de célébrer ce jour avec vous !"
+  },
   photos: {
     intro: "Vos photos et souvenirs sont un trésor inestimable pour nous ! Pour capturer autant de moments merveilleux de notre mariage et de notre réception que possible, nous vous encourageons à utiliser l'application dédiée, qui vous permet de partager facilement des photos de ce jour spécial.",
     howItWorks: "Comment ça marche ?",

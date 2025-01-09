@@ -3,10 +3,10 @@ export default {
     date: "14th August 2024",
     location: "Lésigny, France",
     and: "and",
-    days: 'Days',
-    hours: 'Hours',
-    minutes: 'Minutes',
-    seconds: 'Seconds',
+    days: "Days",
+    hours: "Hours",
+    minutes: "Minutes",
+    seconds: "Seconds",
   },
   nav: {
     welcome: "Main",
@@ -87,6 +87,12 @@ export default {
     failure:
       "Sending your answers has failed. Try once again or contact Gabriela and Francis directly",
     requiredField: "This field is required",
+  },
+  gifts: {
+    p1: "Your presence on this special day is the greatest gift and immense joy for us!",
+    p2: "However, if you would like to additionally celebrate our occasion, instead of traditional gifts, we would be grateful for supporting our shared future in the form of a symbolic bank transfer.",
+    p3: "We plan to use these funds to furnish our new home.",
+    p4: "Thank you in advance for every kind word, gesture and goodwill. We can't wait to celebrate this day together with you!"
   },
   photos: {
     intro:

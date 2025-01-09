@@ -5,6 +5,7 @@ import "./App.css";
 import { Photos } from './sections/Photos';
 import { Schedule } from './sections/Schedule';
 import { Questionnaire } from './sections/Questionnaire';
+import { Gifts } from './sections/Gifts';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Welcome />
       <Schedule />
       <Questionnaire />
+      <Gifts />
       <Photos />
       <ScrollToTop />
     </>

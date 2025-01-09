@@ -109,6 +109,7 @@ body {
 
   .section {
     min-height: calc(100dvh - 60px);
+    scroll-margin-top: 60px;
   }
 
   @keyframes shadow-slide {

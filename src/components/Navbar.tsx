@@ -13,9 +13,8 @@ import {
 
 import { buttonVariants } from "./ui/button";
 import { Menu } from "lucide-react";
-import { ThemeSelect } from "../theme/ThemeSelect";
-import { LanguageSelect } from './LanguageSelect';
-import { useTranslation } from '@/translations/useTranslation';
+import { LanguageSelect } from "./LanguageSelect";
+import { useTranslation } from "@/translations/useTranslation";
 
 interface RouteProps {
   href: string;
@@ -31,27 +30,27 @@ const useRoutes = (): RouteProps[] => {
     },
     {
       href: "#schedule",
-      label: t('nav.schedule'),
+      label: t("nav.schedule"),
     },
     {
       href: "#questionnaire",
-      label: t('nav.questionnaire'),
+      label: t("nav.questionnaire"),
     },
     {
       href: "#transport",
-      label: t('nav.transport'),
+      label: t("nav.transport"),
     },
     {
       href: "#accommodation",
-      label: t('nav.accommodation'),
+      label: t("nav.accommodation"),
     },
     {
       href: "#gifts",
-      label: t('nav.gifts'),
+      label: t("nav.gifts"),
     },
     {
       href: "#photos",
-      label: t('nav.photos'),
+      label: t("nav.photos"),
     },
   ];
 };
@@ -64,18 +63,14 @@ export const Navbar = () => {
     <header className="sticky flex items-center h-[60px] border-b-[1px] top-0 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background">
       <NavigationMenu className="mx-auto">
         <NavigationMenuList className="container h-14 px-4 w-screen flex justify-between">
-          <div/>
+          <div />
           {/* mobile */}
           <span className="flex justify-between w-full md:hidden">
-            <Sheet
-              open={isOpen}
-              onOpenChange={setIsOpen}
-            >
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger className="px-2">
                 <Menu
                   className="flex md:hidden h-5 w-5"
-                  onClick={() => setIsOpen(true)}
-                >
+                  onClick={() => setIsOpen(true)}>
                   <span className="sr-only">Menu Icon</span>
                 </Menu>
               </SheetTrigger>
@@ -93,8 +88,7 @@ export const Navbar = () => {
                       key={label}
                       href={href}
                       onClick={() => setIsOpen(false)}
-                      className={buttonVariants({ variant: "ghost" })}
-                    >
+                      className={buttonVariants({ variant: "ghost" })}>
                       {label}
                     </a>
                   ))}
@@ -102,7 +96,6 @@ export const Navbar = () => {
               </SheetContent>
             </Sheet>
             <div>
-              <ThemeSelect />
               <LanguageSelect />
             </div>
           </span>
@@ -116,8 +109,7 @@ export const Navbar = () => {
                 key={i}
                 className={`text-[17px] ${buttonVariants({
                   variant: "ghost",
-                })}`}
-              >
+                })}`}>
                 {route.label}
               </a>
             ))}

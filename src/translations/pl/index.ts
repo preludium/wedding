@@ -90,6 +90,12 @@ export default {
     failure: "Wysyłanie odpowiedzi nie powiodło się. Spróbuj ponownie lub skontaktuj się bezpośrednio z Gabrielą i Francisem",
     requiredField: "To pole jest wymagane"
   },
+  gifts: {
+    p1: "Wasza obecność w tym wyjątkowym dniu to dla nas największy prezent i ogromna radość!",
+    p2: "Jeśli jednak zechcielibyście dodatkowo uczcić nasze święto, zamiast tradycyjnych prezentów, będziemy wdzięczni za wsparcie naszej wspólnej przyszłości w formie symbolicznego przelewu na konto.",
+    p3: "Środki te planujemy przeznaczyć na urządzenie nowego domu.",
+    p4: "Z góry dziękujemy za każde ciepłe słowo, gest i życzliwość. Nie możemy się doczekać, aby świętować ten dzień razem z Wami!"
+  },
   photos: {
     intro: "Wasze zdjęcia i wspomnienia to dla nas bezcenny skarb! Aby uwiecznić jak najwięcej wspaniałych chwil z naszego ślubu i wesela, zachęcamy Was do korzystania z dedykowanej aplikacji, dzięki której w łatwy sposób możecie dzielić się zdjęciami z tego wyjątkowego dnia.",
     howItWorks: "Jak to działa?",
