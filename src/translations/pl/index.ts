@@ -8,18 +8,18 @@ export default {
     dearQuests: "Drodzy Goście",
   },
   nav: {
-    main: "Strona główna",
-    schedule: "Harmonogram",
-    form: "Formularz",
-    parking: "Parking",
-    accommodation: "Nocleg",
-    gifts: "Prezenty",
-    faq: "FAQ",
+    welcome: 'Główna',
+    schedule: 'Harmonogram',
+    questionnaire: 'Ankieta',
+    transport: 'Transport',
+    accommodation: 'Zakwaterowanie',
+    gifts: 'Prezenty',
+    photos: 'Zdjęcia',
   },
   hero: {
     title: "Zapisz datę",
   },
-  timeline: {
+  schedule: {
     weddingCeremony: {
       time: "14:00",
       title: "Ceremonia ślubna",
@@ -48,6 +48,31 @@ export default {
       time: "23:00",
       title: "Pierwszy taniec",
     }
+  },
+  questionnaire: {
+    confirmAttendance: {
+      title: 'Potwierdź swoją obecność na naszym ślubie',
+      yes: 'Oczywiście, będę!',
+      no: 'Przepraszam, nie mogę być z Wami tego dnia'
+    },
+    transportToWeddingVenue: {
+      title: 'Jak dotrzesz na miejsce wesela (Château de Lésigny)?',
+      onMyOwn: 'We własnym zakresie',
+      needHelp: 'Potrzebuję pomocy',
+    },
+    transportToHotel: {
+      title: 'Jak wrócisz do hotelu?',
+      onMyOwn: 'We własnym zakresie',
+      needHelp: 'Potrzebuję pomocy',
+      notRelevant: 'Nie dotyczy'
+    },
+    fullName: 'Imię i nazwisko',
+    email: 'Email',
+    phoneNumber: 'Numer telefonu',
+    send: "Wyślij",
+    success: "Twoje odpowiedzi zostały wysłane do Gabrieli i Francisa",
+    failure: "Wysyłanie odpowiedzi nie powiodło się. Spróbuj ponownie lub skontaktuj się bezpośrednio z Gabrielą i Francisem",
+    requiredField: "To pole jest wymagane"
   },
   photos: {
     intro: "Wasze zdjęcia i wspomnienia to dla nas bezcenny skarb! Aby uwiecznić jak najwięcej wspaniałych chwil z naszego ślubu i wesela, zachęcamy Was do korzystania z dedykowanej aplikacji, dzięki której w łatwy sposób możecie dzielić się zdjęciami z tego wyjątkowego dnia.",

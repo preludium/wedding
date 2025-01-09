@@ -11,20 +11,27 @@ import { Input } from "@/components/ui/input";
 interface Props {
   name: string;
   label: string;
+  required: boolean;
 }
 
-export function InputField({ name, label }: Props) {
-  const { control } = useFormContext();
+export function InputField({ name, label, required }: Props) {
+  const {
+    control,
+    formState: { errors },
+  } = useFormContext();
 
   return (
     <FormField
       control={control}
       name={name}
       render={({ field }) => (
-        <FormItem>
-          <FormLabel>{label}</FormLabel>
+        <FormItem className="text-start">
+          <FormLabel className="flex gap-1">
+            {label}
+            {required && <span className="text-destructive">*</span>}
+          </FormLabel>
           <FormControl>
-            <Input {...field} />
+            <Input {...field} invalid={Boolean(errors[name])} />
           </FormControl>
           <FormMessage />
         </FormItem>

@@ -4,6 +4,7 @@ import App from "./App.tsx";
 import { ThemeProvider } from "@/theme/ThemeProvider.tsx";
 import "./index.css";
 import { TranslationProvider } from './translations/TranslationProvider';
+import { Toaster } from 'sonner';
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -12,5 +13,6 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <App />
       </TranslationProvider>
     </ThemeProvider>
+    <Toaster duration={1000} />
   </React.StrictMode>
 );

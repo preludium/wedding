@@ -16,6 +16,7 @@ module.exports = {
       },
     },
     fontFamily: {
+      inter: [ 'Inter' ],
       weddingDay: [ 'WeddingDay' ],
       weatherSunday: [ 'WeatherSunday' ],
       calligrapher: [ 'Calligrapher' ],

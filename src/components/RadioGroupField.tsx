@@ -13,9 +13,10 @@ interface Props {
   name: string;
   label: string;
   options: { label: string; value: string }[];
+  required: boolean;
 }
 
-export function RadioGroupField({ name, label, options }: Props) {
+export function RadioGroupField({ name, label, options, required }: Props) {
   const { control } = useFormContext();
 
   return (
@@ -23,8 +24,11 @@ export function RadioGroupField({ name, label, options }: Props) {
       control={control}
       name={name}
       render={({ field }) => (
-        <FormItem className="space-y-3">
-          <FormLabel>{label}</FormLabel>
+        <FormItem className="space-y-3 text-start">
+          <FormLabel className="flex gap-1">
+            {label}
+            {required && <span className="text-destructive">*</span>}
+          </FormLabel>
           <FormControl>
             <RadioGroup
               onValueChange={field.onChange}

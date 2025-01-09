@@ -39,7 +39,7 @@ html {
 }
 
 body {
-  font-family: 'CustomFont', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 /* HeroCards background shadow */
@@ -57,7 +57,7 @@ body {
   animation: shadow-slide infinite 4s linear alternate;
 }
 
-section {
+.section {
   min-height: calc(100dvh - 60px);
 }
 
@@ -97,7 +97,7 @@ section {
     filter: blur(60px);
   }
 
-  section {
+  .section {
     min-height: calc(calc(100dvh - 60px) / 2);
   }
 

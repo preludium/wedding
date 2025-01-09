@@ -4,7 +4,7 @@ export const Photos = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="container flex flex-col justify-around items-center text-center h-viewport-1/2 md:h-viewport">
+    <section id="photos" className="section container flex flex-col justify-around items-center text-center h-viewport-1/2 md:h-viewport">
       <p className='text-2xl'>{t('photos.intro')}</p>
       <p className='text-3xl'>{t('photos.howItWorks')}</p>
       <ol>

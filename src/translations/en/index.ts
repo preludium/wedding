@@ -5,18 +5,18 @@ export default {
     and: 'and',
   },
   nav: {
-    main: 'Main',
+    welcome: 'Main',
     schedule: 'Schedule',
-    form: 'Form',
-    parking: 'Parking',
+    questionnaire: 'Questionnaire',
+    transport: 'Transport',
     accommodation: 'Accommodation',
     gifts: 'Gifts',
-    faq: 'FAQ',
+    photos: 'Photos',
   },
   hero: {
     title: 'Save the date',
   },
-  timeline: {
+  schedule: {
     weddingCeremony: {
       time: '2:00 PM',
       title: 'Wedding Ceremony',
@@ -50,7 +50,7 @@ export default {
     confirmAttendance: {
       title: 'Confirm your attendance at our wedding',
       yes: 'Of course I will!',
-      no: 'I am sorry, I cannot be with you on that day.'
+      no: 'I am sorry, I cannot be with you on that day'
     },
     transportToWeddingVenue: {
       title: 'How will you get to the wedding venue (Château de Lésigny)?',
@@ -66,6 +66,10 @@ export default {
     fullName: 'Full name',
     email: 'Email',
     phoneNumber: 'Phone number',
+    send: "Send",
+    success: "Your answers has been sent to Gabriela and Francis",
+    failure: "Sending your answers has failed. Try once again or contact Gabriela and Francis directly",
+    requiredField: "This field is required"
   },
   photos: {
     intro: 'Your photos and memories are a priceless treasure for us! To capture as many wonderful moments from our wedding and reception as possible, we encourage you to use the dedicated app, which allows you to easily share photos from this special day.',

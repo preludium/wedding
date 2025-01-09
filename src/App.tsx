@@ -1,19 +1,17 @@
-import { Hero } from "./sections/Hero";
+import { Welcome } from "./sections/Welcome";
 import { Navbar } from "./components/Navbar";
 import { ScrollToTop } from "./components/ScrollToTop";
 import "./App.css";
-import { Details } from './sections/Details';
 import { Photos } from './sections/Photos';
-import { Timeline } from './sections/Timeline';
+import { Schedule } from './sections/Schedule';
 import { Questionnaire } from './sections/Questionnaire';
 
 function App() {
   return (
     <>
       <Navbar />
-      <Hero />
-      <Details />
-      <Timeline />
+      <Welcome />
+      <Schedule />
       <Questionnaire />
       <Photos />
       <ScrollToTop />

@@ -27,19 +27,19 @@ const useRoutes = (): RouteProps[] => {
   return [
     {
       href: "/",
-      label: t("nav.main"),
+      label: t("nav.welcome"),
     },
     {
       href: "#schedule",
       label: t('nav.schedule'),
     },
     {
-      href: "#form",
-      label: t('nav.form'),
+      href: "#questionnaire",
+      label: t('nav.questionnaire'),
     },
     {
-      href: "#parking",
-      label: t('nav.parking'),
+      href: "#transport",
+      label: t('nav.transport'),
     },
     {
       href: "#accommodation",
@@ -50,8 +50,8 @@ const useRoutes = (): RouteProps[] => {
       label: t('nav.gifts'),
     },
     {
-      href: "#faq",
-      label: t('nav.faq'),
+      href: "#photos",
+      label: t('nav.photos'),
     },
   ];
 };
@@ -125,7 +125,6 @@ export const Navbar = () => {
 
           <div className="hidden md:flex gap-2">
             <LanguageSelect />
-            <ThemeSelect />
           </div>
         </NavigationMenuList>
       </NavigationMenu>
