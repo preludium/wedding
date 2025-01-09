@@ -5,6 +5,10 @@ export default {
     date: "14 août 2024",
     location: "Lésigny, France",
     and: "et",
+    days: 'Jours',
+    hours: 'Heures',
+    minutes: 'Minutes',
+    seconds: 'Secondes',
   },
   nav: {
     welcome: 'Accueil',
@@ -15,8 +19,20 @@ export default {
     gifts: 'Cadeaux',
     photos: 'Photos',
   },
-  hero: {
-    title: "Réservez la date",
+  welcome: {
+    heading: "Chers invités,",
+    p1: "Nous sommes ravis de partager ce moment spécial avec vous ! Très bientôt, nous célébrerons le début de notre voyage ensemble en tant que mari et femme. Ce site web a été créé pour vous aider à préparer cette journée spéciale et vous fournir toutes les informations nécessaires.",
+    hereYouWillFind: "Vous trouverez ici :",
+    bullet1:
+      "<strong>Les détails de la cérémonie et de la réception</strong> - où et quand notre grand jour aura lieu.",
+    bullet2:
+      "<strong>Les indications</strong> - pour vous aider à rejoindre facilement le lieu.",
+    bullet3:
+      "<strong>Le programme de la journée</strong> - pour savoir à quoi vous attendre.",
+    bullet4: "<strong>RSVP</strong> - merci de confirmer votre présence.",
+    bullet5: "<strong>Et d'autres informations pratiques.</strong>",
+    p2: "Nous sommes reconnaissants de partager ce jour exceptionnel avec les personnes les plus proches de nos cœurs. Votre présence rendra notre mariage encore plus beau !",
+    greeting: "Nous avons hâte de célébrer ensemble !",
   },
   schedule: {
     weddingCeremony: {

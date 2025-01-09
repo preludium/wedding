@@ -26,7 +26,7 @@ const useRoutes = (): RouteProps[] => {
   const { t } = useTranslation();
   return [
     {
-      href: "/",
+      href: "#",
       label: t("nav.welcome"),
     },
     {

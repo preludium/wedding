@@ -6,6 +6,10 @@ export default {
     location: "Lésigny, Francja",
     and: "i",
     dearQuests: "Drodzy Goście",
+    days: 'Dni',
+    hours: 'Godziny',
+    minutes: 'Minuty',
+    seconds: 'Sekundy',
   },
   nav: {
     welcome: 'Główna',
@@ -16,8 +20,20 @@ export default {
     gifts: 'Prezenty',
     photos: 'Zdjęcia',
   },
-  hero: {
-    title: "Zapisz datę",
+  welcome: {
+    heading: "Drodzy Goście,",
+    p1: "Jesteśmy zachwyceni, że możemy dzielić z Wami tę wyjątkową chwilę! Już wkrótce będziemy świętować początek naszej wspólnej drogi jako mąż i żona. Ta strona została stworzona, aby pomóc Wam przygotować się do tego szczególnego dnia i dostarczyć wszystkich niezbędnych informacji.",
+    hereYouWillFind: "Znajdziecie tutaj:",
+    bullet1:
+      "<strong>Szczegóły dotyczące ceremonii i przyjęcia</strong> - gdzie i kiedy odbędzie się nasz wielki dzień.",
+    bullet2:
+      "<strong>Wskazówki dojazdu</strong> - aby pomóc Wam łatwo dotrzeć na miejsce.",
+    bullet3:
+      "<strong>Plan dnia</strong> - abyście wiedzieli, czego się spodziewać.",
+    bullet4: "<strong>RSVP</strong> - prosimy o potwierdzenie obecności.",
+    bullet5: "<strong>Oraz inne praktyczne informacje.</strong>",
+    p2: "Jesteśmy wdzięczni, że możemy dzielić ten wyjątkowy dzień z osobami najbliższymi naszym sercom. Wasza obecność sprawi, że nasz ślub będzie jeszcze piękniejszy!",
+    greeting: "Nie możemy się doczekać wspólnego świętowania!",
   },
   schedule: {
     weddingCeremony: {

@@ -10,7 +10,7 @@ export const Schedule = () => {
       className="section container flex flex-col justify-around items-center text-center h-viewport-1/2 md:h-viewport">
       <ul className="grid -md:grid-rows-7 md:grid-rows-[1fr,1px,1fr] -md:grid-cols-[1fr,1px,1fr] md:grid-cols-7 items-center gap-x-8 gap-y-6">
         <li className={cn(`-md:col-start-1 md:col-start-1 -md:row-start-1 md:row-start-1`)}>
-          <h4 className='font-medium'>{t(`schedule.weddingCeremony.title`)}</h4>
+          <h4 className='font-medium text-sm'>{t(`schedule.weddingCeremony.title`)}</h4>
           <p>{t(`schedule.weddingCeremony.time`)}</p>
         </li>
         <img
@@ -19,7 +19,7 @@ export const Schedule = () => {
         />
 
         <li className={cn(`-md:col-start-3 md:col-start-2 -md:row-start-2 md:row-start-3`)}>
-          <h4 className='font-medium'>{t(`schedule.transferToWeddingVenue.title`)}</h4>
+          <h4 className='font-medium text-sm'>{t(`schedule.transferToWeddingVenue.title`)}</h4>
           <p>{t(`schedule.transferToWeddingVenue.time`)}</p>
         </li>
         <img
@@ -28,7 +28,7 @@ export const Schedule = () => {
         />
 
         <li className={cn(`-md:col-start-1 md:col-start-3 -md:row-start-3 md:row-start-1`)}>
-          <h4 className='font-medium'>{t(`schedule.groupPhotos.title`)}</h4>
+          <h4 className='font-medium text-sm'>{t(`schedule.groupPhotos.title`)}</h4>
           <p>{t(`schedule.groupPhotos.time`)}</p>
         </li>
         <img
@@ -37,7 +37,7 @@ export const Schedule = () => {
         />
 
         <li className={cn(`-md:col-start-3 md:col-start-4 -md:row-start-4 md:row-start-3`)}>
-          <h4 className='font-medium'>{t(`schedule.welcomeCocktail.title`)}</h4>
+          <h4 className='font-medium text-sm'>{t(`schedule.welcomeCocktail.title`)}</h4>
           <p>{t(`schedule.welcomeCocktail.time`)}</p>
         </li>
         <img
@@ -46,7 +46,7 @@ export const Schedule = () => {
         />
 
         <li className={cn(`-md:col-start-1 md:col-start-5 -md:row-start-5 md:row-start-1`)}>
-          <h4 className='font-medium'>{t(`schedule.dinner.title`)}</h4>
+          <h4 className='font-medium text-sm'>{t(`schedule.dinner.title`)}</h4>
           <p>{t(`schedule.dinner.time`)}</p>
         </li>
         <img
@@ -55,7 +55,7 @@ export const Schedule = () => {
         />
 
         <li className={cn(`-md:col-start-3 md:col-start-6 -md:row-start-6 md:row-start-3`)}>
-          <h4 className='font-medium'>{t(`schedule.cakeCutting.title`)}</h4>
+          <h4 className='font-medium text-sm'>{t(`schedule.cakeCutting.title`)}</h4>
           <p>{t(`schedule.cakeCutting.time`)}</p>
         </li>
         <img
@@ -64,7 +64,7 @@ export const Schedule = () => {
         />
 
         <li className={cn(`-md:col-start-1 md:col-start-7 -md:row-start-7 md:row-start-1`)}>
-          <h4 className='font-medium'>{t(`schedule.firstDance.title`)}</h4>
+          <h4 className='font-medium text-sm'>{t(`schedule.firstDance.title`)}</h4>
           <p>{t(`schedule.firstDance.time`)}</p>
         </li>
         <img
