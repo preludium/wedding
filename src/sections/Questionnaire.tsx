@@ -60,9 +60,9 @@ export const Questionnaire = () => {
     <section id="questionnaire" className="section container flex flex-col justify-around items-center text-center h-viewport-1/2 md:h-viewport">
       <Form {...form}>
         <form
-          className="flex flex-col gap-8 min-w-[900px] p-10 rounded-lg shadow-2xl"
+          className="flex flex-col gap-8 md:min-w-[900px] p-10 rounded-lg shadow-2xl"
           onSubmit={form.handleSubmit(sendEmail)}>
-          <div className="grid grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             <div className="flex flex-col gap-6">
               <RadioGroupField
                 name="confirmAttendance"

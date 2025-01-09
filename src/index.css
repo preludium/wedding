@@ -3,43 +3,53 @@ html {
 }
 
 @font-face {
-  font-family: 'WeddingDay';
-  src: url('./assets/weddingday.ttf') format('truetype');
+  font-family: "WeddingDay";
+  src: url("./assets/weddingday.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'WeatherSunday';
-  src: url('./assets/WeatherSunday.otf') format('opentype');
+  font-family: "WeatherSunday";
+  src: url("./assets/WeatherSunday.otf") format("opentype");
 }
 
 @font-face {
-  font-family: 'Calligrapher';
-  src: url('./assets/Calligrapher.ttf') format('truetype');
+  font-family: "Calligrapher";
+  src: url("./assets/Calligrapher.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Dhellia';
-  src: url('./assets/Dhellia.otf') format('opentype');
+  font-family: "Dhellia";
+  src: url("./assets/Dhellia.otf") format("opentype");
 }
 
 @font-face {
-  font-family: 'Playfair Display';
-  src: url('./assets/PlayfairDisplay/PlayfairDisplay-Regular.ttf') format('truetype'),
-  url('./assets/PlayfairDisplay/PlayfairDisplay-Medium.ttf') format('truetype'),
-  url('./assets/PlayfairDisplay/PlayfairDisplay-SemiBold.ttf') format('truetype'),
-  url('./assets/PlayfairDisplay/PlayfairDisplay-Bold.ttf') format('truetype'),
-  url('./assets/PlayfairDisplay/PlayfairDisplay-ExtraBold.ttf') format('truetype'),
-  url('./assets/PlayfairDisplay/PlayfairDisplay-Black.ttf') format('truetype'),
-  url('./assets/PlayfairDisplay/PlayfairDisplay-Italic.ttf') format('truetype'),
-  url('./assets/PlayfairDisplay/PlayfairDisplay-MediumItalic.ttf') format('truetype'),
-  url('./assets/PlayfairDisplay/PlayfairDisplay-SemiBoldItalic.ttf') format('truetype'),
-  url('./assets/PlayfairDisplay/PlayfairDisplay-BoldItalic.ttf') format('truetype'),
-  url('./assets/PlayfairDisplay/PlayfairDisplay-ExtraBoldItalic.ttf') format('truetype'),
-  url('./assets/PlayfairDisplay/PlayfairDisplay-BlackItalic.ttf') format('truetype');
+  font-family: "Playfair Display";
+  src: url("./assets/PlayfairDisplay/PlayfairDisplay-Regular.ttf")
+      format("truetype"),
+    url("./assets/PlayfairDisplay/PlayfairDisplay-Medium.ttf")
+      format("truetype"),
+    url("./assets/PlayfairDisplay/PlayfairDisplay-SemiBold.ttf")
+      format("truetype"),
+    url("./assets/PlayfairDisplay/PlayfairDisplay-Bold.ttf") format("truetype"),
+    url("./assets/PlayfairDisplay/PlayfairDisplay-ExtraBold.ttf")
+      format("truetype"),
+    url("./assets/PlayfairDisplay/PlayfairDisplay-Black.ttf") format("truetype"),
+    url("./assets/PlayfairDisplay/PlayfairDisplay-Italic.ttf")
+      format("truetype"),
+    url("./assets/PlayfairDisplay/PlayfairDisplay-MediumItalic.ttf")
+      format("truetype"),
+    url("./assets/PlayfairDisplay/PlayfairDisplay-SemiBoldItalic.ttf")
+      format("truetype"),
+    url("./assets/PlayfairDisplay/PlayfairDisplay-BoldItalic.ttf")
+      format("truetype"),
+    url("./assets/PlayfairDisplay/PlayfairDisplay-ExtraBoldItalic.ttf")
+      format("truetype"),
+    url("./assets/PlayfairDisplay/PlayfairDisplay-BlackItalic.ttf")
+      format("truetype");
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 /* HeroCards background shadow */
@@ -98,7 +108,7 @@ body {
   }
 
   .section {
-    min-height: calc(calc(100dvh - 60px) / 2);
+    min-height: calc(100dvh - 60px);
   }
 
   @keyframes shadow-slide {
