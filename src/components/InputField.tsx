@@ -12,9 +12,10 @@ interface Props {
   name: string;
   label: string;
   required: boolean;
+  disabled?: boolean;
 }
 
-export function InputField({ name, label, required }: Props) {
+export function InputField({ name, label, required, disabled }: Props) {
   const {
     control,
     formState: { errors },
@@ -31,7 +32,7 @@ export function InputField({ name, label, required }: Props) {
             {required && <span className="text-destructive">*</span>}
           </FormLabel>
           <FormControl>
-            <Input {...field} invalid={Boolean(errors[name])} />
+            <Input {...field} invalid={Boolean(errors[name])} disabled={disabled} />
           </FormControl>
           <FormMessage />
         </FormItem>

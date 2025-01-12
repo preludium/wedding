@@ -64,6 +64,11 @@ export default {
       title: "Première danse",
     }
   },
+  transport: {
+    ceremony: "Cérémonie",
+    wedding: "Réception",
+    info: "Nous proposons un service de transport pour les invités entre l'église et le château - nous demanderons une confirmation dans le questionnaire en raison du nombre limité de places."
+  },
   questionnaire: {
     confirmAttendance: {
       title: 'Confirmez votre présence à notre mariage',
@@ -85,6 +90,7 @@ export default {
     email: 'Email',
     phoneNumber: 'Numéro de téléphone',
     send: "Envoyer",
+    sent: "Réponses envoyées",
     success: "Vos réponses ont été envoyées à Gabriela et Francis",
     failure: "L'envoi de vos réponses a échoué. Réessayez ou contactez directement Gabriela et Francis",
     requiredField: "Ce champ est obligatoire"

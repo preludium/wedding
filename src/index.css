@@ -48,6 +48,11 @@ html {
       format("truetype");
 }
 
+@font-face {
+  font-family: "Alice";
+  src: url("./assets/Alice/Alice-Regular.ttf") format("truetype");
+}
+
 body {
   font-family: "Inter", sans-serif;
 }
@@ -69,6 +74,7 @@ body {
 
 .section {
   min-height: calc(100dvh - 60px);
+  scroll-margin: 60px;
 }
 
 @keyframes shadow-slide {

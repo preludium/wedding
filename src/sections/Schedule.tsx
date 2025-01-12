@@ -14,7 +14,7 @@ export const Schedule = () => {
   return (
     <section
       id="schedule"
-      className="section container flex flex-col justify-around items-center text-center h-viewport-1/2 md:h-viewport">
+      className="section container flex flex-col justify-around items-center text-center h-full">
       <ul className="grid -md:grid-rows-7 md:grid-rows-[1fr,1px,1fr] -md:grid-cols-[1fr,1px,1fr] md:grid-cols-7 items-center gap-x-8 gap-y-6">
         <li className={cn(`-md:col-start-1 md:col-start-1 -md:row-start-1 md:row-start-1`)}>
           <h4 className='font-medium text-sm'>{t(`schedule.weddingCeremony.title`)}</h4>

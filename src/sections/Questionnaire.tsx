@@ -13,6 +13,7 @@ import { z } from "zod";
 
 export const Questionnaire = () => {
   const { t } = useTranslation();
+  const [sent, setSent] = useState(false);
 
   const FormSchema = z.object({
     confirmAttendance: z.enum(["yes", "no"], {
@@ -29,7 +30,9 @@ export const Questionnaire = () => {
       .string({ required_error: t("questionnaire.requiredField") })
       .email(),
     phoneNumber: z.string({ required_error: t("questionnaire.requiredField") }),
-    address: z.string({ required_error: t("questionnaire.requiredField") }).optional(),
+    address: z
+      .string({ required_error: t("questionnaire.requiredField") })
+      .optional(),
   });
 
   const [sending, setSending] = useState(false);
@@ -45,10 +48,11 @@ export const Questionnaire = () => {
       })
       .then(
         () => {
-          toast.success(t("questionnaire.success"));
+          toast.success(t("questionnaire.success"), { duration: 5000 });
+          setSent(true);
         },
         () => {
-          toast.error(t("questionnaire.failure"));
+          toast.error(t("questionnaire.failure"), { duration: 5000 });
         }
       )
       .finally(() => {
@@ -57,10 +61,12 @@ export const Questionnaire = () => {
   };
 
   return (
-    <section id="questionnaire" className="section container flex flex-col justify-around items-center text-center h-viewport-1/2 md:h-viewport">
+    <section
+      id="questionnaire"
+      className="section container flex flex-col justify-around items-center text-center min-h-viewport-1/2 md:min-h-viewport">
       <Form {...form}>
         <form
-          className="flex flex-col gap-8 md:min-w-[900px] p-10 rounded-lg shadow-2xl"
+          className="flex flex-col gap-8 md:min-w-[900px] p-10 rounded-md shadow-around"
           onSubmit={form.handleSubmit(sendEmail)}>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="flex flex-col gap-6">
@@ -78,8 +84,9 @@ export const Questionnaire = () => {
                   },
                 ]}
                 required={!FormSchema.shape.confirmAttendance.isOptional()}
+                disabled={sent}
               />
-              {form.watch('confirmAttendance') === "yes" && (
+              {form.watch("confirmAttendance") === "yes" && (
                 <>
                   <RadioGroupField
                     name="transportToWeddingVenue"
@@ -101,6 +108,7 @@ export const Questionnaire = () => {
                     required={
                       !FormSchema.shape.transportToWeddingVenue.isOptional()
                     }
+                    disabled={sent}
                   />
                   <RadioGroupField
                     name="transportToHotel"
@@ -120,6 +128,7 @@ export const Questionnaire = () => {
                       },
                     ]}
                     required={!FormSchema.shape.transportToHotel.isOptional()}
+                    disabled={sent}
                   />
                 </>
               )}
@@ -129,27 +138,31 @@ export const Questionnaire = () => {
                 name="fullname"
                 label={t("questionnaire.fullName")}
                 required={!FormSchema.shape.fullname.isOptional()}
+                disabled={sent}
               />
               <InputField
                 name="email"
                 label={t("questionnaire.email")}
                 required={!FormSchema.shape.email.isOptional()}
+                disabled={sent}
               />
               <InputField
                 name="phoneNumber"
                 label={t("questionnaire.phoneNumber")}
                 required={!FormSchema.shape.phoneNumber.isOptional()}
+                disabled={sent}
               />
               <InputField
                 name="address"
                 label={t("questionnaire.address")}
                 required={!FormSchema.shape.address.isOptional()}
+                disabled={sent}
               />
             </div>
           </div>
           <FormMessage />
-          <Button className="w-full" type="submit" disabled={sending}>
-            {t("questionnaire.send")}
+          <Button className="w-full" type="submit" disabled={sending || sent}>
+            {sent ? t("questionnaire.sent") : t("questionnaire.send")}
           </Button>
         </form>
       </Form>

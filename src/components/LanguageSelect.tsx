@@ -24,13 +24,13 @@ export function LanguageSelect() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => setLanguage("en")}>
+        <DropdownMenuItem className='hover:!bg-slate-100' onClick={() => setLanguage("en")}>
           English
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setLanguage("fr")}>
+        <DropdownMenuItem className='hover:!bg-slate-100' onClick={() => setLanguage("fr")}>
           Français
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setLanguage("pl")}>
+        <DropdownMenuItem className='hover:!bg-slate-100'onClick={() => setLanguage("pl")}>
           Polski
         </DropdownMenuItem>
       </DropdownMenuContent>

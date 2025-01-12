@@ -32,6 +32,11 @@ export default {
     p2: "We are grateful to share this exceptional day with the people closest to our hearts.Your presence will make our wedding even more beautiful!",
     greeting: "We can't wait to celebrate together!",
   },
+  transport: {
+    ceremony: "Ceremony",
+    wedding: "Wedding",
+    info: 'We offer transport for guests between the church and the castle - we will ask for confirmation in the questionnaire due to the limited number of places'
+  },
   schedule: {
     weddingCeremony: {
       time: "2:00 PM",
@@ -84,6 +89,7 @@ export default {
     email: "Email",
     phoneNumber: "Phone number",
     send: "Send",
+    sent: "Answers sent",
     success: "Your answers has been sent to Gabriela and Francis",
     failure:
       "Sending your answers has failed. Try once again or contact Gabriela and Francis directly",

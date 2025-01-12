@@ -6,6 +6,7 @@ import { Photos } from './sections/Photos';
 import { Schedule } from './sections/Schedule';
 import { Questionnaire } from './sections/Questionnaire';
 import { Gifts } from './sections/Gifts';
+import { Transport } from './sections/Transport';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Navbar />
       <Welcome />
       <Schedule />
+      <Transport />
       <Questionnaire />
       <Gifts />
       <Photos />

@@ -28,19 +28,19 @@ export const Welcome = () => {
   const countDown = (
     <div className="flex w-full justify-center">
       <div className="flex flex-col w-1/4 max-w-[250px] gap-10 text-md">
-        {t("common.days")}
+        <span className="font-alice">{t("common.days")}</span>
         <span className="text-xl">{Math.max(0, diff.days)}</span>
       </div>
       <div className="flex flex-col w-1/4 max-w-[250px] gap-10 text-md">
-        {t("common.hours")}
+        <span className="font-alice">{t("common.hours")}</span>
         <span className="text-xl">{Math.max(0, diff.hours)}</span>
       </div>
       <div className="flex flex-col w-1/4 max-w-[250px] gap-10 text-md">
-        {t("common.minutes")}
+        <span className="font-alice">{t("common.minutes")}</span>
         <span className="text-xl">{Math.max(0, diff.minutes)}</span>
       </div>
       <div className="flex flex-col w-1/4 max-w-[250px] gap-10 text-md">
-        {t("common.seconds")}
+        <span className="font-alice">{t("common.seconds")}</span>
         <span className="text-xl">{Math.max(0, Math.round(diff.seconds))}</span>
       </div>
     </div>

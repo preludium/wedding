@@ -22,6 +22,7 @@ module.exports = {
       calligrapher: [ 'Calligrapher' ],
       dhellia: [ 'Dhellia' ],
       PlayfairDisplay: [ 'Playfair Display' ],
+      alice: [ 'Alice' ]
     },
     extend: {
       screens: {
@@ -33,6 +34,9 @@ module.exports = {
         '-lg': { max: '992px' },
         xl: { min: '1200px' },
         '-xl': { max: '1200px' }
+      },
+      boxShadow: {
+        around: 'rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px'
       },
       colors: {
         border: "hsl(var(--border))",

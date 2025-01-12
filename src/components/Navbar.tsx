@@ -33,16 +33,16 @@ const useRoutes = (): RouteProps[] => {
       label: t("nav.schedule"),
     },
     {
-      href: "#questionnaire",
-      label: t("nav.questionnaire"),
-    },
-    {
       href: "#transport",
       label: t("nav.transport"),
     },
-    {
+    /*{
       href: "#accommodation",
       label: t("nav.accommodation"),
+    },*/
+    {
+      href: "#questionnaire",
+      label: t("nav.questionnaire"),
     },
     {
       href: "#gifts",
