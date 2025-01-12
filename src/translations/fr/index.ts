@@ -9,6 +9,8 @@ export default {
     hours: 'Heures',
     minutes: 'Minutes',
     seconds: 'Secondes',
+    enterPassword: "Saisir le mot de passe:",
+    wrongPassword: "Mot de passe erroné. Saisir le mot de passe:",
   },
   nav: {
     welcome: 'Accueil',

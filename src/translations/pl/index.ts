@@ -10,6 +10,8 @@ export default {
     hours: 'Godziny',
     minutes: 'Minuty',
     seconds: 'Sekundy',
+    enterPassword: "Wpisz hasło:",
+    wrongPassword: "Błędne hasło. Wpisz hasło:",
   },
   nav: {
     welcome: 'Główna',

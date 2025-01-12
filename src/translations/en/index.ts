@@ -7,6 +7,8 @@ export default {
     hours: "Hours",
     minutes: "Minutes",
     seconds: "Seconds",
+    enterPassword: "Enter password:",
+    wrongPassword: "Wrong password. Enter password:",
   },
   nav: {
     welcome: "Main",
@@ -35,7 +37,7 @@ export default {
   transport: {
     ceremony: "Ceremony",
     wedding: "Wedding",
-    info: 'We offer transport for guests between the church and the castle - we will ask for confirmation in the questionnaire due to the limited number of places'
+    info: "We offer transport for guests between the church and the castle - we will ask for confirmation in the questionnaire due to the limited number of places",
   },
   schedule: {
     weddingCeremony: {
@@ -99,7 +101,7 @@ export default {
     p1: "Your presence on this special day is the greatest gift and immense joy for us!",
     p2: "However, if you would like to additionally celebrate our occasion, instead of traditional gifts, we would be grateful for supporting our shared future in the form of a symbolic bank transfer.",
     p3: "We plan to use these funds to furnish our new home.",
-    p4: "Thank you in advance for every kind word, gesture and goodwill. We can't wait to celebrate this day together with you!"
+    p4: "Thank you in advance for every kind word, gesture and goodwill. We can't wait to celebrate this day together with you!",
   },
   photos: {
     intro:
