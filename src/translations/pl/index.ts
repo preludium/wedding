@@ -82,6 +82,7 @@ export default {
       needHelp: 'Potrzebuję pomocy',
       notRelevant: 'Nie dotyczy'
     },
+    address: "Adres, na który wyślemy zaproszenie",
     fullName: 'Imię i nazwisko',
     email: 'Email',
     phoneNumber: 'Numer telefonu',

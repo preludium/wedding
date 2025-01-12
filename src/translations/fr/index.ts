@@ -81,7 +81,7 @@ export default {
       needHelp: "J'ai besoin d'aide",
       notRelevant: 'Non applicable'
     },
-    fullName: 'Nom complet',
+    address: "Adresse à laquelle nous enverrons l'invitation",
     email: 'Email',
     phoneNumber: 'Numéro de téléphone',
     send: "Envoyer",

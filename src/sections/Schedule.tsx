@@ -1,5 +1,12 @@
 import { cn } from "@/lib/utils";
 import { useTranslation } from "@/translations/useTranslation";
+import routeUrl from '@/assets/schedule-icons/route.png';
+import ringsUrl from '@/assets/schedule-icons/rings.png';
+import cameraUrl from '@/assets/schedule-icons/camera.png';
+import champagneUrl from '@/assets/schedule-icons/champagne.png';
+import dinnerTableUrl from '@/assets/schedule-icons/dinner-table.png';
+import weddingCakeUrl from '@/assets/schedule-icons/wedding-cake.png';
+import danceUrl from '@/assets/schedule-icons/dance.png';
 
 export const Schedule = () => {
   const { t } = useTranslation();
@@ -15,7 +22,7 @@ export const Schedule = () => {
         </li>
         <img
           className="-md:col-start-3 md:col-start-1 -md:row-start-1 md:row-start-3 w-14 h-14 justify-self-center"
-          src="src/assets/schedule-icons/rings.png"
+          src={ringsUrl}
         />
 
         <li className={cn(`-md:col-start-3 md:col-start-2 -md:row-start-2 md:row-start-3`)}>
@@ -24,7 +31,7 @@ export const Schedule = () => {
         </li>
         <img
           className="-md:col-start-1 md:col-start-2 -md:row-start-2 md:row-start-1 w-14 h-14 justify-self-center"
-          src="src/assets/schedule-icons/route.png"
+          src={routeUrl}
         />
 
         <li className={cn(`-md:col-start-1 md:col-start-3 -md:row-start-3 md:row-start-1`)}>
@@ -33,7 +40,7 @@ export const Schedule = () => {
         </li>
         <img
           className="-md:col-start-3 md:col-start-3 -md:row-start-3 md:row-start-3 w-14 h-14 justify-self-center"
-          src="src/assets/schedule-icons/camera.png"
+          src={cameraUrl}
         />
 
         <li className={cn(`-md:col-start-3 md:col-start-4 -md:row-start-4 md:row-start-3`)}>
@@ -42,7 +49,7 @@ export const Schedule = () => {
         </li>
         <img
           className="-md:col-start-1 md:col-start-4 -md:row-start-4 md:row-start-1 w-14 h-14 justify-self-center"
-          src="src/assets/schedule-icons/champagne.png"
+          src={champagneUrl}
         />
 
         <li className={cn(`-md:col-start-1 md:col-start-5 -md:row-start-5 md:row-start-1`)}>
@@ -51,7 +58,7 @@ export const Schedule = () => {
         </li>
         <img
           className="-md:col-start-3 md:col-start-5 -md:row-start-5 md:row-start-3 w-14 h-14 justify-self-center"
-          src="src/assets/schedule-icons/dinner-table.png"
+          src={dinnerTableUrl}
         />
 
         <li className={cn(`-md:col-start-3 md:col-start-6 -md:row-start-6 md:row-start-3`)}>
@@ -60,7 +67,7 @@ export const Schedule = () => {
         </li>
         <img
           className="-md:col-start-1 md:col-start-6 -md:row-start-6 md:row-start-1 w-14 h-14 justify-self-center"
-          src="src/assets/schedule-icons/wedding-cake.png"
+          src={weddingCakeUrl}
         />
 
         <li className={cn(`-md:col-start-1 md:col-start-7 -md:row-start-7 md:row-start-1`)}>
@@ -69,7 +76,7 @@ export const Schedule = () => {
         </li>
         <img
           className="-md:col-start-3 md:col-start-7 -md:row-start-7 md:row-start-3 w-14 h-14 justify-self-center"
-          src="src/assets/schedule-icons/dance.png"
+          src={danceUrl}
         />
 
         <div className="-md:col-start-2 md:col-span-7 -md:row-span-7 md:row-start-2 -md:border-l -md:h-full md:border-b border-black" />

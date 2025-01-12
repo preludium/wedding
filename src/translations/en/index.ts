@@ -79,6 +79,7 @@ export default {
       needHelp: "I need help",
       notRelevant: "Not relevant",
     },
+    address: "Address to which we will send the invitation",
     fullName: "Full name",
     email: "Email",
     phoneNumber: "Phone number",

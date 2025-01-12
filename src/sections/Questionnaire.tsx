@@ -29,6 +29,7 @@ export const Questionnaire = () => {
       .string({ required_error: t("questionnaire.requiredField") })
       .email(),
     phoneNumber: z.string({ required_error: t("questionnaire.requiredField") }),
+    address: z.string({ required_error: t("questionnaire.requiredField") }).optional(),
   });
 
   const [sending, setSending] = useState(false);
@@ -138,6 +139,11 @@ export const Questionnaire = () => {
                 name="phoneNumber"
                 label={t("questionnaire.phoneNumber")}
                 required={!FormSchema.shape.phoneNumber.isOptional()}
+              />
+              <InputField
+                name="address"
+                label={t("questionnaire.address")}
+                required={!FormSchema.shape.address.isOptional()}
               />
             </div>
           </div>

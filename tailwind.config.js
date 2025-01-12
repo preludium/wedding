@@ -80,8 +80,8 @@ module.exports = {
         sm: "calc(var(--radius) - 4px)",
       },
       height: {
-        viewport: "calc(100dvh - 60px)",
-        'viewport-1/2': "calc(calc(100dvh - 60px) / 2)",
+        viewport: "calc(100lvh - 60px)",
+        'viewport-1/2': "calc(calc(100lvh - 60px) / 2)",
       },
       keyframes: {
         "accordion-down": {
