@@ -6,7 +6,7 @@ export const Photos = () => {
   return (
     <section
       id="photos"
-      className="section container flex flex-col justify-center gap-10 py-8 min-h-viewport-1/2 md:min-h-viewport">
+      className="section container flex flex-col justify-center gap-10 pt-8 md:pb-8 -md:pb-16 min-h-viewport-1/2 md:min-h-viewport">
       <div className="grid grid-cols-2 -md:grid-cols-1 gap-8">
         <div className="flex flex-col gap-10">
           <p>{t("photos.intro")}</p>

@@ -9,7 +9,7 @@ export const Transport = () => {
   return (
     <section
       id="transport"
-      className="section container flex flex-col justify-around items-center text-center min-h-viewport-1/2 md:min-h-viewport">
+      className="section container flex flex-col justify-around items-center text-center min-h-viewport-1/2 md:min-h-viewport gap-8">
       <div className="flex -md:flex-col w-full justify-center items-center gap-8">
         <div className="flex flex-col items-center w-full max-w-[500px] gap-6 shadow-around p-6 rounded-md bg-secondary">
           <img className="w-24 h-24" src={ringsUrl} />
@@ -54,8 +54,8 @@ export const Transport = () => {
           </div>
         </div>
       </div>
-      <div className="flex items-center gap-4 p-6 text-sky-800 rounded-xl bg-sky-200">
-        <TriangleAlert size="1.25em" />
+      <div className="flex -md:flex-col items-center gap-4 p-6 text-sky-800 rounded-xl bg-sky-200">
+        <TriangleAlert className='-md:w-[50px] -md:h-[50px] md:w-[1.25em] md:h-[1.25em]' />
         {t("transport.info")}
       </div>
     </section>
