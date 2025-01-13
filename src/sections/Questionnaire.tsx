@@ -63,7 +63,12 @@ export const Questionnaire = () => {
   return (
     <section
       id="questionnaire"
-      className="section container flex flex-col justify-around items-center text-center min-h-viewport-1/2 md:min-h-viewport">
+      className="section container flex flex-col gap-16 justify-center items-center text-center min-h-viewport-1/2 md:min-h-viewport py-28">
+      <div className='flex flex-col items-center gap-4'>
+        <h3 className='text-4xl font-medium font-PlayfairDisplay mb-2'>{t("questionnaire.title")}</h3>
+        <div className="border-[#e8ca9b] border-b-2 md:w-[30%] -md:w-[50%]" />
+        <p>{t("questionnaire.p")}</p>
+      </div>
       <Form {...form}>
         <form
           className="flex flex-col gap-8 md:min-w-[900px] p-10 rounded-md shadow-around"

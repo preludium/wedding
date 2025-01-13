@@ -23,6 +23,7 @@ export default {
     photos: 'Zdjęcia',
   },
   welcome: {
+    title: 'Bądźcie z nami!',
     heading: "Drodzy Goście,",
     p1: "Jesteśmy zachwyceni, że możemy dzielić z Wami tę wyjątkową chwilę! Już wkrótce będziemy świętować początek naszej wspólnej drogi jako mąż i żona. Ta strona została stworzona, aby pomóc Wam przygotować się do tego szczególnego dnia i dostarczyć wszystkich niezbędnych informacji.",
     hereYouWillFind: "Znajdziecie tutaj:",
@@ -38,6 +39,7 @@ export default {
     greeting: "Nie możemy się doczekać wspólnego świętowania!",
   },
   schedule: {
+    title: 'Harmonogram',
     weddingCeremony: {
       time: "14:00",
       title: "Ceremonia ślubna",
@@ -68,11 +70,15 @@ export default {
     }
   },
   transport: {
+    title: 'Transport',
     ceremony: "Ceremonia",
     wedding: "Wesele",
-    info: 'Oferujemy transport dla gości między kościołem a zamkiem - poprosimy o potwierdzenie w kwestionnariuszu ze względu na ograniczoną liczbę miejsc'
+    info1: 'Oferujemy transport dla gości między kościołem a zamkiem - poprosimy o potwierdzenie w kwestionnariuszu ze względu na ograniczoną liczbę miejsc'
+    , info2: 'Oferujemy transport dla gości między zamkiem a hotelem o 3 ustalonych godzinach - poprosimy o potwierdzenie w kwestionnariuszu ze względu na ograniczoną liczbę miejsc'
   },
   questionnaire: {
+    title: "Daj znać, że będziesz z nami!",
+    p: "Twoja obecność jest dla nas niezwykle ważna i chcielibyśmy razem z Tobą podzielić się tą wyjątkową chwilą. Prosimy o potwierdzenie swojej obecności, abyśmy mogli odpowiednio przygotować miejsce dla Ciebie i razem uczcić ten wyjątkowy dzień.",
     confirmAttendance: {
       title: 'Potwierdź swoją obecność na naszym ślubie',
       yes: 'Oczywiście, będę!',
@@ -100,13 +106,16 @@ export default {
     requiredField: "To pole jest wymagane"
   },
   gifts: {
+    title: "Prezenty",
     p1: "Wasza obecność w tym wyjątkowym dniu to dla nas największy prezent i ogromna radość!",
     p2: "Jeśli jednak zechcielibyście dodatkowo uczcić nasze święto, zamiast tradycyjnych prezentów, będziemy wdzięczni za wsparcie naszej wspólnej przyszłości w formie symbolicznego przelewu na konto.",
     p3: "Środki te planujemy przeznaczyć na urządzenie nowego domu.",
     p4: "Z góry dziękujemy za każde ciepłe słowo, gest i życzliwość. Nie możemy się doczekać, aby świętować ten dzień razem z Wami!"
   },
   photos: {
-    intro: "Wasze zdjęcia i wspomnienia to dla nas bezcenny skarb! Aby uwiecznić jak najwięcej wspaniałych chwil z naszego ślubu i wesela, zachęcamy Was do korzystania z dedykowanej aplikacji, dzięki której w łatwy sposób możecie dzielić się zdjęciami z tego wyjątkowego dnia.",
+    title: 'Podziel się swoimi wspomnieniami!',
+    p: 'Wasze zdjęcia i wspomnienia to dla nas bezcenny skarb!',
+    intro: "Aby uwiecznić jak najwięcej wspaniałych chwil z naszego ślubu i wesela, zachęcamy Was do korzystania z dedykowanej aplikacji, dzięki której w łatwy sposób możecie dzielić się zdjęciami z tego wyjątkowego dnia.",
     howItWorks: "Jak to działa?",
     step1: "Pobierz aplikację POV na swój telefon.",
     step2: "Zaloguj się lub załóż konto.",

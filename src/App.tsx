@@ -22,6 +22,7 @@ function App() {
         y = prompt(t("common.wrongPassword"));
       }
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

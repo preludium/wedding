@@ -60,14 +60,18 @@ export const Welcome = () => {
           <h2 className="font-calligrapher text-5xl md:text-8xl">
             {`Gabriela ${t("common.and")} Francis`}
           </h2>
-          <h3 className="text-2xl">{t("common.date")}</h3>
+          <h3 className="text-2xl font-alice">{t("common.date")}</h3>
         </div>
         {countDown}
       </section>
 
-      <section className="bg-[#f3f3f3] py-14">
-        <div className="container grid grid-cols-2 -md:grid-cols-1 -md:gap-8 md:gap-20">
-          <div className="flex flex-col gap-6 shadow-around p-8 rounded-xl bg-white">
+      <section className="flex flex-col bg-[#f3f3f3] py-14 gap-12">
+      <div className='flex flex-col items-center gap-4'>
+        <h3 className='text-4xl font-medium font-PlayfairDisplay mb-2'>{t("welcome.title")}</h3>
+        <div className="border-[#e8ca9b] border-b-2 md:w-[30%] -md:w-[50%]" />
+      </div>
+        <div className="container grid grid-cols-2 items-center -md:grid-cols-1 -md:gap-8 md:gap-20">
+          <div className="flex flex-col gap-6 shadow-around p-8 rounded-xl bg-white h-fit">
             <p>{t("welcome.heading")}</p>
             <p>{t("welcome.p1")}</p>
             {/* <p>{t("welcome.hereYouWillFind")}</p>
@@ -82,14 +86,14 @@ export const Welcome = () => {
             <p>{t("welcome.greeting")}</p>
             <p>Gabriela & Francis</p>
           </div>
-          <div className="relative grid grid-cols-12 items-center">
+          <div className="relative grid grid-cols-12">
             <img
               src={churchUrl}
               className="aspect-square w-[350px] row-start-1 col-start-1 col-span-8 rounded-lg shadow-around"
             />
             <img
               src={castleUrl}
-              className="aspect-[3/2] w-[400px] mt-[100%] row-start-1 col-start-6 col-span-7 rounded-lg shadow-around"
+              className="aspect-[3/2] w-[400px] mt-[70%] row-start-1 col-start-6 col-span-7 rounded-lg shadow-around"
             />
           </div>
         </div>

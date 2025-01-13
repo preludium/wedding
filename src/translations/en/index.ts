@@ -20,6 +20,7 @@ export default {
     photos: "Photos",
   },
   welcome: {
+    title: "Be with us!",
     heading: "Dear Guests,",
     p1: "We are delighted to share this special moment with you! Very soon, we will be celebrating the beginning of our journey together as husband and wife. This website has been created to help you prepare for this special day and provide all the necessary information.",
     hereYouWillFind: "Here you will find:",
@@ -35,11 +36,16 @@ export default {
     greeting: "We can't wait to celebrate together!",
   },
   transport: {
+    title: "Transport",
     ceremony: "Ceremony",
     wedding: "Wedding",
-    info: "We offer transport for guests between the church and the castle - we will ask for confirmation in the questionnaire due to the limited number of places",
+    info1:
+      "We offer transport for guests between the church and the castle - we will ask for confirmation in the questionnaire due to the limited number of places",
+    info2:
+      "We offer transport for guests between the castle and the hotel at 3 fixed times - we will ask for confirmation in the questionnaire due to the limited number of places",
   },
   schedule: {
+    title: "Schedule",
     weddingCeremony: {
       time: "2:00 PM",
       title: "Wedding Ceremony",
@@ -70,6 +76,8 @@ export default {
     },
   },
   questionnaire: {
+    title: "Let us know you'll be with us!",
+    p: "Your presence is extremely important to us and we would like to share this special moment with you. Please confirm your presence so that we can properly prepare the venue for you and celebrate this special day together.",
     confirmAttendance: {
       title: "Confirm your attendance at our wedding",
       yes: "Of course I will!",
@@ -98,14 +106,16 @@ export default {
     requiredField: "This field is required",
   },
   gifts: {
+    title: "Gifts",
     p1: "Your presence on this special day is the greatest gift and immense joy for us!",
     p2: "However, if you would like to additionally celebrate our occasion, instead of traditional gifts, we would be grateful for supporting our shared future in the form of a symbolic bank transfer.",
     p3: "We plan to use these funds to furnish our new home.",
     p4: "Thank you in advance for every kind word, gesture and goodwill. We can't wait to celebrate this day together with you!",
   },
   photos: {
-    intro:
-      "Your photos and memories are a priceless treasure for us! To capture as many wonderful moments from our wedding and reception as possible, we encourage you to use the dedicated app, which allows you to easily share photos from this special day.",
+    title: "Share your memories!",
+    p: "Your photos and memories are a priceless treasure for us!",
+    intro: "To capture as many wonderful moments from our wedding and reception as possible, we encourage you to use the dedicated app, which allows you to easily share photos from this special day.",
     howItWorks: "How it works?",
     step1: "Download the POV app on your phone.",
     step2: "Log in or create an account.",

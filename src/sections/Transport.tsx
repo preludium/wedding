@@ -9,7 +9,13 @@ export const Transport = () => {
   return (
     <section
       id="transport"
-      className="section container flex flex-col justify-around items-center text-center min-h-viewport-1/2 md:min-h-viewport gap-8">
+      className="section container flex flex-col items-center text-center py-10 min-h-viewport-1/2 md:min-h-viewport gap-8">
+      <div className="flex flex-col w-full items-center gap-4">
+        <h3 className="text-4xl font-medium font-PlayfairDisplay mb-2">
+          {t("transport.title")}
+        </h3>
+        <div className="border-[#e8ca9b] border-b-2 md:w-[30%] -md:w-[50%]" />
+      </div>
       <div className="flex -md:flex-col w-full justify-center items-center gap-8">
         <div className="flex flex-col items-center w-full max-w-[500px] gap-6 shadow-around p-6 rounded-md bg-secondary">
           <img className="w-24 h-24" src={ringsUrl} />
@@ -54,9 +60,13 @@ export const Transport = () => {
           </div>
         </div>
       </div>
-      <div className="flex -md:flex-col items-center gap-4 p-6 text-sky-800 rounded-xl bg-sky-200">
-        <TriangleAlert className='-md:w-[50px] -md:h-[50px] md:w-[1.25em] md:h-[1.25em]' />
-        {t("transport.info")}
+      <div className="flex -md:flex-col items-center gap-4 p-6 -md:max-w-[500px] max-w-[1032px] text-sky-800 rounded-xl bg-sky-200">
+        <TriangleAlert className="-md:w-[50px] -md:h-[50px] md:w-[1.25em] md:h-[1.25em] md:min-w-[20px] md:min-h-[20px]" />
+        {t("transport.info1")}
+      </div>
+      <div className="flex -md:flex-col items-center gap-4 p-6 -md:max-w-[500px] max-w-[1032px] text-sky-800 rounded-xl bg-sky-200">
+        <TriangleAlert className="-md:w-[50px] -md:h-[50px] md:w-[1.25em] md:h-[1.25em] md:min-w-[20px] md:min-h-[20px]" />
+        {t("transport.info2")}
       </div>
     </section>
   );
