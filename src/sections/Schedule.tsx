@@ -7,6 +7,7 @@ import champagneUrl from "@/assets/schedule-icons/champagne.png";
 import dinnerTableUrl from "@/assets/schedule-icons/dinner-table.png";
 import weddingCakeUrl from "@/assets/schedule-icons/wedding-cake.png";
 import danceUrl from "@/assets/schedule-icons/dance.png";
+import busUrl from "@/assets/schedule-icons/bus.png";
 
 export const Schedule = () => {
   const { t } = useTranslation();
@@ -21,7 +22,7 @@ export const Schedule = () => {
         </h3>
         <div className="border-[#e8ca9b] border-b-2 md:w-[30%] -md:w-[50%]" />
       </div>
-      <ul className="grid -md:grid-rows-7 md:grid-rows-[1fr,1px,1fr] -md:grid-cols-[1fr,1px,1fr] md:grid-cols-7 items-center gap-x-8 gap-y-6">
+      <ul className="grid -md:grid-rows-9 md:grid-rows-[1fr,1px,1fr] -md:grid-cols-[1fr,1px,1fr] md:grid-cols-9 items-center gap-x-8 gap-y-6">
         <li
           className={cn(
             `-md:col-start-1 md:col-start-1 -md:row-start-1 md:row-start-1`
@@ -118,7 +119,35 @@ export const Schedule = () => {
           src={danceUrl}
         />
 
-        <div className="-md:col-start-2 md:col-span-7 -md:row-span-7 md:row-start-2 -md:border-l -md:h-full md:border-b border-black" />
+        <li
+          className={cn(
+            `-md:col-start-3 md:col-start-8 -md:row-start-8 md:row-start-3`
+          )}>
+          <h4 className="font-medium text-sm">
+            {t(`schedule.firstBus.title`)}
+          </h4>
+          <p>{t(`schedule.firstBus.time`)}</p>
+        </li>
+        <img
+          className="-md:col-start-1 md:col-start-8 -md:row-start-8 md:row-start-1 w-14 h-14 justify-self-center"
+          src={busUrl}
+        />
+
+        <li
+          className={cn(
+            `-md:col-start-1 md:col-start-9 -md:row-start-9 md:row-start-1`
+          )}>
+          <h4 className="font-medium text-sm">
+            {t(`schedule.secondBus.title`)}
+          </h4>
+          <p>{t(`schedule.secondBus.time`)}</p>
+        </li>
+        <img
+          className="-md:col-start-3 md:col-start-9 -md:row-start-9 md:row-start-3 w-14 h-14 justify-self-center"
+          src={busUrl}
+        />
+
+        <div className="-md:col-start-2 md:col-span-9 -md:row-span-9 md:row-start-2 -md:border-l -md:h-full md:border-b border-black" />
       </ul>
     </section>
   );

@@ -37,7 +37,7 @@ export function RadioGroupField({ name, label, options, required, disabled }: Pr
               disabled={disabled}
               className="flex flex-col space-y-1">
               {options.map((option) => (
-                <FormItem className="flex items-center space-x-3 space-y-0">
+                <FormItem key={option.value} className="flex items-center space-x-3 space-y-0">
                   <FormControl>
                     <RadioGroupItem value={option.value} />
                   </FormControl>

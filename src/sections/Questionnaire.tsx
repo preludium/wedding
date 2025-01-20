@@ -1,8 +1,10 @@
 import { InputField } from "@/components/InputField";
 import { RadioGroupField } from "@/components/RadioGroupField";
+import { TextareaField } from "@/components/TextareaField";
 import { Button } from "@/components/ui/button";
 import { Form, FormMessage } from "@/components/ui/form";
 import { config } from "@/config";
+import { cn } from "@/lib/utils";
 import { useTranslation } from "@/translations/useTranslation";
 import emailjs from "@emailjs/browser";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -24,6 +26,9 @@ export const Questionnaire = () => {
       .enum(["onMyOwn", "needHelp", "notRelevant"], {
         required_error: t("questionnaire.requiredField"),
       })
+      .optional(),
+    allergies: z
+      .string({ required_error: t("questionnaire.requiredField") })
       .optional(),
     fullname: z.string({ required_error: t("questionnaire.requiredField") }),
     email: z
@@ -64,8 +69,10 @@ export const Questionnaire = () => {
     <section
       id="questionnaire"
       className="section container flex flex-col gap-16 justify-center items-center text-center min-h-viewport-1/2 md:min-h-viewport py-28">
-      <div className='flex flex-col items-center gap-4'>
-        <h3 className='text-4xl font-medium font-PlayfairDisplay mb-2'>{t("questionnaire.title")}</h3>
+      <div className="flex flex-col items-center gap-4">
+        <h3 className="text-4xl font-medium font-PlayfairDisplay mb-2">
+          {t("questionnaire.title")}
+        </h3>
         <div className="border-[#e8ca9b] border-b-2 md:w-[30%] -md:w-[50%]" />
         <p>{t("questionnaire.p")}</p>
       </div>
@@ -73,7 +80,10 @@ export const Questionnaire = () => {
         <form
           className="flex flex-col gap-8 md:min-w-[900px] p-10 rounded-md shadow-around"
           onSubmit={form.handleSubmit(sendEmail)}>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div
+            className={cn("grid md:grid-cols-2 gap-8", {
+              "md:grid-cols-3": form.watch("confirmAttendance") === "yes",
+            })}>
             <div className="flex flex-col gap-6">
               <RadioGroupField
                 name="confirmAttendance"
@@ -91,52 +101,55 @@ export const Questionnaire = () => {
                 required={!FormSchema.shape.confirmAttendance.isOptional()}
                 disabled={sent}
               />
-              {form.watch("confirmAttendance") === "yes" && (
-                <>
-                  <RadioGroupField
-                    name="transportToWeddingVenue"
-                    label={t("questionnaire.transportToWeddingVenue.title")}
-                    options={[
-                      {
-                        label: t(
-                          "questionnaire.transportToWeddingVenue.onMyOwn"
-                        ),
-                        value: "onMyOwn",
-                      },
-                      {
-                        label: t(
-                          "questionnaire.transportToWeddingVenue.needHelp"
-                        ),
-                        value: "needHelp",
-                      },
-                    ]}
-                    required={
-                      !FormSchema.shape.transportToWeddingVenue.isOptional()
-                    }
-                    disabled={sent}
-                  />
-                  <RadioGroupField
-                    name="transportToHotel"
-                    label={t("questionnaire.transportToHotel.title")}
-                    options={[
-                      {
-                        label: t("questionnaire.transportToHotel.onMyOwn"),
-                        value: "onMyOwn",
-                      },
-                      {
-                        label: t("questionnaire.transportToHotel.needHelp"),
-                        value: "needHelp",
-                      },
-                      {
-                        label: t("questionnaire.transportToHotel.notRelevant"),
-                        value: "notRelevant",
-                      },
-                    ]}
-                    required={!FormSchema.shape.transportToHotel.isOptional()}
-                    disabled={sent}
-                  />
-                </>
-              )}
+              <TextareaField
+                name="allergies"
+                label={t("questionnaire.allergies")}
+                required={!FormSchema.shape.allergies.isOptional()}
+                disabled={sent}
+              />
+            </div>
+            <div
+              className={cn('flex flex-col gap-5',{
+                hidden: form.watch("confirmAttendance") !== "yes",
+              })}>
+              <RadioGroupField
+                name="transportToWeddingVenue"
+                label={t("questionnaire.transportToWeddingVenue.title")}
+                options={[
+                  {
+                    label: t("questionnaire.transportToWeddingVenue.onMyOwn"),
+                    value: "onMyOwn",
+                  },
+                  {
+                    label: t("questionnaire.transportToWeddingVenue.needHelp"),
+                    value: "needHelp",
+                  },
+                ]}
+                required={
+                  !FormSchema.shape.transportToWeddingVenue.isOptional()
+                }
+                disabled={sent}
+              />
+              <RadioGroupField
+                name="transportToHotel"
+                label={t("questionnaire.transportToHotel.title")}
+                options={[
+                  {
+                    label: t("questionnaire.transportToHotel.onMyOwn"),
+                    value: "onMyOwn",
+                  },
+                  {
+                    label: t("questionnaire.transportToHotel.needHelp"),
+                    value: "needHelp",
+                  },
+                  {
+                    label: t("questionnaire.transportToHotel.notRelevant"),
+                    value: "notRelevant",
+                  },
+                ]}
+                required={!FormSchema.shape.transportToHotel.isOptional()}
+                disabled={sent}
+              />
             </div>
             <div className="flex flex-col gap-5">
               <InputField
@@ -146,15 +159,15 @@ export const Questionnaire = () => {
                 disabled={sent}
               />
               <InputField
-                name="email"
-                label={t("questionnaire.email")}
-                required={!FormSchema.shape.email.isOptional()}
-                disabled={sent}
-              />
-              <InputField
                 name="phoneNumber"
                 label={t("questionnaire.phoneNumber")}
                 required={!FormSchema.shape.phoneNumber.isOptional()}
+                disabled={sent}
+              />
+              <InputField
+                name="email"
+                label={t("questionnaire.email")}
+                required={!FormSchema.shape.email.isOptional()}
                 disabled={sent}
               />
               <InputField

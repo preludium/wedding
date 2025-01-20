@@ -54,15 +54,18 @@ export const Welcome = () => {
     <>
       <section
         className={cn(
-          "section relative container flex flex-col items-center justify-center gap-[200px] text-center"
+          "section relative flex items-center bg-background-2-flowers bg-cover bg-no-repeat md:bg-center"
         )}>
+          <div className='container flex flex-col items-center justify-center gap-[200px] text-center'>
+
         <div className="flex flex-col items-center gap-20">
-          <h2 className="font-calligrapher text-5xl md:text-8xl">
+          <h2 className="font-calligrapher text-7xl md:text-8xl font-medium">
             {`Gabriela ${t("common.and")} Francis`}
           </h2>
           <h3 className="text-2xl font-alice">{t("common.date")}</h3>
         </div>
         {countDown}
+          </div>
       </section>
 
       <section className="flex flex-col bg-[#f3f3f3] py-14 gap-12">

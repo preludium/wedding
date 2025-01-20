@@ -1,37 +1,14 @@
-import { createContext, useState } from "react";
+import { useState } from "react";
 import en from './en';
 import fr from './fr';
 import pl from './pl';
 import * as _ from 'lodash';
-
-type Language = "en" | "fr" | "pl";
-
-type DotPrefix<T extends string> = T extends "" ? "" : `.${T}`
-
-type DotNestedKeys<T> = (T extends object ?
-    { [K in Exclude<keyof T, symbol>]: `${K}${DotPrefix<DotNestedKeys<T[K]>>}` }[Exclude<keyof T, symbol>]
-    : "") extends infer D ? Extract<D, string> : never;
-
-type TranslationKeys = DotNestedKeys<typeof en>
+import { Language, TranslationContext, TranslationKeys } from './TranslationContext';
 
 type TranslationProviderProps = {
   children: React.ReactNode;
   defaultLanguage?: Language;
 };
-
-type TranslationProviderState = {
-  language: Language;
-  setLanguage: (theme: Language) => void;
-  t: (key: TranslationKeys) => string;
-};
-
-const initialState: TranslationProviderState = {
-  language: "en",
-  setLanguage: () => null,
-  t: () => "",
-};
-
-export const TranslationContext = createContext<TranslationProviderState>(initialState);
 
 export function TranslationProvider({
   children,

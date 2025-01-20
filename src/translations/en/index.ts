@@ -9,6 +9,7 @@ export default {
     seconds: "Seconds",
     enterPassword: "Enter password:",
     wrongPassword: "Wrong password. Enter password:",
+    dearGuests: "Dear Guests",
   },
   nav: {
     welcome: "Main",
@@ -39,10 +40,11 @@ export default {
     title: "Transport",
     ceremony: "Ceremony",
     wedding: "Wedding",
+    hotel: "Hotel",
     info1:
       "We offer transport for guests between the church and the castle - we will ask for confirmation in the questionnaire due to the limited number of places",
     info2:
-      "We offer transport for guests between the castle and the hotel at 3 fixed times - we will ask for confirmation in the questionnaire due to the limited number of places",
+      "We offer transport for guests between the castle and the hotel at 2 fixed times - we will ask for confirmation in the questionnaire due to the limited number of places",
   },
   schedule: {
     title: "Schedule",
@@ -74,6 +76,20 @@ export default {
       time: "11:00 PM",
       title: "First dance",
     },
+    firstBus: {
+      time: "1:30 AM",
+      title: "First bus to the hotel",
+    },
+    secondBus: {
+      time: "3:00 AM",
+      title: "Second bus to the hotel",
+    }
+  },
+  accommodation: {
+    p1: "Please be advised that we do not provide accommodation as part of our wedding reception. However, we are happy to recommend that you use the <strong>Novotel Marne-la-Vallée Collégien</strong> for your overnight stay, which is conveniently located.",
+    p2: "As part of the ceremony, we provide <strong>breakfast the following day at the above hotel</strong>.",
+    p3: "For accommodation reservations, please contact us or feel free to contact the hotel directly",
+    p4: "If you are booking directly with the hotel, please inform us that you are our wedding guests."
   },
   questionnaire: {
     title: "Let us know you'll be with us!",
@@ -94,7 +110,8 @@ export default {
       needHelp: "I need help",
       notRelevant: "Not relevant",
     },
-    address: "Address to which we will send the invitation",
+    allergies: "Allergies and/or special dietary requirements",
+    address: "Residence address",
     fullName: "Full name",
     email: "Email",
     phoneNumber: "Phone number",
@@ -108,9 +125,9 @@ export default {
   gifts: {
     title: "Gifts",
     p1: "Your presence on this special day is the greatest gift and immense joy for us!",
-    p2: "However, if you would like to additionally celebrate our occasion, instead of traditional gifts, we would be grateful for supporting our shared future in the form of a symbolic bank transfer.",
-    p3: "We plan to use these funds to furnish our new home.",
-    p4: "Thank you in advance for every kind word, gesture and goodwill. We can't wait to celebrate this day together with you!",
+    p2: "If you would like to mark our occasion in another way, we would be grateful for your support in the form of an online collection.",
+    p3: "Link to fundraising: ",
+    p4: "Thank you in advance",
   },
   photos: {
     title: "Share your memories!",

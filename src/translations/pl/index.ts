@@ -12,6 +12,7 @@ export default {
     seconds: 'Sekundy',
     enterPassword: "Wpisz hasło:",
     wrongPassword: "Błędne hasło. Wpisz hasło:",
+    dearGuests: "Drodzy Goście",
   },
   nav: {
     welcome: 'Główna',
@@ -67,14 +68,29 @@ export default {
     firstDance: {
       time: "23:00",
       title: "Pierwszy taniec",
+    },
+    firstBus: {
+      time: "1:30",
+      title: "Pierwszy autobus do hotelu",
+    },
+    secondBus: {
+      time: "3:00",
+      title: "Drugi autobus do hotelu",
     }
   },
   transport: {
     title: 'Transport',
     ceremony: "Ceremonia",
     wedding: "Wesele",
-    info1: 'Oferujemy transport dla gości między kościołem a zamkiem - poprosimy o potwierdzenie w kwestionnariuszu ze względu na ograniczoną liczbę miejsc'
-    , info2: 'Oferujemy transport dla gości między zamkiem a hotelem o 3 ustalonych godzinach - poprosimy o potwierdzenie w kwestionnariuszu ze względu na ograniczoną liczbę miejsc'
+    hotel: "Hotel",
+    info1: 'Oferujemy transport dla gości między kościołem a zamkiem - poprosimy o potwierdzenie w kwestionnariuszu ze względu na ograniczoną liczbę miejsc',
+    info2: 'Oferujemy transport dla gości między zamkiem a hotelem o 2 ustalonych godzinach - poprosimy o potwierdzenie w kwestionnariuszu ze względu na ograniczoną liczbę miejsc'
+  },
+  accommodation: {
+    p1: "Informujemy, że nie zapewniamy zakwaterowania w ramach naszego przyjęcia weselnego. Jednak z przyjemnością polecamy skorzystanie z noclegu w <strong>Novotel Marne-la-Vallée Collégien</strong>, który znajduje się w dogodnej lokalizacji.",
+    p2: "W ramach uroczystości zapewniamy jednak <strong>śniadanie następnego dnia w powyższym hotelu</strong>.",
+    p3: "W celu dokonania rezerwacji noclegu prosimy o kontakt z nami lub zapraszamy do kontaktu bezpośrednio z hotelem",
+    p4: "Jeśli dokonujecie rezerwacji bezpośrednio w hotelu, prosimy o poinformowanie, że jesteście naszymi gośćmi weselnymi."
   },
   questionnaire: {
     title: "Daj znać, że będziesz z nami!",
@@ -95,7 +111,8 @@ export default {
       needHelp: 'Potrzebuję pomocy',
       notRelevant: 'Nie dotyczy'
     },
-    address: "Adres, na który wyślemy zaproszenie",
+    allergies: "Alergie i/lub specjalne wymagania dietetyczne",
+    address: "Adres zamieszkania",
     fullName: 'Imię i nazwisko',
     email: 'Email',
     phoneNumber: 'Numer telefonu',
@@ -108,9 +125,9 @@ export default {
   gifts: {
     title: "Prezenty",
     p1: "Wasza obecność w tym wyjątkowym dniu to dla nas największy prezent i ogromna radość!",
-    p2: "Jeśli jednak zechcielibyście dodatkowo uczcić nasze święto, zamiast tradycyjnych prezentów, będziemy wdzięczni za wsparcie naszej wspólnej przyszłości w formie symbolicznego przelewu na konto.",
-    p3: "Środki te planujemy przeznaczyć na urządzenie nowego domu.",
-    p4: "Z góry dziękujemy za każde ciepłe słowo, gest i życzliwość. Nie możemy się doczekać, aby świętować ten dzień razem z Wami!"
+    p2: "Jeśli chcielibyście uczcić naszą okazję w inny sposób, będziemy wdzięczni za wsparcie w formie internetowej zbiórki.",
+    p3: "Link do zbiórki: ",
+    p4: "Z góry dziękujemy"
   },
   photos: {
     title: 'Podziel się swoimi wspomnieniami!',

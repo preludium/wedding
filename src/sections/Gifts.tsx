@@ -26,7 +26,10 @@ export const Gifts = () => {
         <div className="flex flex-col gap-6 max-w-xl">
           <p>{t("gifts.p2")}</p>
           <p>
-            {t("gifts.p3")} {t("gifts.p4")}
+            {t("gifts.p3")}
+          </p>
+          <p>
+            {t("gifts.p4")}
           </p>
         </div>
       </div>

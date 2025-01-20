@@ -1,6 +1,7 @@
 import { useTranslation } from "@/translations/useTranslation";
 import danceUrl from "@/assets/schedule-icons/dance.png";
 import ringsUrl from "@/assets/schedule-icons/rings.png";
+import hotelUrl from "@/assets/hotel.png";
 import { TriangleAlert } from "lucide-react";
 
 export const Transport = () => {
@@ -9,9 +10,9 @@ export const Transport = () => {
   return (
     <section
       id="transport"
-      className="section container flex flex-col items-center text-center py-10 min-h-viewport-1/2 md:min-h-viewport gap-8">
+      className="section container flex flex-col items-center text-center py-28 gap-12">
       <div className="flex flex-col w-full items-center gap-4">
-        <h3 className="text-4xl font-medium font-PlayfairDisplay mb-2">
+        <h3 className="text-4xl font-medium justify-stretch font-PlayfairDisplay mb-2">
           {t("transport.title")}
         </h3>
         <div className="border-[#e8ca9b] border-b-2 md:w-[30%] -md:w-[50%]" />
@@ -38,10 +39,10 @@ export const Transport = () => {
               referrerPolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
-        <div className="flex flex-col w-full items-center max-w-[500px] gap-6 shadow-around p-6 rounded-md bg-secondary">
+        <div className="flex flex-col w-full flex-grow self-stretch items-center max-w-[500px] gap-6 shadow-around p-6 rounded-md bg-secondary">
           <img className="w-24 h-24" src={danceUrl} />
           <h4 className="text-2xl font-alice">{t("transport.wedding")}</h4>
-          <p>
+          <p className='h-full'>
             <strong>Château de Lésigny</strong>
             <br />
             Rue de la Croix,
@@ -59,7 +60,22 @@ export const Transport = () => {
               referrerPolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
+        <div className="flex flex-col w-full self-stretch items-center max-w-[500px] gap-6 shadow-around p-6 rounded-md bg-secondary">
+          <img className="w-24 h-24" src={hotelUrl} />
+          <h4 className="text-2xl font-alice">{t("transport.hotel")}</h4>
+          <p className='h-full'>
+            <strong>Novotel Marne-la-Vallée Collégien</strong>
+            <br />
+            Allée des portes de la Foret,
+            <br />
+            77090 Collégien
+          </p>
+          <div className="w-full">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2626.446771733545!2d2.6762127!3d48.8306162!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e605203860e737%3A0x8df1d29a3199ca7c!2sNovotel%20Marne-la-Vall%C3%A9e%20Coll%C3%A9gien!5e0!3m2!1sen!2spl!4v1737405300692!5m2!1sen!2spl" width="600" height="350" style={{ border: 0, width: "100%" }} allowFullScreen={false} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
       </div>
+      <div className='flex flex-col gap-8'>
       <div className="flex -md:flex-col items-center gap-4 p-6 -md:max-w-[500px] max-w-[1032px] text-sky-800 rounded-xl bg-sky-200">
         <TriangleAlert className="-md:w-[50px] -md:h-[50px] md:w-[1.25em] md:h-[1.25em] md:min-w-[20px] md:min-h-[20px]" />
         {t("transport.info1")}
@@ -67,6 +83,7 @@ export const Transport = () => {
       <div className="flex -md:flex-col items-center gap-4 p-6 -md:max-w-[500px] max-w-[1032px] text-sky-800 rounded-xl bg-sky-200">
         <TriangleAlert className="-md:w-[50px] -md:h-[50px] md:w-[1.25em] md:h-[1.25em] md:min-w-[20px] md:min-h-[20px]" />
         {t("transport.info2")}
+      </div>
       </div>
     </section>
   );

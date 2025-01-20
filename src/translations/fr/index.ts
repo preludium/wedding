@@ -11,6 +11,7 @@ export default {
     seconds: "Secondes",
     enterPassword: "Saisir le mot de passe:",
     wrongPassword: "Mot de passe erroné. Saisir le mot de passe:",
+    dearGuests: "Chers invités",
   },
   nav: {
     welcome: "Accueil",
@@ -25,7 +26,7 @@ export default {
     title: "Soyez avec nous!",
     heading: "Chers invités,",
     p1: "Nous sommes ravis de partager ce moment spécial avec vous! Très bientôt, nous célébrerons le début de notre voyage ensemble en tant que mari et femme. Ce site web a été créé pour vous aider à préparer cette journée spéciale et vous fournir toutes les informations nécessaires.",
-    hereYouWillFind: "Vous trouverez ici :",
+    hereYouWillFind: "Vous trouverez ici:",
     bullet1:
       "<strong>Les détails de la cérémonie et de la réception</strong> - où et quand notre grand jour aura lieu.",
     bullet2:
@@ -67,15 +68,30 @@ export default {
       time: "23:00",
       title: "Première danse",
     },
+    firstBus: {
+      time: "1:30",
+      title: "Premier bus pour l'hôtel",
+    },
+    secondBus: {
+      time: "3:00",
+      title: "Deuxième bus pour l'hôtel",
+    }
   },
   transport: {
     title: "Transport",
     ceremony: "Cérémonie",
     wedding: "Réception",
+    hotel: "Hôtel",
     info1:
       "Nous proposons un service de transport pour les invités entre l'église et le château - nous demanderons une confirmation dans le questionnaire en raison du nombre limité de places.",
     info2:
-      "Nous proposons un service de transport entre le château et l'hôtel à trois heures fixes - nous vous demanderons de confirmer votre choix dans le questionnaire en raison du nombre limité de places.",
+      "Nous proposons un service de transport entre le château et l'hôtel à deux heures fixes - nous vous demanderons de confirmer votre choix dans le questionnaire en raison du nombre limité de places.",
+  },
+  accommodation: {
+    p1: "Nous vous informons que nous ne fournissons pas d’hébergement dans le cadre de notre réception de mariage. Cependant, nous vous recommandons avec plaisir de séjourner au Novotel Marne-la-Vallée Collégien, qui est idéalement situé.",
+    p2: "Dans le cadre des festivités, nous avons le plaisir de vous offrir un petit-déjeuner le lendemain dans cet hôtel.",
+    p3: "Pour effectuer une réservation, merci de nous contacter directement ou de prendre contact avec l’hôtel: <strong>Novotel Marne- la - Vallée Collégien</strong>",
+    p4: "Si vous effectuez votre réservation directement auprès de l’hôtel, merci de bien vouloir informer que vous êtes invités à notre mariage."
   },
   questionnaire: {
     title: "Faites-nous savoir que vous serez des nôtres!",
@@ -97,7 +113,8 @@ export default {
       needHelp: "J'ai besoin d'aide",
       notRelevant: "Non applicable",
     },
-    address: "Adresse à laquelle nous enverrons l'invitation",
+    allergies: "Allergies et/ou régimes alimentaires particuliers",
+    address: "Adresse de résidence",
     email: "Email",
     fullName: "Nom et prénom",
     phoneNumber: "Numéro de téléphone",
@@ -111,9 +128,9 @@ export default {
   gifts: {
     title: "Cadeaux",
     p1: "Votre présence en ce jour spécial est le plus beau cadeau et une immense joie pour nous!",
-    p2: "Cependant, si vous souhaitez célébrer davantage notre union, plutôt que des cadeaux traditionnels, nous serions reconnaissants de votre soutien à notre avenir commun sous la forme d'un virement bancaire symbolique.",
-    p3: "Nous prévoyons d'utiliser ces fonds pour meubler notre nouvelle maison.",
-    p4: "Merci d'avance pour chaque mot gentil, geste et bienveillance. Nous avons hâte de célébrer ce jour avec vous!",
+    p2: "Si vous souhaitez marquer l'événement d'une autre manière, nous vous serions reconnaissants de nous soutenir par une collecte en ligne.",
+    p3: "Lien vers la collecte de fonds: ",
+    p4: "Je vous remercie d'avance",
   },
   photos: {
     title: "Partagez vos souvenirs!",

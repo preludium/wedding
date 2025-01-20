@@ -23,6 +23,7 @@ interface RouteProps {
 
 const useRoutes = (): RouteProps[] => {
   const { t } = useTranslation();
+  
   return [
     {
       href: "#",
@@ -36,10 +37,10 @@ const useRoutes = (): RouteProps[] => {
       href: "#transport",
       label: t("nav.transport"),
     },
-    /*{
+    {
       href: "#accommodation",
       label: t("nav.accommodation"),
-    },*/
+    },
     {
       href: "#questionnaire",
       label: t("nav.questionnaire"),
@@ -48,10 +49,10 @@ const useRoutes = (): RouteProps[] => {
       href: "#gifts",
       label: t("nav.gifts"),
     },
-    {
-      href: "#photos",
-      label: t("nav.photos"),
-    },
+    // {
+    //   href: "#photos",
+    //   label: t("nav.photos"),
+    // },
   ];
 };
 
