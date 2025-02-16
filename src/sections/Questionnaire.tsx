@@ -1,6 +1,6 @@
 import { InputField } from "@/components/InputField";
 import { RadioGroupField } from "@/components/RadioGroupField";
-import { TextareaField } from "@/components/TextareaField";
+import { TextareaField } from '@/components/TextareaField';
 import { Button } from "@/components/ui/button";
 import { Form, FormMessage } from "@/components/ui/form";
 import { config } from "@/config";
@@ -21,21 +21,30 @@ export const Questionnaire = () => {
     confirmAttendance: z.enum(["yes", "no"], {
       required_error: t("questionnaire.requiredField"),
     }),
-    transportToWeddingVenue: z.enum(["onMyOwn", "needHelp"]).optional(),
-    transportToHotel: z
-      .enum(["onMyOwn", "needHelp", "notRelevant"], {
-        required_error: t("questionnaire.requiredField"),
-      })
-      .optional(),
-    allergies: z
-      .string({ required_error: t("questionnaire.requiredField") })
-      .optional(),
+    seafood: z.enum(["yes", "no"], {
+      required_error: t("questionnaire.requiredField"),
+    }),
+    meat: z.enum(["yes", "no"], {
+      required_error: t("questionnaire.requiredField"),
+    }),
+    hotel: z.enum(["yes", "no"], {
+      required_error: t("questionnaire.requiredField"),
+    }),
+    busToTheCastle: z.enum(["yes", "no"], {
+      required_error: t("questionnaire.requiredField"),
+    }),
+    busToNovotel: z.enum(["yes", "no"], {
+      required_error: t("questionnaire.requiredField"),
+    }),
     fullname: z.string({ required_error: t("questionnaire.requiredField") }),
     email: z
       .string({ required_error: t("questionnaire.requiredField") })
       .email(),
     phoneNumber: z.string({ required_error: t("questionnaire.requiredField") }),
     address: z
+      .string({ required_error: t("questionnaire.requiredField") })
+      .optional(),
+    anyOtherQueries: z
       .string({ required_error: t("questionnaire.requiredField") })
       .optional(),
   });
@@ -69,7 +78,7 @@ export const Questionnaire = () => {
     <section
       id="questionnaire"
       className="section container flex flex-col gap-16 justify-center items-center text-center min-h-viewport-1/2 md:min-h-viewport py-28">
-      <div className="flex flex-col items-center gap-4">
+      <div className="flex flex-col items-center gap-4 bg-secondary">
         <h3 className="text-4xl font-medium font-PlayfairDisplay mb-2">
           {t("questionnaire.title")}
         </h3>
@@ -78,7 +87,7 @@ export const Questionnaire = () => {
       </div>
       <Form {...form}>
         <form
-          className="flex flex-col gap-8 md:min-w-[900px] p-10 rounded-md shadow-around"
+          className="flex flex-col gap-8 md:min-w-[900px] p-10 rounded-xl shadow-around text-start"
           onSubmit={form.handleSubmit(sendEmail)}>
           <div
             className={cn("grid md:grid-cols-2 gap-8", {
@@ -101,57 +110,129 @@ export const Questionnaire = () => {
                 required={!FormSchema.shape.confirmAttendance.isOptional()}
                 disabled={sent}
               />
-              <TextareaField
-                name="allergies"
-                label={t("questionnaire.allergies")}
-                required={!FormSchema.shape.allergies.isOptional()}
-                disabled={sent}
-              />
+              <div
+                className={cn("flex flex-col gap-6", {
+                  hidden: form.watch("confirmAttendance") !== "yes",
+                })}>
+                <div className="flex flex-col gap-2">
+                  <h3 className="text-lg font-medium">
+                    {t("questionnaire.section.menu")}
+                  </h3>
+                  <RadioGroupField
+                    name="seafood"
+                    label={t("questionnaire.seafood.title")}
+                    options={[
+                      {
+                        label: t("questionnaire.seafood.yes"),
+                        value: "yes",
+                      },
+                      {
+                        label: t("questionnaire.seafood.no"),
+                        value: "no",
+                      },
+                    ]}
+                    required={
+                      !FormSchema.shape.seafood.isOptional()
+                    }
+                    disabled={sent}
+                  />
+                </div>
+                <RadioGroupField
+                  name="meat"
+                  label={t("questionnaire.meat.title")}
+                  options={[
+                    {
+                      label: t("questionnaire.meat.yes"),
+                      value: "yes",
+                    },
+                    {
+                      label: t("questionnaire.meat.no"),
+                      value: "no",
+                    },
+                  ]}
+                  required={
+                    !FormSchema.shape.meat.isOptional()
+                  }
+                  disabled={sent}
+                />
+                <div className="flex flex-col gap-2">
+                  <h3 className="text-lg font-medium">
+                    {t("questionnaire.section.hotel")}
+                  </h3>
+                  <RadioGroupField
+                    name="hotel"
+                    label={t("questionnaire.hotel.title")}
+                    options={[
+                      {
+                        label: t("questionnaire.hotel.yes"),
+                        value: "yes",
+                      },
+                      {
+                        label: t("questionnaire.hotel.no"),
+                        value: "no",
+                      },
+                    ]}
+                    required={
+                      !FormSchema.shape.hotel.isOptional()
+                    }
+                    disabled={sent}
+                  />
+                </div>
+              </div>
             </div>
             <div
-              className={cn('flex flex-col gap-5',{
+              className={cn("flex flex-col gap-6", {
                 hidden: form.watch("confirmAttendance") !== "yes",
               })}>
+              <div className="flex flex-col gap-2">
+                <h3 className="text-lg font-medium">
+                  {t("questionnaire.section.transportation")}
+                </h3>
+                <RadioGroupField
+                  name="busToTheCastle"
+                  label={t("questionnaire.busToTheCastle.title")}
+                  options={[
+                    {
+                      label: t("questionnaire.busToTheCastle.yes"),
+                      value: "yes",
+                    },
+                    {
+                      label: t("questionnaire.busToTheCastle.no"),
+                      value: "no",
+                    },
+                  ]}
+                  required={
+                    !FormSchema.shape.busToTheCastle.isOptional()
+                  }
+                  disabled={sent}
+                />
+              </div>
               <RadioGroupField
-                name="transportToWeddingVenue"
-                label={t("questionnaire.transportToWeddingVenue.title")}
+                name="busToNovotel"
+                label={t("questionnaire.busToNovotel.title")}
                 options={[
                   {
-                    label: t("questionnaire.transportToWeddingVenue.onMyOwn"),
-                    value: "onMyOwn",
+                    label: t("questionnaire.busToNovotel.yes"),
+                    value: "yes",
                   },
                   {
-                    label: t("questionnaire.transportToWeddingVenue.needHelp"),
-                    value: "needHelp",
+                    label: t("questionnaire.busToNovotel.no"),
+                    value: "no",
                   },
                 ]}
                 required={
-                  !FormSchema.shape.transportToWeddingVenue.isOptional()
+                  !FormSchema.shape.busToNovotel.isOptional()
                 }
                 disabled={sent}
               />
-              <RadioGroupField
-                name="transportToHotel"
-                label={t("questionnaire.transportToHotel.title")}
-                options={[
-                  {
-                    label: t("questionnaire.transportToHotel.onMyOwn"),
-                    value: "onMyOwn",
-                  },
-                  {
-                    label: t("questionnaire.transportToHotel.needHelp"),
-                    value: "needHelp",
-                  },
-                  {
-                    label: t("questionnaire.transportToHotel.notRelevant"),
-                    value: "notRelevant",
-                  },
-                ]}
-                required={!FormSchema.shape.transportToHotel.isOptional()}
-                disabled={sent}
-              />
+              <TextareaField
+                    name="anyOtherQueries"
+                    label={t("questionnaire.anyOtherQueries")}
+                    required={!FormSchema.shape.anyOtherQueries.isOptional()}
+                    disabled={sent}
+                  />
             </div>
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-col gap-6">
               <InputField
                 name="fullname"
                 label={t("questionnaire.fullName")}

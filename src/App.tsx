@@ -5,7 +5,7 @@ import "./App.css";
 import { Schedule } from "./sections/Schedule";
 import { Questionnaire } from "./sections/Questionnaire";
 import { Gifts } from "./sections/Gifts";
-import { Transport } from "./sections/Transport";
+import { Localization } from "./sections/Localization";
 import { useEffect } from "react";
 import { config } from "./config";
 import { useTranslation } from "./translations/useTranslation";
@@ -32,8 +32,8 @@ function App() {
       <Navbar />
       <Welcome />
       <Schedule />
+      <Localization />
       <Accommodation />
-      <Transport />
       <Questionnaire />
       <Gifts />
       {/* <Photos /> */}

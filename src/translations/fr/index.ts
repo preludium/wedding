@@ -17,7 +17,7 @@ export default {
     welcome: "Accueil",
     schedule: "Programme",
     questionnaire: "Questionnaire",
-    transport: "Transport",
+    localization: "Localisation",
     accommodation: "Hébergement",
     gifts: "Cadeaux",
     photos: "Photos",
@@ -41,7 +41,7 @@ export default {
   schedule: {
     title: "Programme",
     weddingCeremony: {
-      time: "14:00",
+      time: "14:30",
       title: "Cérémonie de mariage",
     },
     transferToWeddingVenue: {
@@ -68,6 +68,10 @@ export default {
       time: "23:00",
       title: "Première danse",
     },
+    snack: {
+      time: "00:30",
+      title: "Petit-déjeuner",
+    },
     firstBus: {
       time: "1:30",
       title: "Premier bus pour l'hôtel",
@@ -77,53 +81,70 @@ export default {
       title: "Deuxième bus pour l'hôtel",
     }
   },
-  transport: {
-    title: "Transport",
+  localization: {
+    title: "Localisation",
     ceremony: "Cérémonie",
     wedding: "Réception",
     hotel: "Hôtel",
-    info1:
-      "Nous proposons un service de transport pour les invités entre l'église et le château - nous demanderons une confirmation dans le questionnaire en raison du nombre limité de places.",
-    info2:
-      "Nous proposons un service de transport entre le château et l'hôtel à deux heures fixes - nous vous demanderons de confirmer votre choix dans le questionnaire en raison du nombre limité de places.",
+    info:
+      "Nous proposons un service de transport entre l'église et le château - merci de confirmer votre participation dans le questionnaire ci-dessous",
   },
   accommodation: {
-    p1: "Nous vous informons que nous ne fournissons pas d’hébergement dans le cadre de notre réception de mariage. Cependant, nous vous recommandons avec plaisir de séjourner au Novotel Marne-la-Vallée Collégien, qui est idéalement situé.",
+    p1: "Nous vous informons que nous ne fournissons pas d'hébergement dans le cadre de notre réception de mariage. Cependant, nous vous recommandons avec plaisir de séjourner au Novotel Marne-la-Vallée Collégien, qui est idéalement situé.",
     p2: "Dans le cadre des festivités, nous avons le plaisir de vous offrir un petit-déjeuner le lendemain dans cet hôtel.",
-    p3: "Pour effectuer une réservation, merci de nous contacter directement ou de prendre contact avec l’hôtel: <strong>Novotel Marne- la - Vallée Collégien</strong>",
-    p4: "Si vous effectuez votre réservation directement auprès de l’hôtel, merci de bien vouloir informer que vous êtes invités à notre mariage."
+    p3: "Pour effectuer une réservation, merci de nous contacter directement ou de prendre contact avec l'hôtel: <strong>Novotel Marne- la - Vallée Collégien</strong>",
+    p4: "Si vous effectuez votre réservation directement auprès de l'hôtel, merci de bien vouloir informer que vous êtes invités à notre mariage.",
+    info: "Nous proposons un service de transport retour vers le Novotel à 1h30 et 3h00 - merci de confirmer votre participation dans le questionnaire ci-dessous"
   },
   questionnaire: {
     title: "Faites-nous savoir que vous serez des nôtres!",
     p: "Votre présence est extrêmement importante pour nous et nous aimerions partager ce moment spécial avec vous. Veuillez confirmer votre présence afin que nous puissions préparer correctement le lieu pour vous et célébrer ce jour spécial ensemble.",
+    section: {
+      menu: "Menu",
+      hotel: "Hôtel",
+      transportation: "Transport",
+    },
     confirmAttendance: {
       title: "Confirmez votre présence à notre mariage",
       yes: "Bien sûr, je serai là!",
       no: "Je suis désolé(e), je ne pourrai pas être avec vous ce jour-là",
     },
-    transportToWeddingVenue: {
-      title:
-        "Comment vous rendrez-vous au lieu de réception (Château de Lésigny)?",
-      onMyOwn: "Par mes propres moyens",
-      needHelp: "J'ai besoin d'aide",
+    seafood: {
+      title: "Un menu avec des fruits de mer vous conviendrait-il?",
+      yes: "Oui",
+      no: "Non, je préfère l'option végétarienne",
     },
-    transportToHotel: {
-      title: "Comment retournerez-vous à l'hôtel?",
-      onMyOwn: "Par mes propres moyens",
-      needHelp: "J'ai besoin d'aide",
-      notRelevant: "Non applicable",
+    meat: {
+      title: "Un menu avec du veau vous conviendrait-il?",
+      yes: "Oui",
+      no: "Non, je préfère l'option végétarienne",
+    },
+    hotel: {
+      title: "Restez-vous avec nous au Novotel?",
+      yes: "Oui, j'ai fait ma réservation",
+      no: "Non, je loge ailleurs",
+    },
+    busToTheCastle: {
+      title: "Je souhaite réserver une place dans le bus de l'église au château",
+      yes: "Oui",
+      no: "Non",
+    },
+    busToNovotel: {
+      title: "Je souhaite réserver une place dans le bus de nuit du château au Novotel",
+      yes: "Oui",
+      no: "Non",
     },
     allergies: "Allergies et/ou régimes alimentaires particuliers",
-    address: "Adresse de résidence",
-    email: "Email",
+    address: "Adresse de résidence (pour envoyer les invitations)",
     fullName: "Nom et prénom",
+    email: "Email",
     phoneNumber: "Numéro de téléphone",
     send: "Envoyer",
     sent: "Réponses envoyées",
     success: "Vos réponses ont été envoyées à Gabriela et Francis",
-    failure:
-      "L'envoi de vos réponses a échoué. Réessayez ou contactez directement Gabriela et Francis",
+    failure: "L'envoi de vos réponses a échoué. Réessayez ou contactez directement Gabriela et Francis",
     requiredField: "Ce champ est obligatoire",
+    anyOtherQueries: "Autres questions",
   },
   gifts: {
     title: "Cadeaux",

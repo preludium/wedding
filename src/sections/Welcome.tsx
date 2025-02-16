@@ -74,7 +74,7 @@ export const Welcome = () => {
         <div className="border-[#e8ca9b] border-b-2 md:w-[30%] -md:w-[50%]" />
       </div>
         <div className="container grid grid-cols-2 items-center -md:grid-cols-1 -md:gap-8 md:gap-20">
-          <div className="flex flex-col gap-6 shadow-around p-8 rounded-xl bg-white h-fit">
+          <div className="flex flex-col gap-6 shadow-around p-8 rounded-xl bg-secondary h-fit">
             <p>{t("welcome.heading")}</p>
             <p>{t("welcome.p1")}</p>
             {/* <p>{t("welcome.hereYouWillFind")}</p>

@@ -20,16 +20,20 @@ interface Props {
 export function RadioGroupField({ name, label, options, required, disabled }: Props) {
   const { control } = useFormContext();
 
+  const labelWithAsterisk = (
+    <>
+      {label}
+      {required && <span className="text-destructive ml-1 inline-block">*</span>}
+    </>
+  );
+
   return (
     <FormField
       control={control}
       name={name}
       render={({ field }) => (
         <FormItem className="space-y-3 text-start">
-          <FormLabel className="flex gap-1">
-            {label}
-            {required && <span className="text-destructive">*</span>}
-          </FormLabel>
+          <FormLabel>{labelWithAsterisk}</FormLabel>
           <FormControl>
             <RadioGroup
               onValueChange={field.onChange}

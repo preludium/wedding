@@ -18,7 +18,7 @@ export default {
     welcome: 'Główna',
     schedule: 'Harmonogram',
     questionnaire: 'Ankieta',
-    transport: 'Transport',
+    localization: 'Lokalizacja',
     accommodation: 'Zakwaterowanie',
     gifts: 'Prezenty',
     photos: 'Zdjęcia',
@@ -42,7 +42,7 @@ export default {
   schedule: {
     title: 'Harmonogram',
     weddingCeremony: {
-      time: "14:00",
+      time: "14:30",
       title: "Ceremonia ślubna",
     },
     transferToWeddingVenue: {
@@ -69,6 +69,10 @@ export default {
       time: "23:00",
       title: "Pierwszy taniec",
     },
+    snack: {
+      time: "00:30",
+      title: "Przekąska",
+    },
     firstBus: {
       time: "1:30",
       title: "Pierwszy autobus do hotelu",
@@ -78,41 +82,60 @@ export default {
       title: "Drugi autobus do hotelu",
     }
   },
-  transport: {
-    title: 'Transport',
+  localization: {
+    title: 'Lokalizacja',
     ceremony: "Ceremonia",
     wedding: "Wesele",
     hotel: "Hotel",
-    info1: 'Oferujemy transport dla gości między kościołem a zamkiem - poprosimy o potwierdzenie w kwestionnariuszu ze względu na ograniczoną liczbę miejsc',
-    info2: 'Oferujemy transport dla gości między zamkiem a hotelem o 2 ustalonych godzinach - poprosimy o potwierdzenie w kwestionnariuszu ze względu na ograniczoną liczbę miejsc'
+    info: 'Oferujemy transport dla gości między kościołem a zamkiem - prosimy o potwierdzenie w kwestionariuszu poniżej',
   },
   accommodation: {
     p1: "Informujemy, że nie zapewniamy zakwaterowania w ramach naszego przyjęcia weselnego. Jednak z przyjemnością polecamy skorzystanie z noclegu w <strong>Novotel Marne-la-Vallée Collégien</strong>, który znajduje się w dogodnej lokalizacji.",
-    p2: "W ramach uroczystości zapewniamy jednak <strong>śniadanie następnego dnia w powyższym hotelu</strong>.",
+    p2: "W ramach uroczystości zapewniamy <strong>śniadanie następnego dnia w powyższym hotelu</strong>.",
     p3: "W celu dokonania rezerwacji noclegu prosimy o kontakt z nami lub zapraszamy do kontaktu bezpośrednio z hotelem",
-    p4: "Jeśli dokonujecie rezerwacji bezpośrednio w hotelu, prosimy o poinformowanie, że jesteście naszymi gośćmi weselnymi."
+    p4: "Jeśli dokonujecie rezerwacji bezpośrednio w hotelu, prosimy o poinformowanie, że jesteście naszymi gośćmi weselnymi.",
+    info: "Oferujemy transport powrotny dla gości do Novotel o 1:30 i 3:00 - prosimy o potwierdzenie w kwestionariuszu poniżej"
   },
   questionnaire: {
     title: "Daj znać, że będziesz z nami!",
     p: "Twoja obecność jest dla nas niezwykle ważna i chcielibyśmy razem z Tobą podzielić się tą wyjątkową chwilą. Prosimy o potwierdzenie swojej obecności, abyśmy mogli odpowiednio przygotować miejsce dla Ciebie i razem uczcić ten wyjątkowy dzień.",
+    section: {
+      menu: "Menu",
+      hotel: "Hotel",
+      transportation: "Transport",
+    },
     confirmAttendance: {
       title: 'Potwierdź swoją obecność na naszym ślubie',
       yes: 'Oczywiście, będę!',
       no: 'Przepraszam, nie mogę być z Wami tego dnia'
     },
-    transportToWeddingVenue: {
-      title: 'Jak dotrzesz na miejsce wesela (Château de Lésigny)?',
-      onMyOwn: 'We własnym zakresie',
-      needHelp: 'Potrzebuję pomocy',
+    seafood: {
+      title: "Czy odpowiada Ci menu z owocami morza?",
+      yes: "Tak",
+      no: "Nie, wolę opcję wegetariańską",
     },
-    transportToHotel: {
-      title: 'Jak wrócisz do hotelu?',
-      onMyOwn: 'We własnym zakresie',
-      needHelp: 'Potrzebuję pomocy',
-      notRelevant: 'Nie dotyczy'
+    meat: {
+      title: "Czy odpowiada Ci menu z mięsem (cielęciną)?",
+      yes: "Tak",
+      no: "Nie, wolę opcję wegetariańską",
+    },
+    hotel: {
+      title: "Czy zostajesz z nami w hotelu Novotel?",
+      yes: "Tak, dokonałem/am rezerwacji",
+      no: "Nie, nocuję gdzie indziej",
+    },
+    busToTheCastle: {
+      title: "Chcę zarezerwować miejsce w autobusie z kościoła do zamku",
+      yes: "Tak",
+      no: "Nie",
+    },
+    busToNovotel: {
+      title: "Chcę zarezerwować miejsce w nocnym autobusie z zamku do hotelu Novotel",
+      yes: "Tak",
+      no: "Nie",
     },
     allergies: "Alergie i/lub specjalne wymagania dietetyczne",
-    address: "Adres zamieszkania",
+    address: "Adres zamieszkania (do wysyłania zaproszeń)",
     fullName: 'Imię i nazwisko',
     email: 'Email',
     phoneNumber: 'Numer telefonu',
@@ -120,7 +143,8 @@ export default {
     sent: "Wysłano odpowiedzi",
     success: "Twoje odpowiedzi zostały wysłane do Gabrieli i Francisa",
     failure: "Wysyłanie odpowiedzi nie powiodło się. Spróbuj ponownie lub skontaktuj się bezpośrednio z Gabrielą i Francisem",
-    requiredField: "To pole jest wymagane"
+    requiredField: "To pole jest wymagane",
+    anyOtherQueries: "Dodatkowe pytania",
   },
   gifts: {
     title: "Prezenty",

@@ -15,7 +15,7 @@ export default {
     welcome: "Main",
     schedule: "Schedule",
     questionnaire: "Questionnaire",
-    transport: "Transport",
+    localization: "Localization",
     accommodation: "Accommodation",
     gifts: "Gifts",
     photos: "Photos",
@@ -36,25 +36,23 @@ export default {
     p2: "We are grateful to share this exceptional day with the people closest to our hearts.Your presence will make our wedding even more beautiful!",
     greeting: "We can't wait to celebrate together!",
   },
-  transport: {
-    title: "Transport",
+  localization: {
+    title: "Localization",
     ceremony: "Ceremony",
     wedding: "Wedding",
     hotel: "Hotel",
-    info1:
-      "We offer transport for guests between the church and the castle - we will ask for confirmation in the questionnaire due to the limited number of places",
-    info2:
-      "We offer transport for guests between the castle and the hotel at 2 fixed times - we will ask for confirmation in the questionnaire due to the limited number of places",
+    info:
+      "We offer transportation for guests between the church and the castle – please confirm your participation in the questionnaire below",
   },
   schedule: {
     title: "Schedule",
     weddingCeremony: {
-      time: "2:00 PM",
+      time: "2:30 PM",
       title: "Wedding Ceremony",
     },
     transferToWeddingVenue: {
       time: "3:30 PM",
-      title: "Transfer to the Wedding Venue",
+      title: "Transfer to the Reception Venue",
     },
     groupPhotos: {
       time: "4:00 PM",
@@ -76,6 +74,10 @@ export default {
       time: "11:00 PM",
       title: "First dance",
     },
+    snack: {
+      time: "00:30 AM",
+      title: "Snack",
+    },
     firstBus: {
       time: "1:30 AM",
       title: "First bus to the hotel",
@@ -89,29 +91,23 @@ export default {
     p1: "Please be advised that we do not provide accommodation as part of our wedding reception. However, we are happy to recommend that you use the <strong>Novotel Marne-la-Vallée Collégien</strong> for your overnight stay, which is conveniently located.",
     p2: "As part of the ceremony, we provide <strong>breakfast the following day at the above hotel</strong>.",
     p3: "For accommodation reservations, please contact us or feel free to contact the hotel directly",
-    p4: "If you are booking directly with the hotel, please inform us that you are our wedding guests."
+    p4: "If you are booking directly with the hotel, please inform us that you are our wedding guests.",
+    info: "We offer transportation for guests back to Novotel at 1.30 and 3am – please confirm your participation in the questionnaire below"
   },
   questionnaire: {
     title: "Let us know you'll be with us!",
     p: "Your presence is extremely important to us and we would like to share this special moment with you. Please confirm your presence so that we can properly prepare the venue for you and celebrate this special day together.",
+    section: {
+      menu: "Menu",
+      hotel: "Hotel",
+      transportation: "Transportation",
+    },
     confirmAttendance: {
       title: "Confirm your attendance at our wedding",
       yes: "Of course I will!",
       no: "I am sorry, I cannot be with you on that day",
     },
-    transportToWeddingVenue: {
-      title: "How will you get to the wedding venue (Château de Lésigny)?",
-      onMyOwn: "On my own",
-      needHelp: "I need help",
-    },
-    transportToHotel: {
-      title: "How will you get back to the hotel?",
-      onMyOwn: "On my own",
-      needHelp: "I need help",
-      notRelevant: "Not relevant",
-    },
-    allergies: "Allergies and/or special dietary requirements",
-    address: "Residence address",
+    address: "Residence address (to send out invitations)",
     fullName: "Full name",
     email: "Email",
     phoneNumber: "Phone number",
@@ -121,6 +117,32 @@ export default {
     failure:
       "Sending your answers has failed. Try once again or contact Gabriela and Francis directly",
     requiredField: "This field is required",
+    seafood: {
+      title: "Would a menu featuring seafood suit your preferences?",
+      yes: "Yes",
+      no: "No, I’d opt for vegetarian",
+    },
+    meat: {
+      title: "Would a menu featuring meat (veal) suit your preferences?",
+      yes: "Yes",
+      no: "No, I’d opt for vegetarian",
+    },
+    hotel: {
+      title: "Are you staying in Novotel with us?",
+      yes: "Yes, I made my reservation",
+      no: "No, I’m staying somewhere else",
+    },
+    busToTheCastle: {
+      title: "I’d like to reserve a seat on the bus from the church to the castle",
+      yes: "Yes",
+      no: "No",
+    },
+    busToNovotel: {
+      title: "I’d like to reserve a seat on the night bus from the castle to Novotel",
+      yes: "Yes",
+      no: "No",
+    },
+    anyOtherQueries: "Any other queries",
   },
   gifts: {
     title: "Gifts",

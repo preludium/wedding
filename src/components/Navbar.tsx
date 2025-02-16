@@ -34,8 +34,8 @@ const useRoutes = (): RouteProps[] => {
       label: t("nav.schedule"),
     },
     {
-      href: "#transport",
-      label: t("nav.transport"),
+      href: "#localization",
+      label: t("nav.localization"),
     },
     {
       href: "#accommodation",
