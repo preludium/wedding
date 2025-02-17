@@ -2,7 +2,7 @@ import en from "../en";
 
 export default {
   common: {
-    date: "14 août 2024",
+    date: "14 août 2025",
     location: "Lésigny, France",
     and: "et",
     days: "Jours",

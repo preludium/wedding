@@ -1,6 +1,6 @@
 export default {
   common: {
-    date: "14th August 2024",
+    date: "14th August 2025",
     location: "Lésigny, France",
     and: "and",
     days: "Days",

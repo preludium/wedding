@@ -2,7 +2,7 @@ import en from '../en';
 
 export default {
   common: {
-    date: "14 Sierpnia 2024",
+    date: "14 Sierpnia 2025",
     location: "Lésigny, Francja",
     and: "i",
     dearQuests: "Drodzy Goście",
