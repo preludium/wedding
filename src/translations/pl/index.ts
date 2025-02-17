@@ -90,12 +90,10 @@ export default {
     info: 'Oferujemy transport dla gości między kościołem a zamkiem - prosimy o potwierdzenie w kwestionariuszu poniżej',
   },
   accommodation: {
-    p1: "Informujemy, że nie zapewniamy zakwaterowania w ramach naszego przyjęcia weselnego. Jednak z przyjemnością polecamy skorzystanie z noclegu w <strong>Novotel Marne-la-Vallée Collégien</strong>, który znajduje się w dogodnej lokalizacji.",
-    p2: "W ramach uroczystości zapewniamy <strong>śniadanie następnego dnia w powyższym hotelu</strong>.",
-    p3: "Dla gości szukających alternatywnego noclegu polecamy hotel <strong>Abbaye du Golf</strong>, gdzie można skorzystać z specjalnej zniżki używając kodu <strong>EXT20</strong>",
-    p4: "W celu dokonania rezerwacji noclegu prosimy o kontakt z nami lub zapraszamy do kontaktu bezpośrednio z hotelem",
-    p5: "Jeśli dokonujecie rezerwacji bezpośrednio w hotelu, prosimy o poinformowanie, że jesteście naszymi gośćmi weselnymi.",
-    info: "Oferujemy transport powrotny dla gości do Novotel o 1:30 i 3:00 - prosimy o potwierdzenie w kwestionariuszu poniżej",
+    p1: "Informujemy, że nie zapewniamy zakwaterowania w ramach naszego przyjęcia weselnego. Jednak z przyjemnością polecamy poniżej wymienione hotele.",
+    p2: "W sprawie rezerwacji noclegów prosimy o kontakt z nami lub bezpośrednio z hotelem",
+    discount: "Użyj kodu <strong>EXT20</strong> na stronie hotelu",
+    info: "Oferujemy transport powrotny dla gości do hotelu o 1:30 i 3:00 - prosimy o potwierdzenie w kwestionariuszu poniżej",
     fromTheCastle: "od zamku <strong>Château de Lésigny</strong>",
   },
   questionnaire: {
@@ -133,7 +131,7 @@ export default {
       no: "Nie",
     },
     busToNovotel: {
-      title: "Chcę zarezerwować miejsce w nocnym autobusie z zamku do hotelu Novotel",
+      title: "Chcę zarezerwować miejsce w nocnym autobusie z zamku do hotelu",
       yes: "Tak",
       no: "Nie",
     },

@@ -88,12 +88,10 @@ export default {
     }
   },
   accommodation: {
-    p1: "Please be advised that we do not provide accommodation as part of our wedding reception. However, we are happy to recommend that you use the <strong>Novotel Marne-la-Vallée Collégien</strong> for your overnight stay, which is conveniently located.",
-    p2: "As part of the ceremony, we provide <strong>breakfast the following day at the above hotel</strong>.",
-    p3: "For guests seeking alternative accommodation, we recommend the nearby hotel <strong>Abbaye du Golf</strong>, where you can enjoy a special rate using code <strong>EXT20</strong>",
-    p4: "For accommodation reservations, please contact us or feel free to contact the hotel directly",
-    p5: "If you are booking directly with the hotel, please inform us that you are our wedding guests.",
-    info: "We offer transportation for guests back to Novotel at 1.30 and 3am – please confirm your participation in the questionnaire below",
+    p1: "Please be advised that we do not provide accommodation as part of our wedding reception. However, we are happy to recommend the below-listed hotels.",
+    p2: "For accommodation reservations, please contact us or feel free to contact the hotel directly",
+    discount: "Use the discount code <strong>EXT20</strong> on the hotel website",
+    info: "We offer transportation for guests back to hotel at 1.30 and 3am – please confirm your participation in the questionnaire below",
     fromTheCastle: "from the <strong>Château de Lésigny</strong>",
   },
   questionnaire: {
@@ -141,7 +139,7 @@ export default {
       no: "No",
     },
     busToNovotel: {
-      title: "I’d like to reserve a seat on the night bus from the castle to Novotel",
+      title: "I’d like to reserve a seat on the night bus from the castle to hotel",
       yes: "Yes",
       no: "No",
     },

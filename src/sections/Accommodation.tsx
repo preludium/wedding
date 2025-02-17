@@ -25,9 +25,6 @@ export const Accommodation = () => {
               <p>{t("common.dearGuests")},</p>
               <p dangerouslySetInnerHTML={{ __html: t("accommodation.p1") }} />
               <p dangerouslySetInnerHTML={{ __html: t("accommodation.p2") }} />
-              <p dangerouslySetInnerHTML={{ __html: t("accommodation.p3") }} />
-              <p dangerouslySetInnerHTML={{ __html: t("accommodation.p4") }} />
-              <p dangerouslySetInnerHTML={{ __html: t("accommodation.p5") }} />
             </div>
           </div>
 
@@ -51,6 +48,7 @@ export const Accommodation = () => {
                 <span dangerouslySetInnerHTML={{ __html: t("accommodation.fromTheCastle") }} />
                   </span>
               </div>
+              <div className='invisible'>nothing important</div>
               <div className="flex -md:flex-col items-center gap-6 justify-evenly">
                 <Button asChild>
                   <a
@@ -104,6 +102,7 @@ export const Accommodation = () => {
                   <span dangerouslySetInnerHTML={{ __html: t("accommodation.fromTheCastle") }} />
                   </span>
               </div>
+              <p className='m-0 text-center' dangerouslySetInnerHTML={{ __html: t("accommodation.discount") }} />
               <div className="flex gap-6 justify-center">
                 <Button asChild>
                   <a

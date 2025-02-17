@@ -90,12 +90,10 @@ export default {
       "Nous proposons un service de transport entre l'église et le château - merci de confirmer votre participation dans le questionnaire ci-dessous",
   },
   accommodation: {
-    p1: "Nous vous informons que nous ne fournissons pas d'hébergement dans le cadre de notre réception de mariage. Cependant, nous vous recommandons avec plaisir de séjourner au Novotel Marne-la-Vallée Collégien, qui est idéalement situé.",
-    p2: "Dans le cadre des festivités, nous avons le plaisir de vous offrir un petit-déjeuner le lendemain dans cet hôtel.",
-    p3: "Pour les invités cherchant un hébergement alternatif, nous recommandons l'hôtel <strong>Abbaye du Golf</strong> à proximité, où vous pouvez bénéficier d'un tarif préférentiel en utilisant le code <strong>EXT20</strong>",
-    p4: "Pour effectuer une réservation, merci de nous contacter directement ou de prendre contact avec l'hôtel: <strong>Novotel Marne- la - Vallée Collégien</strong>",
-    p5: "Si vous effectuez votre réservation directement auprès de l'hôtel, merci de bien vouloir informer que vous êtes invités à notre mariage.",
-    info: "Nous proposons un service de transport retour vers le Novotel à 1h30 et 3h00 - merci de confirmer votre participation dans le questionnaire ci-dessous",
+    p1: "Nous ne proposons pas d'hébergement pour notre réception de mariage. Cependant, nous sommes heureux de vous recommander les hôtels ci-dessous.",
+    p2: "Pour les réservations d'hébergement, veuillez nous contacter ou nous contacter directement",
+    discount: "Utilisez le code <strong>EXT20</strong> sur le site web de l'hôtel",
+    info: "Nous proposons un service de transport pour le retour des clients à l'hôtel à 1h30 et 3h du matin - veuillez confirmer votre participation dans le questionnaire ci-dessous",
     fromTheCastle: "du <strong>Château de Lésigny</strong>",
   },
   questionnaire: {
@@ -133,7 +131,7 @@ export default {
       no: "Non",
     },
     busToNovotel: {
-      title: "Je souhaite réserver une place dans le bus de nuit du château au Novotel",
+      title: "Je souhaite réserver une place dans le bus de nuit du château au hotel",
       yes: "Oui",
       no: "Non",
     },
