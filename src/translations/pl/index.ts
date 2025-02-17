@@ -92,9 +92,11 @@ export default {
   accommodation: {
     p1: "Informujemy, że nie zapewniamy zakwaterowania w ramach naszego przyjęcia weselnego. Jednak z przyjemnością polecamy skorzystanie z noclegu w <strong>Novotel Marne-la-Vallée Collégien</strong>, który znajduje się w dogodnej lokalizacji.",
     p2: "W ramach uroczystości zapewniamy <strong>śniadanie następnego dnia w powyższym hotelu</strong>.",
-    p3: "W celu dokonania rezerwacji noclegu prosimy o kontakt z nami lub zapraszamy do kontaktu bezpośrednio z hotelem",
-    p4: "Jeśli dokonujecie rezerwacji bezpośrednio w hotelu, prosimy o poinformowanie, że jesteście naszymi gośćmi weselnymi.",
-    info: "Oferujemy transport powrotny dla gości do Novotel o 1:30 i 3:00 - prosimy o potwierdzenie w kwestionariuszu poniżej"
+    p3: "Dla gości szukających alternatywnego noclegu polecamy hotel <strong>Abbaye du Golf</strong>, gdzie można skorzystać z specjalnej zniżki używając kodu <strong>EXT20</strong>",
+    p4: "W celu dokonania rezerwacji noclegu prosimy o kontakt z nami lub zapraszamy do kontaktu bezpośrednio z hotelem",
+    p5: "Jeśli dokonujecie rezerwacji bezpośrednio w hotelu, prosimy o poinformowanie, że jesteście naszymi gośćmi weselnymi.",
+    info: "Oferujemy transport powrotny dla gości do Novotel o 1:30 i 3:00 - prosimy o potwierdzenie w kwestionariuszu poniżej",
+    fromTheCastle: "od zamku <strong>Château de Lésigny</strong>",
   },
   questionnaire: {
     title: "Daj znać, że będziesz z nami!",
@@ -120,8 +122,9 @@ export default {
       no: "Nie, wolę opcję wegetariańską",
     },
     hotel: {
-      title: "Czy zostajesz z nami w hotelu Novotel?",
-      yes: "Tak, dokonałem/am rezerwacji",
+      title: "Czy nocujecie w hotelu z nami?",
+      novotel: "Tak, zrobiłem rezerwację w Novotel",
+      abbayeDuGolf: "Tak, zrobiłem rezerwację w Abbaye du Golf",
       no: "Nie, nocuję gdzie indziej",
     },
     busToTheCastle: {

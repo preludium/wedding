@@ -92,9 +92,11 @@ export default {
   accommodation: {
     p1: "Nous vous informons que nous ne fournissons pas d'hébergement dans le cadre de notre réception de mariage. Cependant, nous vous recommandons avec plaisir de séjourner au Novotel Marne-la-Vallée Collégien, qui est idéalement situé.",
     p2: "Dans le cadre des festivités, nous avons le plaisir de vous offrir un petit-déjeuner le lendemain dans cet hôtel.",
-    p3: "Pour effectuer une réservation, merci de nous contacter directement ou de prendre contact avec l'hôtel: <strong>Novotel Marne- la - Vallée Collégien</strong>",
-    p4: "Si vous effectuez votre réservation directement auprès de l'hôtel, merci de bien vouloir informer que vous êtes invités à notre mariage.",
-    info: "Nous proposons un service de transport retour vers le Novotel à 1h30 et 3h00 - merci de confirmer votre participation dans le questionnaire ci-dessous"
+    p3: "Pour les invités cherchant un hébergement alternatif, nous recommandons l'hôtel <strong>Abbaye du Golf</strong> à proximité, où vous pouvez bénéficier d'un tarif préférentiel en utilisant le code <strong>EXT20</strong>",
+    p4: "Pour effectuer une réservation, merci de nous contacter directement ou de prendre contact avec l'hôtel: <strong>Novotel Marne- la - Vallée Collégien</strong>",
+    p5: "Si vous effectuez votre réservation directement auprès de l'hôtel, merci de bien vouloir informer que vous êtes invités à notre mariage.",
+    info: "Nous proposons un service de transport retour vers le Novotel à 1h30 et 3h00 - merci de confirmer votre participation dans le questionnaire ci-dessous",
+    fromTheCastle: "du <strong>Château de Lésigny</strong>",
   },
   questionnaire: {
     title: "Faites-nous savoir que vous serez des nôtres!",
@@ -120,8 +122,9 @@ export default {
       no: "Non, je préfère l'option végétarienne",
     },
     hotel: {
-      title: "Restez-vous avec nous au Novotel?",
-      yes: "Oui, j'ai fait ma réservation",
+      title: "Serez-vous dans un hôtel avec nous?",
+      novotel: "Oui, j'ai réservé à Novotel",
+      abbayeDuGolf: "Oui, j'ai réservé à l'Abbaye du Golf",
       no: "Non, je loge ailleurs",
     },
     busToTheCastle: {

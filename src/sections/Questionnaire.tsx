@@ -27,7 +27,7 @@ export const Questionnaire = () => {
     meat: z.enum(["yes", "no"], {
       required_error: t("questionnaire.requiredField"),
     }),
-    hotel: z.enum(["yes", "no"], {
+    hotel: z.string({
       required_error: t("questionnaire.requiredField"),
     }),
     busToTheCastle: z.enum(["yes", "no"], {
@@ -164,8 +164,11 @@ export const Questionnaire = () => {
                     label={t("questionnaire.hotel.title")}
                     options={[
                       {
-                        label: t("questionnaire.hotel.yes"),
-                        value: "yes",
+                        label: t("questionnaire.hotel.novotel"),
+                        value: "Novotel",
+                      },{
+                        label: t("questionnaire.hotel.abbayeDuGolf"),
+                        value: "Abbaye du Golf",
                       },
                       {
                         label: t("questionnaire.hotel.no"),
