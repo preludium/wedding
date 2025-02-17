@@ -22,7 +22,13 @@ module.exports = {
       calligrapher: [ 'Calligrapher' ],
       dhellia: [ 'Dhellia' ],
       PlayfairDisplay: [ 'Playfair Display' ],
-      alice: [ 'Alice' ]
+      alice: [ 'Alice' ],
+      sacramento: [ 'Sacramento' ],
+      greatVibes: [ 'GreatVibes' ],
+      alexBrush: [ 'AlexBrush' ],
+      lora: [ 'Lora' ],
+      allura: [ 'Allura' ],
+      dancingScript: [ 'DancingScript' ],
     },
     extend: {
       screens: {

@@ -18,8 +18,49 @@ html {
 }
 
 @font-face {
+  font-family: "DancingScript";
+  src: url("./assets/DancingScript/DancingScript-Regular.ttf") format("truetype");
+  src: url("./assets/DancingScript/DancingScript-Bold.ttf") format("truetype");
+  src: url("./assets/DancingScript/DancingScript-Medium.ttf") format("truetype");
+  src: url("./assets/DancingScript/DancingScript-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Allura";
+  src: url("./assets/Allura-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Sacramento";
+  src: url("./assets/Sacramento-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "GreatVibes";
+  src: url("./assets/GreatVibes-Regular.ttf") format("truetype"); 
+}
+
+@font-face {
+  font-family: "AlexBrush";
+  src: url("./assets/AlexBrush-Regular.ttf") format("truetype");
+}
+
+
+@font-face {
   font-family: "Dhellia";
   src: url("./assets/Dhellia.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Lora";
+  src: url("./assets/Lora/Lora-Regular.ttf") format("truetype"),
+    url("./assets/Lora/Lora-Medium.ttf") format("truetype"),
+    url("./assets/Lora/Lora-SemiBold.ttf") format("truetype"),
+    url("./assets/Lora/Lora-Bold.ttf") format("truetype"),
+    url("./assets/Lora/Lora-Italic.ttf") format("truetype"),
+    url("./assets/Lora/Lora-MediumItalic.ttf") format("truetype"),
+    url("./assets/Lora/Lora-SemiBoldItalic.ttf") format("truetype"),
+    url("./assets/Lora/Lora-BoldItalic.ttf") format("truetype");
 }
 
 @font-face {
@@ -54,7 +95,7 @@ html {
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Lora", sans-serif;
 }
 
 /* HeroCards background shadow */

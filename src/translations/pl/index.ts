@@ -91,7 +91,7 @@ export default {
   },
   accommodation: {
     p1: "Informujemy, że nie zapewniamy zakwaterowania w ramach naszego przyjęcia weselnego. Jednak z przyjemnością polecamy poniżej wymienione hotele.",
-    p2: "W sprawie rezerwacji noclegów prosimy o kontakt z nami lub bezpośrednio z hotelem",
+    p2: "W sprawie rezerwacji noclegów prosimy o bezpośredni kontakt z hotelami.",
     discount: "Użyj kodu <strong>EXT20</strong> na stronie hotelu",
     info: "Oferujemy transport powrotny dla gości do hotelu o 1:30 i 3:00 - prosimy o potwierdzenie w kwestionariuszu poniżej",
     fromTheCastle: "od zamku <strong>Château de Lésigny</strong>",

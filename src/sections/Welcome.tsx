@@ -59,10 +59,10 @@ export const Welcome = () => {
           <div className='container flex flex-col items-center justify-center gap-[200px] text-center'>
 
         <div className="flex flex-col items-center gap-20">
-          <h2 className="font-calligrapher text-7xl md:text-8xl font-medium">
+          <h2 className="font-dancingScript text-6xl md:text-8xl">
             {`Gabriela ${t("common.and")} Francis`}
           </h2>
-          <h3 className="text-2xl font-alice">{t("common.date")}</h3>
+          <h3 className="text-2xl">{t("common.date")}</h3>
         </div>
         {countDown}
           </div>
