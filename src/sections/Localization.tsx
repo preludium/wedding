@@ -9,7 +9,8 @@ export const Localization = () => {
   return (
     <section
       id="localization"
-      className="section container flex flex-col items-center text-center py-28 gap-12">
+      className="section flex flex-col items-center text-center py-28 bg-[#f3f3f3]">
+        <div className='container flex flex-col items-center gap-12'>
       <div className="flex flex-col w-full items-center gap-4">
         <h3 className="text-4xl font-medium justify-stretch font-PlayfairDisplay mb-2">
           {t("localization.title")}
@@ -64,6 +65,7 @@ export const Localization = () => {
       <div className="flex -md:flex-col items-center gap-4 p-6 -md:max-w-[500px] max-w-[1032px] text-sky-800 rounded-xl bg-sky-200">
         <TriangleAlert className="-md:w-[50px] -md:h-[50px] md:w-[1.25em] md:h-[1.25em] md:min-w-[20px] md:min-h-[20px]" />
         {t("localization.info")}
+      </div>
       </div>
       </div>
     </section>

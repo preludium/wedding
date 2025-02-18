@@ -68,7 +68,7 @@ export const Welcome = () => {
           </div>
       </section>
 
-      <section className="flex flex-col bg-[#f3f3f3] py-14 gap-12">
+      <section className="flex flex-col bg-[#f3f3f3] py-28 gap-12">
       <div className='flex flex-col items-center gap-4'>
         <h3 className='text-4xl font-medium font-PlayfairDisplay mb-2'>{t("welcome.title")}</h3>
         <div className="border-[#e8ca9b] border-b-2 md:w-[30%] -md:w-[50%]" />
