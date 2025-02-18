@@ -9,7 +9,7 @@ export const Localization = () => {
   return (
     <section
       id="localization"
-      className="section flex flex-col items-center text-center py-28 bg-[#f3f3f3]">
+      className="flex flex-col items-center text-center py-28 bg-[#f3f3f3]">
         <div className='container flex flex-col items-center gap-12'>
       <div className="flex flex-col w-full items-center gap-4">
         <h3 className="text-4xl font-medium justify-stretch font-PlayfairDisplay mb-2">
