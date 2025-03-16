@@ -93,7 +93,7 @@ export const Questionnaire = () => {
         </div>
         <Form {...form}>
           <form
-            className="flex flex-col gap-8 md:min-w-[900px] p-10 rounded-xl shadow-around-sm text-start bg-secondary"
+            className="flex flex-col gap-8 md:min-w-[900px] p-6 rounded-xl shadow-around-sm text-start bg-secondary"
             onSubmit={form.handleSubmit(sendEmail)}>
             <div
               className={cn("grid md:grid-cols-2 gap-8", {

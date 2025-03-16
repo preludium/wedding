@@ -87,6 +87,7 @@ module.exports = {
         'hero-top': "url('assets/hero-top-background.png')",
         'background-flowers': "url('assets/background.png')",
         'background-2-flowers': "url('assets/background-2.png')",
+        'background-3-flowers': "url('assets/background-3.png')",
       },
       borderRadius: {
         lg: "var(--radius)",
