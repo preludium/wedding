@@ -9,6 +9,7 @@ import weddingCakeUrl from "@/assets/schedule-icons/wedding-cake.png";
 import danceUrl from "@/assets/schedule-icons/dance.png";
 import busUrl from "@/assets/schedule-icons/bus.png";
 import burgerUrl from "@/assets/schedule-icons/burger.png";
+import { Heart } from "lucide-react";
 
 export const Schedule = () => {
   const { t } = useTranslation();
@@ -21,7 +22,11 @@ export const Schedule = () => {
         <h3 className="text-4xl font-medium font-PlayfairDisplay mb-2">
           {t("schedule.title")}
         </h3>
-        <div className="border-[#e8ca9b] border-b-2 md:w-[30%] -md:w-[50%]" />
+        <div className="flex items-center justify-center w-full">
+          <div className="h-[1px] bg-[#e8ca9b] md:w-[15%] -md:w-[25%]"></div>
+          <Heart className="mx-2 text-[#e8ca9b] h-5 w-5" />
+          <div className="h-[1px] bg-[#e8ca9b] md:w-[15%] -md:w-[25%]"></div>
+        </div>{" "}
       </div>
       <ul className="grid -md:grid-rows-9 md:grid-rows-[1fr,1px,1fr] -md:grid-cols-[1fr,1px,1fr] md:grid-cols-10 items-center gap-x-8 gap-y-6">
         <li
@@ -124,9 +129,7 @@ export const Schedule = () => {
           className={cn(
             `-md:col-start-3 md:col-start-8 -md:row-start-8 md:row-start-3`
           )}>
-          <h4 className="font-medium text-sm">
-            {t(`schedule.snack.title`)}
-          </h4>
+          <h4 className="font-medium text-sm">{t(`schedule.snack.title`)}</h4>
           <p>{t(`schedule.snack.time`)}</p>
         </li>
         <img

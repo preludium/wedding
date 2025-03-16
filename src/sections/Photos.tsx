@@ -1,5 +1,6 @@
 import { useTranslation } from "@/translations/useTranslation";
 import povUrl from "@/assets/pov.png";
+import { Heart } from "lucide-react";
 export const Photos = () => {
   const { t } = useTranslation();
 
@@ -11,7 +12,11 @@ export const Photos = () => {
         <h3 className="text-4xl font-medium font-PlayfairDisplay mb-2 text-center">
           {t("photos.title")}
         </h3>
-        <div className="border-[#e8ca9b] border-b-2 md:w-[30%] -md:w-[50%]" />
+        <div className="flex items-center justify-center w-full">
+          <div className="h-[1px] bg-[#e8ca9b] md:w-[15%] -md:w-[25%]"></div>
+          <Heart className="mx-2 text-[#e8ca9b] h-5 w-5" />
+          <div className="h-[1px] bg-[#e8ca9b] md:w-[15%] -md:w-[25%]"></div>
+        </div>{" "}
         <p className="text-center">{t("photos.p")}</p>
       </div>
       <div className="grid grid-cols-2 -md:grid-cols-1 items-center gap-8">

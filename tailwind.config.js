@@ -29,6 +29,7 @@ module.exports = {
       lora: [ 'Lora' ],
       allura: [ 'Allura' ],
       dancingScript: [ 'DancingScript' ],
+      geist: [ 'Geist' ],
     },
     extend: {
       screens: {
@@ -42,7 +43,8 @@ module.exports = {
         '-xl': { max: '1200px' }
       },
       boxShadow: {
-        around: 'rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px'
+        around: 'rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px',
+        'around-sm': 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;'
       },
       colors: {
         border: "hsl(var(--border))",

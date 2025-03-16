@@ -118,14 +118,15 @@ export default {
       "Sending your answers has failed. Try once again or contact Gabriela and Francis directly",
     requiredField: "This field is required",
     seafood: {
-      title: "Would a menu featuring seafood suit your preferences?",
+      title: "Would you like a menu with seafood as a starter?",
       yes: "Yes",
       no: "No, I’d opt for vegetarian",
     },
-    meat: {
-      title: "Would a menu featuring meat (veal) suit your preferences?",
-      yes: "Yes",
-      no: "No, I’d opt for vegetarian",
+    main: {
+      title: "What type of main course do you prefer?",
+      meat: "Meat",
+      fish: "Fish",
+      vegetarian: "Vegetarian option"
     },
     hotel: {
       title: "Are you staying in a hotel with us?",
@@ -149,8 +150,8 @@ export default {
     title: "Gifts",
     p1: "Your presence on this special day is the greatest gift and immense joy for us!",
     p2: "If you would like to mark our occasion in another way, we would be grateful for your support in the form of an online collection.",
-    p3: "Link to fundraising: ",
-    p4: "Thank you in advance",
+    p4: "Thank you in advance 💕",
+    link: "Donate"
   },
   photos: {
     title: "Share your memories!",

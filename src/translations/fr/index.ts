@@ -23,7 +23,7 @@ export default {
     photos: "Photos",
   },
   welcome: {
-    title: "Soyez avec nous!",
+    title: "Partagez ce moment avec nous !",
     heading: "Chers invités,",
     p1: "Nous sommes ravis de partager ce moment spécial avec vous! Très bientôt, nous célébrerons le début de notre voyage ensemble en tant que mari et femme. Ce site web a été créé pour vous aider à préparer cette journée spéciale et vous fournir toutes les informations nécessaires.",
     hereYouWillFind: "Vous trouverez ici:",
@@ -70,7 +70,7 @@ export default {
     },
     snack: {
       time: "00:30",
-      title: "Petit-déjeuner",
+      title: "Collation nocturne",
     },
     firstBus: {
       time: "1:30",
@@ -78,27 +78,27 @@ export default {
     },
     secondBus: {
       time: "3:00",
-      title: "Deuxième bus pour l'hôtel",
-    }
+      title: "Second bus pour l’hôtel",
+    },
   },
   localization: {
     title: "Localisation",
     ceremony: "Cérémonie",
     wedding: "Réception",
     hotel: "Hôtel",
-    info:
-      "Nous proposons un service de transport entre l'église et le château - merci de confirmer votre participation dans le questionnaire ci-dessous",
+    info: "Nous proposons un service de transport entre l'église et le château - merci de confirmer votre participation dans le questionnaire ci-dessous",
   },
   accommodation: {
-    p1: "Nous ne proposons pas d'hébergement pour notre réception de mariage. Cependant, nous sommes heureux de vous recommander les hôtels ci-dessous.",
+    p1: "Nous ne proposons pas d'hébergement. Cependant, nous sommes heureux de vous recommander les hôtels ci-dessous.",
     p2: "Pour les réservations d'hébergement, n'hésitez pas à contacter directement les hôtels.",
-    discount: "Utilisez le code <strong>EXT20</strong> sur le site web de l'hôtel",
+    discount:
+      "Utilisez le code <strong>EXT20</strong> sur le site web de l'hôtel",
     info: "Nous proposons un service de transport pour le retour des clients à l'hôtel à 1h30 et 3h du matin - veuillez confirmer votre participation dans le questionnaire ci-dessous",
     fromTheCastle: "du <strong>Château de Lésigny</strong>",
   },
   questionnaire: {
     title: "Faites-nous savoir que vous serez des nôtres!",
-    p: "Votre présence est extrêmement importante pour nous et nous aimerions partager ce moment spécial avec vous. Veuillez confirmer votre présence afin que nous puissions préparer correctement le lieu pour vous et célébrer ce jour spécial ensemble.",
+    p: "Votre présence est précieuse pour nous. Merci de bien vouloir confirmer votre venue afin que nous puissions organiser au mieux cette journée spéciale.",
     section: {
       menu: "Menu",
       hotel: "Hôtel",
@@ -106,18 +106,19 @@ export default {
     },
     confirmAttendance: {
       title: "Confirmez votre présence à notre mariage",
-      yes: "Bien sûr, je serai là!",
-      no: "Je suis désolé(e), je ne pourrai pas être avec vous ce jour-là",
+      yes: "Je serai présent",
+      no: "Non, je ne pourrai pas être là",
     },
     seafood: {
-      title: "Un menu avec des fruits de mer vous conviendrait-il?",
+      title: "Souhaitez-vous un menu avec des fruits de mer en entrée?",
       yes: "Oui",
       no: "Non, je préfère l'option végétarienne",
     },
-    meat: {
-      title: "Un menu avec du veau vous conviendrait-il?",
-      yes: "Oui",
-      no: "Non, je préfère l'option végétarienne",
+    main: {
+      title: "Quel type de plat principal préférez-vous?",
+      meat: "Viande",
+      fish: "Poisson",
+      vegetarian: "Option végétarienne",
     },
     hotel: {
       title: "Serez-vous dans un hôtel avec nous?",
@@ -126,12 +127,14 @@ export default {
       no: "Non, je loge ailleurs",
     },
     busToTheCastle: {
-      title: "Je souhaite réserver une place dans le bus de l'église au château",
+      title:
+        "Je souhaite réserver une place dans le bus de l'église au château",
       yes: "Oui",
       no: "Non",
     },
     busToNovotel: {
-      title: "Je souhaite réserver une place dans le bus de nuit du château au hotel",
+      title:
+        "Je souhaite réserver une place dans le bus de nuit du château à l’hôtel",
       yes: "Oui",
       no: "Non",
     },
@@ -143,16 +146,17 @@ export default {
     send: "Envoyer",
     sent: "Réponses envoyées",
     success: "Vos réponses ont été envoyées à Gabriela et Francis",
-    failure: "L'envoi de vos réponses a échoué. Réessayez ou contactez directement Gabriela et Francis",
+    failure:
+      "L'envoi de vos réponses a échoué. Réessayez ou contactez directement Gabriela et Francis",
     requiredField: "Ce champ est obligatoire",
     anyOtherQueries: "Autres questions",
   },
   gifts: {
     title: "Cadeaux",
     p1: "Votre présence en ce jour spécial est le plus beau cadeau et une immense joie pour nous!",
-    p2: "Si vous souhaitez marquer l'événement d'une autre manière, nous vous serions reconnaissants de nous soutenir par une collecte en ligne.",
-    p3: "Lien vers la collecte de fonds: ",
-    p4: "Je vous remercie d'avance",
+    p2: "Si vous souhaitez toutefois nous accompagner d’une attention supplémentaire, une cagnotte en ligne est à votre disposition.",
+    p4: "Merci de tout cœur pour votre délicate pensée 💕",
+    link: "Faire un don",
   },
   photos: {
     title: "Partagez vos souvenirs!",

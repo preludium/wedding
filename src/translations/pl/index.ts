@@ -110,14 +110,15 @@ export default {
       no: 'Przepraszam, nie mogę być z Wami tego dnia'
     },
     seafood: {
-      title: "Czy odpowiada Ci menu z owocami morza?",
+      title: "Czy chciałbyś menu z owocami morza jako przystawką?",
       yes: "Tak",
       no: "Nie, wolę opcję wegetariańską",
     },
-    meat: {
-      title: "Czy odpowiada Ci menu z mięsem (cielęciną)?",
-      yes: "Tak",
-      no: "Nie, wolę opcję wegetariańską",
+    main: {
+      title: "Jaki rodzaj dania głównego preferujesz?",
+      meat: "Mięso",
+      fish: "Ryba",
+      vegetarian: "Opcja wegetariańska",
     },
     hotel: {
       title: "Czy nocujecie w hotelu z nami?",
@@ -151,8 +152,8 @@ export default {
     title: "Prezenty",
     p1: "Wasza obecność w tym wyjątkowym dniu to dla nas największy prezent i ogromna radość!",
     p2: "Jeśli chcielibyście uczcić naszą okazję w inny sposób, będziemy wdzięczni za wsparcie w formie internetowej zbiórki.",
-    p3: "Link do zbiórki: ",
-    p4: "Z góry dziękujemy"
+    p4: "Z góry dziękujemy 💕"
+    , link: "Przekaż darowiznę"
   },
   photos: {
     title: 'Podziel się swoimi wspomnieniami!',

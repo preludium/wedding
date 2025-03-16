@@ -26,6 +26,14 @@ html {
 }
 
 @font-face {
+  font-family: "Geist";
+  src: url("./assets/Geist/Geist-Regular.ttf") format("truetype"),
+    url("./assets/Geist/Geist-Bold.ttf") format("truetype"),
+    url("./assets/Geist/Geist-Italic.ttf") format("truetype"),
+    url("./assets/Geist/Geist-BoldItalic.ttf") format("truetype");
+}
+
+@font-face {
   font-family: "Allura";
   src: url("./assets/Allura-Regular.ttf") format("truetype");
 }
