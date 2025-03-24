@@ -22,6 +22,7 @@ export default {
     accommodation: 'Zakwaterowanie',
     gifts: 'Prezenty',
     photos: 'Zdjęcia',
+    breakfast: 'Śniadanie'
   },
   welcome: {
     title: 'Bądźcie z nami!',
@@ -96,6 +97,15 @@ export default {
     info: "Oferujemy transport powrotny dla gości do hotelu o 1:30 i 3:00 - prosimy o potwierdzenie w kwestionariuszu poniżej",
     fromTheCastle: "od zamku <strong>Château de Lésigny</strong>",
   },
+  breakfast: {
+    title: 'Śniadanie 15 sierpnia',
+    p1: 'Po nocy pełnej radości, zabawy i niezapomnianych wspomnień, będzie nam ogromnie miło przedłużyć te wyjątkowe chwile i spotkać się z Wami w spokojniejszej, bardziej kameralnej atmosferze.',
+    p2: 'Zapraszamy Was serdecznie na <u>nieformalne śniadanie następnego dnia rano, 15 sierpnia, w hotelu Novotel Marne-la-Vallée.</u>',
+    p3: 'Niezależnie od tego, czy nocujecie w tym hotelu, czy gdzie indziej — <u>wszyscy jesteście mile widziani!</u>',
+    p4: 'Śniadanie jest <u>zapewnione i opłacone dla wszystkich naszych gości.</u>',
+    p5: 'Będzie to ostatnia okazja, by jeszcze raz się spotkać, porozmawiać i spędzić wspólnie trochę czasu, zanim się pożegnamy.',
+    greeting1: 'Mamy nadzieję, że będziecie z nami!',
+  },
   questionnaire: {
     title: "Daj znać, że będziesz z nami!",
     p: "Twoja obecność jest dla nas niezwykle ważna i chcielibyśmy razem z Tobą podzielić się tą wyjątkową chwilą. Prosimy o potwierdzenie swojej obecności, abyśmy mogli odpowiednio przygotować miejsce dla Ciebie i razem uczcić ten wyjątkowy dzień.",
@@ -103,6 +113,7 @@ export default {
       menu: "Menu",
       hotel: "Hotel",
       transportation: "Transport",
+      breakfast: "Śniadanie 15 sierpnia – Novotel Marne-la-Vallée Collégien"
     },
     confirmAttendance: {
       title: 'Potwierdź swoją obecność na naszym ślubie',
@@ -125,6 +136,11 @@ export default {
       novotel: "Tak, zrobiłem rezerwację w Novotel",
       abbayeDuGolf: "Tak, zrobiłem rezerwację w Abbaye du Golf",
       no: "Nie, nocuję gdzie indziej",
+    },
+    breakfast: {
+      title: 'Czy chcesz dołączyć do nas na to poranne spotkanie?'
+      , yes: 'Tak, z przyjemnością',
+      no: 'Nie, niestety nie będę mógł/mogła być obecny/a'
     },
     busToTheCastle: {
       title: "Chcę zarezerwować miejsce w autobusie z kościoła do zamku",

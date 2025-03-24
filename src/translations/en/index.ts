@@ -19,6 +19,7 @@ export default {
     accommodation: "Accommodation",
     gifts: "Gifts",
     photos: "Photos",
+    breakfast: "Breakfast",
   },
   welcome: {
     title: "Be with us!",
@@ -33,7 +34,7 @@ export default {
       "<strong>The schedule of the day</strong> - so you know what to expect.",
     bullet4: "<strong>RSVP</strong> - please confirm your attendance.",
     bullet5: "<strong>And other practical information.</strong>",
-    p2: "We are grateful to share this exceptional day with the people closest to our hearts.Your presence will make our wedding even more beautiful!",
+    p2: "We are grateful to share this exceptional day with the people closest to our hearts. Your presence will make our wedding even more beautiful!",
     greeting: "We can't wait to celebrate together!",
   },
   localization: {
@@ -94,6 +95,15 @@ export default {
     info: "We offer transportation for guests back to hotel at 1.30 and 3am – please confirm your participation in the questionnaire below",
     fromTheCastle: "from the <strong>Château de Lésigny</strong>",
   },
+  breakfast: {
+    title: 'Breakfast 15th August',
+    p1: 'After a night full of joy, fun, and unforgettable memories, we would be delighted to extend these special moments and meet you in a calmer, more intimate atmosphere.',
+    p2: 'We warmly invite you to an <u>informal breakfast the next morning, 15th August, at the Novotel Marne-la-Vallée hotel.</u>',
+    p3: 'Regardless of whether you are staying at this hotel or elsewhere — <u>everyone is welcome!</u>',
+    p4: 'Breakfast is <u>provided and paid for all our guests.</u>',
+    p5: 'This will be the last opportunity to meet again, chat, and spend some time together before we say goodbye.',
+    greeting1: 'We hope you will be with us!',
+  },
   questionnaire: {
     title: "Let us know you'll be with us!",
     p: "Your presence is extremely important to us and we would like to share this special moment with you. Please confirm your presence so that we can properly prepare the venue for you and celebrate this special day together.",
@@ -101,6 +111,7 @@ export default {
       menu: "Menu",
       hotel: "Hotel",
       transportation: "Transportation",
+      breakfast: "Breakfast 15th August – Novotel Marne-la-Vallée Collégien"
     },
     confirmAttendance: {
       title: "Confirm your attendance at our wedding",
@@ -133,6 +144,11 @@ export default {
       novotel: "Yes, I made my reservation at Novotel",
       abbayeDuGolf: "Yes, I made my reservation at Abbaye du Golf",
       no: "No, I’m staying somewhere else",
+    },
+    breakfast: {
+      title: 'Would you like to join us for this morning meeting?',
+      yes: 'Yes, with pleasure',
+      no: 'No, unfortunately I will not be able to attend'
     },
     busToTheCastle: {
       title: "I’d like to reserve a seat on the bus from the church to the castle",

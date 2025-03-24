@@ -113,7 +113,7 @@ export const Welcome = () => {
             <p>{t("welcome.greeting")}</p>
             <p>Gabriela & Francis</p>
           </div>
-          <div className='flex justify-center'>
+          <div className='flex'>
             <img src={photo} className="aspect-[4/3] max-h-[376px] rounded-lg shadow-around-sm"
             />
             </div>

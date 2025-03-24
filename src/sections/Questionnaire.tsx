@@ -37,6 +37,9 @@ export const Questionnaire = () => {
     busToNovotel: z.enum(["yes", "no"], {
       required_error: t("questionnaire.requiredField"),
     }),
+    breakfast: z.enum(["yes", "no"], {
+      required_error: t("questionnaire.requiredField"),
+    }),
     fullname: z.string({ required_error: t("questionnaire.requiredField") }),
     email: z
       .string({ required_error: t("questionnaire.requiredField") })
@@ -186,6 +189,27 @@ export const Questionnaire = () => {
                       disabled={sent}
                     />
                   </div>
+                  <div className="flex flex-col gap-2">
+                    <h3 className="text-lg font-medium">
+                      {t("questionnaire.section.breakfast")}
+                    </h3>
+                    <RadioGroupField
+                      name="breakfast"
+                      label={t("questionnaire.breakfast.title")}
+                      options={[
+                        {
+                          label: t("questionnaire.breakfast.yes"),
+                          value: "yes",
+                        },
+                        {
+                          label: t("questionnaire.breakfast.no"),
+                          value: "no",
+                        },
+                      ]}
+                      required={!FormSchema.shape.breakfast.isOptional()}
+                      disabled={sent}
+                    />
+                    </div>
                   <div className="flex flex-col gap-2">
                     <h3 className="text-lg font-medium">
                       {t("questionnaire.section.transportation")}

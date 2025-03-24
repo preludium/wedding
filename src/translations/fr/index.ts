@@ -21,6 +21,7 @@ export default {
     accommodation: "Hébergement",
     gifts: "Cadeaux",
     photos: "Photos",
+    breakfast: "Petit-déjeuner"
   },
   welcome: {
     title: "Partagez ce moment avec nous !",
@@ -96,6 +97,15 @@ export default {
     info: "Nous proposons un service de transport pour le retour des clients à l'hôtel à 1h30 et 3h du matin - veuillez confirmer votre participation dans le questionnaire ci-dessous",
     fromTheCastle: "du <strong>Château de Lésigny</strong>",
   },
+  breakfast: {
+    title: 'Petit-déjeuner du 15 août',
+    p1: 'Après une nuit de fête, de joie et de souvenirs inoubliables partagés ensemble, nous serions ravis de prolonger ces instants précieux avec vous autour d’un moment plus calme et convivial.',
+    p2: 'Nous vous proposons de nous retrouver le <u>lendemain matin, le 15 août</u>, pour un petit-déjeuner informel au <u>Hôtel Novotel Marne-la-Vallée.</u>',
+    p3: 'Le petit-déjeuner est <u>offert à tous nos invités.</u>',
+    p4: 'Breakfast is <u>provided and paid for all our guests.</u>',
+    p5: 'Ce sera l’occasion de nous retrouver une dernière fois et passer du temps ensemble avant de se dire au revoir.',
+    greeting1: 'Nous espérons vous y voir nombreux !',
+  },
   questionnaire: {
     title: "Faites-nous savoir que vous serez des nôtres!",
     p: "Votre présence est précieuse pour nous. Merci de bien vouloir confirmer votre venue afin que nous puissions organiser au mieux cette journée spéciale.",
@@ -103,6 +113,7 @@ export default {
       menu: "Menu",
       hotel: "Hôtel",
       transportation: "Transport",
+      breakfast: "Petit-déjeuner du 15 août – Novotel Marne-la-Vallée Collégien"
     },
     confirmAttendance: {
       title: "Confirmez votre présence à notre mariage",
@@ -125,6 +136,11 @@ export default {
       novotel: "Oui, j'ai réservé à Novotel",
       abbayeDuGolf: "Oui, j'ai réservé à l'Abbaye du Golf",
       no: "Non, je loge ailleurs",
+    },
+    breakfast: {
+      title: 'Souhaitez-vous vous joindre à nous pour ce moment convivial ?',
+      yes: 'Oui, avec plaisir',
+      no: 'Non, je ne pourrai pas être présent(e)'
     },
     busToTheCastle: {
       title:

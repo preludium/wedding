@@ -10,6 +10,7 @@ import { useEffect } from "react";
 import { config } from "./config";
 import { useTranslation } from "./translations/useTranslation";
 import { Accommodation } from './sections/Accommodation';
+import { Breakfast } from './sections/Breakfast';
 
 function App() {
   const { t } = useTranslation();
@@ -34,6 +35,7 @@ function App() {
       <Schedule />
       <Localization />
       <Accommodation />
+      <Breakfast />
       <Questionnaire />
       <Gifts />
       {/* <Photos /> */}
