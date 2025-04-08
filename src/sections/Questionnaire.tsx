@@ -17,29 +17,25 @@ import { z } from "zod";
 export const Questionnaire = () => {
   const { t } = useTranslation();
   const [sent, setSent] = useState(false);
+  
+  
+  const yesNoEnum = z.enum(["yes", "no"], {
+    required_error: t("questionnaire.requiredField"),
+  });
 
-  const FormSchema = z.object({
-    confirmAttendance: z.enum(["yes", "no"], {
-      required_error: t("questionnaire.requiredField"),
-    }),
-    seafood: z.enum(["yes", "no"], {
-      required_error: t("questionnaire.requiredField"),
-    }),
+  const FormSchema = z.discriminatedUnion('confirmAttendance',[
+    z.object({
+    confirmAttendance: yesNoEnum.extract(['yes']),
+    seafood: yesNoEnum,
     main: z.enum(["meat", "fish", "vegetarian"], {
       required_error: t("questionnaire.requiredField"),
     }),
     hotel: z.string({
       required_error: t("questionnaire.requiredField"),
     }),
-    busToTheCastle: z.enum(["yes", "no"], {
-      required_error: t("questionnaire.requiredField"),
-    }),
-    busToNovotel: z.enum(["yes", "no"], {
-      required_error: t("questionnaire.requiredField"),
-    }),
-    breakfast: z.enum(["yes", "no"], {
-      required_error: t("questionnaire.requiredField"),
-    }),
+    busToTheCastle: yesNoEnum,
+    busToNovotel: yesNoEnum,
+    breakfast: yesNoEnum,
     fullname: z.string({ required_error: t("questionnaire.requiredField") }),
     email: z
       .string({ required_error: t("questionnaire.requiredField") })
@@ -51,7 +47,19 @@ export const Questionnaire = () => {
     anyOtherQueries: z
       .string({ required_error: t("questionnaire.requiredField") })
       .optional(),
-  });
+  }),
+  z.object({
+    confirmAttendance: yesNoEnum.extract(['no']),
+    fullname: z.string({ required_error: t("questionnaire.requiredField") }),
+    email: z
+      .string({ required_error: t("questionnaire.requiredField") })
+      .email(),
+    phoneNumber: z.string({ required_error: t("questionnaire.requiredField") }),
+    address: z
+      .string({ required_error: t("questionnaire.requiredField") })
+      .optional()
+  })
+]);
 
   const [sending, setSending] = useState(false);
   const form = useForm<z.infer<typeof FormSchema>>({
@@ -116,7 +124,7 @@ export const Questionnaire = () => {
                       value: "no",
                     },
                   ]}
-                  required={!FormSchema.shape.confirmAttendance.isOptional()}
+                  required={!FormSchema.options[0].shape.confirmAttendance.isOptional()}
                   disabled={sent}
                 />
                 <div
@@ -140,7 +148,7 @@ export const Questionnaire = () => {
                           value: "no",
                         },
                       ]}
-                      required={!FormSchema.shape.seafood.isOptional()}
+                      required={!FormSchema.options[0].shape.seafood.isOptional()}
                       disabled={sent}
                     />
                   </div>
@@ -161,7 +169,7 @@ export const Questionnaire = () => {
                         value: "vegetarian",
                       },
                     ]}
-                    required={!FormSchema.shape.main.isOptional()}
+                    required={!FormSchema.options[0].shape.main.isOptional()}
                     disabled={sent}
                   />
                   <div className="flex flex-col gap-2">
@@ -185,7 +193,7 @@ export const Questionnaire = () => {
                           value: "no",
                         },
                       ]}
-                      required={!FormSchema.shape.hotel.isOptional()}
+                      required={!FormSchema.options[0].shape.hotel.isOptional()}
                       disabled={sent}
                     />
                   </div>
@@ -206,7 +214,7 @@ export const Questionnaire = () => {
                           value: "no",
                         },
                       ]}
-                      required={!FormSchema.shape.breakfast.isOptional()}
+                      required={!FormSchema.options[0].shape.breakfast.isOptional()}
                       disabled={sent}
                     />
                     </div>
@@ -227,7 +235,7 @@ export const Questionnaire = () => {
                           value: "no",
                         },
                       ]}
-                      required={!FormSchema.shape.busToTheCastle.isOptional()}
+                      required={!FormSchema.options[0].shape.busToTheCastle.isOptional()}
                       disabled={sent}
                     />
                   </div>
@@ -244,13 +252,13 @@ export const Questionnaire = () => {
                         value: "no",
                       },
                     ]}
-                    required={!FormSchema.shape.busToNovotel.isOptional()}
+                    required={!FormSchema.options[0].shape.busToNovotel.isOptional()}
                     disabled={sent}
                   />
                   <TextareaField
                     name="anyOtherQueries"
                     label={t("questionnaire.anyOtherQueries")}
-                    required={!FormSchema.shape.anyOtherQueries.isOptional()}
+                    required={!FormSchema.options[0].shape.anyOtherQueries.isOptional()}
                     disabled={sent}
                   />
                 </div>
@@ -260,25 +268,25 @@ export const Questionnaire = () => {
                 <InputField
                   name="fullname"
                   label={t("questionnaire.fullName")}
-                  required={!FormSchema.shape.fullname.isOptional()}
+                  required={!FormSchema.options[0].shape.fullname.isOptional()}
                   disabled={sent}
                 />
                 <InputField
                   name="phoneNumber"
                   label={t("questionnaire.phoneNumber")}
-                  required={!FormSchema.shape.phoneNumber.isOptional()}
+                  required={!FormSchema.options[0].shape.phoneNumber.isOptional()}
                   disabled={sent}
                 />
                 <InputField
                   name="email"
                   label={t("questionnaire.email")}
-                  required={!FormSchema.shape.email.isOptional()}
+                  required={!FormSchema.options[0].shape.email.isOptional()}
                   disabled={sent}
                 />
                 <InputField
                   name="address"
                   label={t("questionnaire.address")}
-                  required={!FormSchema.shape.address.isOptional()}
+                  required={!FormSchema.options[0].shape.address.isOptional()}
                   disabled={sent}
                 />
               </div>
