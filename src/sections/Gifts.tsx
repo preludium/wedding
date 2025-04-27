@@ -1,6 +1,12 @@
-import { Button } from '@/components/ui/button';
+import { Button } from "@/components/ui/button";
 import { useTranslation } from "@/translations/useTranslation";
-import { ArrowRightIcon, BanknoteIcon, GiftIcon, Heart } from "lucide-react";
+import {
+  ArrowRightIcon,
+  BanknoteIcon,
+  ExternalLink,
+  GiftIcon,
+  Heart,
+} from "lucide-react";
 
 export const Gifts = () => {
   const { t } = useTranslation();
@@ -40,10 +46,19 @@ export const Gifts = () => {
 
           <div className="flex flex-col gap-6 max-w-xl">
             <p>{t("gifts.p2")}</p>
-            <Button className='font-medium' disabled>{t('gifts.link')}</Button>
+            <Button asChild className="w-full font-medium">
+              <a
+                href="https://revolut.me/franci7sw"
+                referrerPolicy="no-referrer"
+                target="_blank"
+                className="flex gap-2 w-[150px]">
+                {t("gifts.link")}
+                <ExternalLink />
+              </a>
+            </Button>
           </div>
         </div>
-          <p>{t("gifts.p4")}</p>
+        <p>{t("gifts.p4")}</p>
       </div>
     </section>
   );
