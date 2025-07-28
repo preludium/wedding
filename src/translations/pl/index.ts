@@ -100,7 +100,7 @@ export default {
   breakfast: {
     title: 'Śniadanie 15 sierpnia',
     p1: 'Po nocy pełnej radości, zabawy i niezapomnianych wspomnień, będzie nam ogromnie miło przedłużyć te wyjątkowe chwile i spotkać się z Wami w spokojniejszej, bardziej kameralnej atmosferze.',
-    p2: 'Zapraszamy Was serdecznie na <u>nieformalne śniadanie następnego dnia rano, 15 sierpnia, w hotelu Novotel Marne-la-Vallée.</u>',
+    p2: 'Zapraszamy Was serdecznie na <u>nieformalne śniadanie następnego dnia rano, 15 sierpnia, o 11:00 w Château de Lésigny.</u>',
     p3: 'Niezależnie od tego, czy nocujecie w tym hotelu, czy gdzie indziej — <u>wszyscy jesteście mile widziani!</u>',
     p4: 'Śniadanie jest <u>zapewnione i opłacone dla wszystkich naszych gości.</u>',
     p5: 'Będzie to ostatnia okazja, by jeszcze raz się spotkać, porozmawiać i spędzić wspólnie trochę czasu, zanim się pożegnamy.',
@@ -113,7 +113,7 @@ export default {
       menu: "Menu",
       hotel: "Hotel",
       transportation: "Transport",
-      breakfast: "Śniadanie 15 sierpnia – Novotel Marne-la-Vallée Collégien"
+      breakfast: "Śniadanie 15 sierpnia – Château de Lésigny"
     },
     confirmAttendance: {
       title: 'Potwierdź swoją obecność na naszym ślubie',

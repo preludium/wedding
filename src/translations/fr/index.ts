@@ -100,7 +100,7 @@ export default {
   breakfast: {
     title: 'Petit-déjeuner du 15 août',
     p1: 'Après une nuit de fête, de joie et de souvenirs inoubliables partagés ensemble, nous serions ravis de prolonger ces instants précieux avec vous autour d’un moment plus calme et convivial.',
-    p2: 'Nous vous proposons de nous retrouver le <u>lendemain matin, le 15 août</u>, pour un petit-déjeuner au <u>Hôtel Novotel Marne-la-Vallée.</u>',
+    p2: 'Nous vous proposons de nous retrouver le <u>lendemain matin, le 15 août à 11h00</u>, pour un petit-déjeuner au <u>Château de Lésigny.</u>',
     p3: '<u>Que vous logiez dans cet hôtel ou ailleurs, vous êtes les bienvenus !</u>',
     p4: 'Le petit-déjeuner est <u>offert à tous nos invités.</u>',
     p5: 'Ce sera l’occasion de nous retrouver une dernière fois et passer du temps ensemble avant de se dire au revoir.',
@@ -113,7 +113,7 @@ export default {
       menu: "Menu",
       hotel: "Hôtel",
       transportation: "Transport",
-      breakfast: "Petit-déjeuner du 15 août – Novotel Marne-la-Vallée Collégien"
+      breakfast: "Petit-déjeuner du 15 août – Château de Lésigny"
     },
     confirmAttendance: {
       title: "Confirmez votre présence à notre mariage",

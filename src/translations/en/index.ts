@@ -98,7 +98,7 @@ export default {
   breakfast: {
     title: 'Breakfast 15th August',
     p1: 'After a night full of joy, fun, and unforgettable memories, we would be delighted to extend these special moments and meet you in a calmer, more intimate atmosphere.',
-    p2: 'We warmly invite you to an <u>informal breakfast the next morning, 15th August, at the Novotel Marne-la-Vallée hotel.</u>',
+    p2: 'We warmly invite you to an <u>informal breakfast the next morning, 15th August, at 11:00 AM at the Château de Lésigny.</u>',
     p3: 'Regardless of whether you are staying at this hotel or elsewhere — <u>everyone is welcome!</u>',
     p4: 'Breakfast is <u>provided and paid for all our guests.</u>',
     p5: 'This will be the last opportunity to meet again, chat, and spend some time together before we say goodbye.',
@@ -111,7 +111,7 @@ export default {
       menu: "Menu",
       hotel: "Hotel",
       transportation: "Transportation",
-      breakfast: "Breakfast 15th August – Novotel Marne-la-Vallée Collégien"
+      breakfast: "Breakfast 15th August – Château de Lésigny"
     },
     confirmAttendance: {
       title: "Confirm your attendance at our wedding",
