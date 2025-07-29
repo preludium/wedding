@@ -1,9 +1,9 @@
-import { useState } from "react";
+import * as _ from 'lodash';
+import { useState } from 'react';
 import en from './en';
 import fr from './fr';
 import pl from './pl';
-import * as _ from 'lodash';
-import { Language, TranslationContext, TranslationKeys } from './TranslationContext';
+import { type Language, TranslationContext, type TranslationKeys } from './TranslationContext';
 
 type TranslationProviderProps = {
   children: React.ReactNode;
@@ -12,10 +12,12 @@ type TranslationProviderProps = {
 
 export function TranslationProvider({
   children,
-  defaultLanguage = "en",
+  defaultLanguage = 'en',
   ...props
 }: TranslationProviderProps) {
-  const [language, setLanguage] = useState<Language>(() => window.navigator.language as Language ?? defaultLanguage);
+  const [language, setLanguage] = useState<Language>(
+    () => (window.navigator.language as Language) ?? defaultLanguage
+  );
 
   const value = {
     language,
@@ -24,24 +26,19 @@ export function TranslationProvider({
     },
     t: (key: TranslationKeys) => {
       switch (language) {
-        case "fr":
+        case 'fr':
           return _.get(fr, key);
-        case "pl":
-          return _.get(pl,key);
+        case 'pl':
+          return _.get(pl, key);
         default:
-          return _.get(en,key);
+          return _.get(en, key);
       }
-    }
+    },
   };
 
   return (
-    <TranslationContext.Provider
-      {...props}
-      value={value}
-    >
+    <TranslationContext.Provider {...props} value={value}>
       {children}
     </TranslationContext.Provider>
   );
 }
-
-

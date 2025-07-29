@@ -1,20 +1,10 @@
-import { useState } from "react";
-import {
-  NavigationMenu,
-  NavigationMenuList,
-} from "@/components/ui/navigation-menu";
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
-
-import { buttonVariants } from "./ui/button";
-import { Menu } from "lucide-react";
-import { LanguageSelect } from "./LanguageSelect";
-import { useTranslation } from "@/translations/useTranslation";
+import { Menu } from 'lucide-react';
+import { useState } from 'react';
+import { NavigationMenu, NavigationMenuList } from '@/components/ui/navigation-menu';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
+import { useTranslation } from '@/translations/useTranslation';
+import { LanguageSelect } from './LanguageSelect';
+import { buttonVariants } from './ui/button';
 
 interface RouteProps {
   href: string;
@@ -23,35 +13,35 @@ interface RouteProps {
 
 const useRoutes = (): RouteProps[] => {
   const { t } = useTranslation();
-  
+
   return [
     {
-      href: "#",
-      label: t("nav.welcome"),
+      href: '#',
+      label: t('nav.welcome'),
     },
     {
-      href: "#schedule",
-      label: t("nav.schedule"),
+      href: '#schedule',
+      label: t('nav.schedule'),
     },
     {
-      href: "#localization",
-      label: t("nav.localization"),
+      href: '#localization',
+      label: t('nav.localization'),
     },
     {
-      href: "#accommodation",
-      label: t("nav.accommodation"),
+      href: '#accommodation',
+      label: t('nav.accommodation'),
     },
     {
-      href: "#breakfast",
-      label: t("nav.breakfast"),
+      href: '#breakfast',
+      label: t('nav.breakfast'),
     },
     {
-      href: "#questionnaire",
-      label: t("nav.questionnaire"),
+      href: '#questionnaire',
+      label: t('nav.questionnaire'),
     },
     {
-      href: "#gifts",
-      label: t("nav.gifts"),
+      href: '#gifts',
+      label: t('nav.gifts'),
     },
     // {
     //   href: "#photos",
@@ -73,14 +63,12 @@ export const Navbar = () => {
           <span className="flex justify-between w-full md:hidden">
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger className="px-2">
-                <Menu
-                  className="flex md:hidden h-5 w-5"
-                  onClick={() => setIsOpen(true)}>
+                <Menu className="flex md:hidden h-5 w-5" onClick={() => setIsOpen(true)}>
                   <span className="sr-only">Menu Icon</span>
                 </Menu>
               </SheetTrigger>
 
-              <SheetContent side={"left"}>
+              <SheetContent side={'left'}>
                 <SheetHeader>
                   <SheetTitle className="font-normal text-4xl font-calligrapher">
                     Gabriela & Francis
@@ -93,7 +81,8 @@ export const Navbar = () => {
                       key={label}
                       href={href}
                       onClick={() => setIsOpen(false)}
-                      className={buttonVariants({ variant: "ghost" })}>
+                      className={buttonVariants({ variant: 'ghost' })}
+                    >
                       {label}
                     </a>
                   ))}
@@ -107,14 +96,15 @@ export const Navbar = () => {
 
           {/* desktop */}
           <nav className="hidden md:flex gap-2">
-            {routes.map((route: RouteProps, i) => (
+            {routes.map((route: RouteProps) => (
               <a
                 rel="noreferrer noopener"
                 href={route.href}
-                key={i}
+                key={route.href}
                 className={`text-[17px] ${buttonVariants({
-                  variant: "ghost",
-                })}`}>
+                  variant: 'ghost',
+                })}`}
+              >
                 {route.label}
               </a>
             ))}

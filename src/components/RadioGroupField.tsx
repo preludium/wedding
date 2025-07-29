@@ -1,20 +1,14 @@
-import { useFormContext } from "react-hook-form";
+import { useFormContext } from 'react-hook-form';
 
-import {
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 
 interface Props {
   name: string;
   label: string;
   options: { label: string; value: string }[];
   required: boolean;
-  disabled?: boolean
+  disabled?: boolean;
 }
 
 export function RadioGroupField({ name, label, options, required, disabled }: Props) {
@@ -39,7 +33,8 @@ export function RadioGroupField({ name, label, options, required, disabled }: Pr
               onValueChange={field.onChange}
               defaultValue={field.value}
               disabled={disabled}
-              className="flex flex-col space-y-1">
+              className="flex flex-col space-y-1"
+            >
               {options.map((option) => (
                 <FormItem key={option.value} className="flex items-center space-x-3 space-y-0">
                   <FormControl>

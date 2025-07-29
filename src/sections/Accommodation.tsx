@@ -1,20 +1,19 @@
-import { Button } from "@/components/ui/button";
-import { useTranslation } from "@/translations/useTranslation";
-import { ExternalLink, Heart, TriangleAlert } from "lucide-react";
-import hotelUrl from "@/assets/hotel.png";
-import routeUrl from "@/assets/schedule-icons/route.png";
+/** biome-ignore-all lint/security/noDangerouslySetInnerHtml: ignore */
+import { ExternalLink, Heart, TriangleAlert } from 'lucide-react';
+import hotelUrl from '@/assets/hotel.png';
+import routeUrl from '@/assets/schedule-icons/route.png';
+import { Button } from '@/components/ui/button';
+import { useTranslation } from '@/translations/useTranslation';
 
 export const Accommodation = () => {
   const { t } = useTranslation();
 
   return (
-    <section
-      id="accommodation"
-      className="flex flex-col justify-around items-center py-28">
+    <section id="accommodation" className="flex flex-col justify-around items-center py-28">
       <div className="container flex flex-col items-center w-full gap-12">
         <div className="flex flex-col w-full items-center gap-4">
           <h3 className="text-4xl font-medium font-PlayfairDisplay mb-2">
-            {t("nav.accommodation")}
+            {t('nav.accommodation')}
           </h3>
           <div className="flex items-center justify-center w-full">
             <div className="h-[1px] bg-[#e8ca9b] md:w-[15%] -md:w-[25%]"></div>
@@ -26,16 +25,16 @@ export const Accommodation = () => {
         <div className="flex flex-col gap-8 w-full max-w-[1032px]">
           <div className="shadow-around-sm p-8 rounded-xl bg-secondary h-fit">
             <div className="flex flex-col gap-4">
-              <p>{t("common.dearGuests")},</p>
-              <p dangerouslySetInnerHTML={{ __html: t("accommodation.p1") }} />
-              <p dangerouslySetInnerHTML={{ __html: t("accommodation.p2") }} />
+              <p>{t('common.dearGuests')},</p>
+              <p dangerouslySetInnerHTML={{ __html: t('accommodation.p1') }} />
+              <p dangerouslySetInnerHTML={{ __html: t('accommodation.p2') }} />
             </div>
           </div>
 
           <div className="flex -md:flex-col items-center gap-8 justify-center">
             <div className="flex flex-col justify-center gap-6 shadow-around-sm p-6 rounded-xl bg-secondary w-full max-w-[500px]">
               <div className="flex flex-col w-full h-full items-center justify-center gap-6 ">
-                <img className="w-24 h-24" src={hotelUrl} />
+                <img className="w-24 h-24" src={hotelUrl} alt="Hotel Novotel icon" />
                 <h4 className="text-2xl font-alice text-center">
                   <strong>Hôtel Novotel Marne-la-Vallée Collégien</strong>
                 </h4>
@@ -46,12 +45,16 @@ export const Accommodation = () => {
                 </p>
               </div>
               <div className="flex items-center justify-center gap-2">
-                <img className="w-12 h-12 justify-self-center" src={routeUrl} />
+                <img
+                  className="w-12 h-12 justify-self-center"
+                  src={routeUrl}
+                  alt="Distance/route icon"
+                />
                 <span>
                   <strong>16.1 km</strong>&nbsp;
                   <span
                     dangerouslySetInnerHTML={{
-                      __html: t("accommodation.fromTheCastle"),
+                      __html: t('accommodation.fromTheCastle'),
                     }}
                   />
                 </span>
@@ -63,7 +66,9 @@ export const Accommodation = () => {
                     href="https://www.booking.com/Share-32tzk7"
                     referrerPolicy="no-referrer"
                     target="_blank"
-                    className="flex gap-2 w-[150px]">
+                    className="flex gap-2 w-[150px]"
+                    rel="noopener"
+                  >
                     Booking
                     <ExternalLink />
                   </a>
@@ -73,7 +78,9 @@ export const Accommodation = () => {
                     href="https://all.accor.com/hotel/0385/index.fr.shtml"
                     referrerPolicy="no-referrer"
                     target="_blank"
-                    className="flex gap-2 w-[150px]">
+                    className="flex gap-2 w-[150px]"
+                    rel="noopener"
+                  >
                     Accor
                     <ExternalLink />
                   </a>
@@ -87,13 +94,15 @@ export const Accommodation = () => {
                   className="border-none w-full min-h-[350px]"
                   allowFullScreen={false}
                   loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"></iframe>
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Hotel Novotel Marne-la-Vallée Collégien location map"
+                ></iframe>
               </div>
             </div>
 
             <div className="flex flex-col justify-center gap-6 shadow-around-sm p-6 rounded-xl bg-secondary w-full max-w-[500px]">
               <div className="flex flex-col w-full h-full items-center justify-center gap-6 ">
-                <img className="w-24 h-24" src={hotelUrl} />
+                <img className="w-24 h-24" src={hotelUrl} alt="Hotel Abbaye du Golf icon" />
                 <h4 className="text-2xl font-alice">
                   <strong>Hôtel Abbaye du Golf</strong>
                 </h4>
@@ -104,12 +113,16 @@ export const Accommodation = () => {
                 </p>
               </div>
               <div className="flex items-center justify-center gap-2">
-                <img className="w-12 h-12 justify-self-center" src={routeUrl} />
+                <img
+                  className="w-12 h-12 justify-self-center"
+                  src={routeUrl}
+                  alt="Distance/route icon"
+                />
                 <span>
                   <strong>2.2 km</strong>&nbsp;
                   <span
                     dangerouslySetInnerHTML={{
-                      __html: t("accommodation.fromTheCastle"),
+                      __html: t('accommodation.fromTheCastle'),
                     }}
                   />
                 </span>
@@ -117,7 +130,7 @@ export const Accommodation = () => {
               <p
                 className="m-0 text-center"
                 dangerouslySetInnerHTML={{
-                  __html: t("accommodation.discount"),
+                  __html: t('accommodation.discount'),
                 }}
               />
               <div className="flex gap-6 justify-center">
@@ -126,7 +139,9 @@ export const Accommodation = () => {
                     href="https://www.hotelabbayedugolf.com"
                     referrerPolicy="no-referrer"
                     target="_blank"
-                    className="flex gap-2 w-[150px]">
+                    className="flex gap-2 w-[150px]"
+                    rel="noopener"
+                  >
                     Link
                     <ExternalLink />
                   </a>
@@ -140,14 +155,16 @@ export const Accommodation = () => {
                   className="border-none w-full min-h-[350px]"
                   allowFullScreen={false}
                   loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"></iframe>
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Hotel Abbaye du Golf location map"
+                ></iframe>
               </div>
             </div>
           </div>
         </div>
         <div className="flex -md:flex-col -md:text-center items-center gap-4 p-6 -md:max-w-[500px] max-w-[1032px] text-sky-800 rounded-xl bg-sky-200">
           <TriangleAlert className="-md:w-[50px] -md:h-[50px] md:w-[1.25em] md:h-[1.25em] md:min-w-[20px] md:min-h-[20px]" />
-          {t("accommodation.info")}
+          {t('accommodation.info')}
         </div>
       </div>
     </section>

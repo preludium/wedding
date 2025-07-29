@@ -1,11 +1,14 @@
-import ReactDOM from "react-dom/client";
-import App from "./App.tsx";
-import { ThemeProvider } from "@/theme/ThemeProvider.tsx";
-import "./index.css";
-import { TranslationProvider } from './translations/TranslationProvider';
+import ReactDOM from 'react-dom/client';
+import { ThemeProvider } from '@/theme/ThemeProvider.tsx';
+import App from './App.tsx';
+import './index.css';
 import { Toaster } from 'sonner';
+import { TranslationProvider } from './translations/TranslationProvider';
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
+const rootElement = document.getElementById('root');
+if (!rootElement) throw new Error('Root element not found');
+
+ReactDOM.createRoot(rootElement).render(
   <>
     <ThemeProvider>
       <TranslationProvider>

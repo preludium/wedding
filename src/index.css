@@ -27,7 +27,8 @@ html {
 
 @font-face {
   font-family: "Geist";
-  src: url("./assets/Geist/Geist-Regular.ttf") format("truetype"),
+  src:
+    url("./assets/Geist/Geist-Regular.ttf") format("truetype"),
     url("./assets/Geist/Geist-Bold.ttf") format("truetype"),
     url("./assets/Geist/Geist-Italic.ttf") format("truetype"),
     url("./assets/Geist/Geist-BoldItalic.ttf") format("truetype");
@@ -45,14 +46,13 @@ html {
 
 @font-face {
   font-family: "GreatVibes";
-  src: url("./assets/GreatVibes-Regular.ttf") format("truetype"); 
+  src: url("./assets/GreatVibes-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "AlexBrush";
   src: url("./assets/AlexBrush-Regular.ttf") format("truetype");
 }
-
 
 @font-face {
   font-family: "Dhellia";
@@ -61,7 +61,8 @@ html {
 
 @font-face {
   font-family: "Lora";
-  src: url("./assets/Lora/Lora-Regular.ttf") format("truetype"),
+  src:
+    url("./assets/Lora/Lora-Regular.ttf") format("truetype"),
     url("./assets/Lora/Lora-Medium.ttf") format("truetype"),
     url("./assets/Lora/Lora-SemiBold.ttf") format("truetype"),
     url("./assets/Lora/Lora-Bold.ttf") format("truetype"),
@@ -73,28 +74,19 @@ html {
 
 @font-face {
   font-family: "Playfair Display";
-  src: url("./assets/PlayfairDisplay/PlayfairDisplay-Regular.ttf")
-      format("truetype"),
-    url("./assets/PlayfairDisplay/PlayfairDisplay-Medium.ttf")
-      format("truetype"),
-    url("./assets/PlayfairDisplay/PlayfairDisplay-SemiBold.ttf")
-      format("truetype"),
+  src:
+    url("./assets/PlayfairDisplay/PlayfairDisplay-Regular.ttf") format("truetype"),
+    url("./assets/PlayfairDisplay/PlayfairDisplay-Medium.ttf") format("truetype"),
+    url("./assets/PlayfairDisplay/PlayfairDisplay-SemiBold.ttf") format("truetype"),
     url("./assets/PlayfairDisplay/PlayfairDisplay-Bold.ttf") format("truetype"),
-    url("./assets/PlayfairDisplay/PlayfairDisplay-ExtraBold.ttf")
-      format("truetype"),
+    url("./assets/PlayfairDisplay/PlayfairDisplay-ExtraBold.ttf") format("truetype"),
     url("./assets/PlayfairDisplay/PlayfairDisplay-Black.ttf") format("truetype"),
-    url("./assets/PlayfairDisplay/PlayfairDisplay-Italic.ttf")
-      format("truetype"),
-    url("./assets/PlayfairDisplay/PlayfairDisplay-MediumItalic.ttf")
-      format("truetype"),
-    url("./assets/PlayfairDisplay/PlayfairDisplay-SemiBoldItalic.ttf")
-      format("truetype"),
-    url("./assets/PlayfairDisplay/PlayfairDisplay-BoldItalic.ttf")
-      format("truetype"),
-    url("./assets/PlayfairDisplay/PlayfairDisplay-ExtraBoldItalic.ttf")
-      format("truetype"),
-    url("./assets/PlayfairDisplay/PlayfairDisplay-BlackItalic.ttf")
-      format("truetype");
+    url("./assets/PlayfairDisplay/PlayfairDisplay-Italic.ttf") format("truetype"),
+    url("./assets/PlayfairDisplay/PlayfairDisplay-MediumItalic.ttf") format("truetype"),
+    url("./assets/PlayfairDisplay/PlayfairDisplay-SemiBoldItalic.ttf") format("truetype"),
+    url("./assets/PlayfairDisplay/PlayfairDisplay-BoldItalic.ttf") format("truetype"),
+    url("./assets/PlayfairDisplay/PlayfairDisplay-ExtraBoldItalic.ttf") format("truetype"),
+    url("./assets/PlayfairDisplay/PlayfairDisplay-BlackItalic.ttf") format("truetype");
 }
 
 @font-face {
