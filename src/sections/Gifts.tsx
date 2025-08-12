@@ -40,7 +40,7 @@ export const Gifts = () => {
             <p>{t('gifts.p2')}</p>
             <Button asChild className="w-full font-medium">
               <a
-                href="https://revolut.me/franci7sw"
+                href="https://www.millemercismariage.com/gabrielaandfrancis"
                 referrerPolicy="no-referrer"
                 target="_blank"
                 className="flex gap-2 w-[150px]"
