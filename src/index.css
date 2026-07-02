@@ -1,0 +1,143 @@
+@import "tailwindcss";
+
+@theme {
+  /* Core palette (exact hex from the original design) */
+  --color-cream: #faf6f0; /* page background */
+  --color-creamalt: #f1ebe1; /* alt section background */
+  --color-ink: #2c3e50; /* primary text / dark bg */
+  --color-gold: #c9a86a; /* accent / eyebrows / dividers */
+  --color-sage: #9caf88; /* secondary accent / icons */
+  --color-blue: #7fa6c4; /* links / tertiary accent */
+  --color-skyblue: #a8c4d8; /* soft blue accent */
+  --color-body: #46586b; /* body copy */
+  --color-bodysoft: #5b7390; /* hero subtitle */
+  --color-muted: #7d8da0; /* captions / addresses */
+  --color-mutedcool: #9aa9b8; /* countdown labels */
+  --color-card: #6a7c8e; /* agenda card copy */
+
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: Montserrat, system-ui, -apple-system, sans-serif;
+  --font-script: "Mr De Haviland", cursive;
+}
+
+/* ---------------------------------------------------------------------------
+   Base resets - mirrors the original design's global styles.
+--------------------------------------------------------------------------- */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    margin: 0;
+    font-family: "Montserrat", system-ui, -apple-system, sans-serif;
+    color: #2c3e50;
+    background: #faf6f0;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    line-height: 1.75;
+    overflow-x: hidden;
+  }
+  img {
+    max-width: 100%;
+    display: block;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Keyframes (declared globally so both inline `animation:` strings and any
+   utility classes can reference them).
+--------------------------------------------------------------------------- */
+@keyframes fall {
+  0% {
+    transform: translateY(-14vh) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  8% {
+    opacity: 0.7;
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(114vh) translateX(70px) rotate(390deg);
+    opacity: 0;
+  }
+}
+@keyframes sway {
+  0%,
+  100% {
+    transform: rotate(-3.5deg);
+  }
+  50% {
+    transform: rotate(3.5deg);
+  }
+}
+@keyframes breathe {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.07);
+    opacity: 0.6;
+  }
+}
+@keyframes bob {
+  0%,
+  100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, 9px);
+  }
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes drift {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-16px) rotate(2deg);
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Floating nav: docks to the bottom-center on narrow screens.
+--------------------------------------------------------------------------- */
+@media (max-width: 760px) {
+  #floatnav {
+    top: auto !important;
+    bottom: 16px !important;
+    right: 50% !important;
+    transform: translateX(50%) !important;
+    flex-direction: row !important;
+  }
+}
+
+/* On touch devices the gallery zoom buttons are always visible. */
+@media (hover: none) {
+  [data-gallery-btn] {
+    opacity: 1 !important;
+  }
+}
+
+/* Respect reduced-motion preferences. */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
