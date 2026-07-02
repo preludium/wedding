@@ -13,9 +13,7 @@ output "cloudfront_distribution_id" {
   value       = aws_cloudfront_distribution.images.id
 }
 
-output "image_urls" {
-  description = "CloudFront URLs for all uploaded images. Ready to paste as environment variables."
-  value = {
-    for name, obj in aws_s3_object.image : name => "https://${aws_cloudfront_distribution.images.domain_name}/${obj.key}"
-  }
+output "github_actions_role_arn" {
+  description = "ARN of the IAM role for GitHub Actions OIDC. Copy this to the AWS_ROLE_ARN GitHub Secret."
+  value       = aws_iam_role.github_actions.arn
 }

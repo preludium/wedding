@@ -1,6 +1,7 @@
 variable "aws_profile" {
-  description = "AWS CLI profile to use for authentication."
+  description = "AWS CLI profile for local development. Leave unset in CI (OIDC)."
   type        = string
+  default     = null
 }
 
 variable "aws_region" {
@@ -29,12 +30,14 @@ variable "budget_alert_email" {
   sensitive   = true
 }
 
-variable "images" {
-  description = "Images to upload to S3. Key = short name, path = relative to the infrastructure folder."
-  type = map(object({
-    path = string
-    type = string
-  }))
+variable "github_org" {
+  description = "GitHub organization or username for the OIDC trust policy."
+  type        = string
+}
+
+variable "github_repo" {
+  description = "GitHub repository name for the OIDC trust policy."
+  type        = string
 }
 
 variable "cors_allowed_origins" {

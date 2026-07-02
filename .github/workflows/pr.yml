@@ -1,0 +1,41 @@
+name: PR Checks
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  terraform:
+    name: Terraform Quality
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: "~1.14"
+
+      - name: Check formatting
+        run: terraform fmt -check -recursive infrastructure/
+
+      - name: Init (offline)
+        run: terraform init -backend=false
+        working-directory: infrastructure
+
+      - name: Validate
+        run: terraform validate
+        working-directory: infrastructure
+
+      - uses: terraform-linters/setup-tflint@v4
+
+      - name: Lint
+        run: tflint --recursive -f compact
+        working-directory: infrastructure
+
+      - name: Security scan
+        uses: aquasecurity/trivy-action@master
+        with:
+          scan-type: config
+          scan-ref: infrastructure/
+          severity: HIGH,CRITICAL
+          exit-code: 1

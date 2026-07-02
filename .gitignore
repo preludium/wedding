@@ -17,3 +17,5 @@ images/*
 *.tfstate.*
 *.tfvars
 *.tfvars.json
+*.hcl
+!.terraform.lock.hcl

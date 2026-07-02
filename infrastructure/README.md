@@ -15,38 +15,118 @@ The S3 bucket has **Block all public access** enabled and is accessible only thr
 - [Terraform](https://developer.hashicorp.com/terraform/downloads) >= 1.5.0
 - [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) installed and configured with the `terraform` profile (`aws configure --profile terraform`)
 
-## Setup
+## One-time bootstrap
 
-1. Copy and edit `terraform.tfvars` — insert your email for budget alerts and adjust any values as needed:
+Before CI can deploy, you need to run these steps once locally:
 
-   ```hcl
-   budget_alert_email = "you@example.com"
-   ```
+### 1. Create the state backend bucket
 
-   All variables are declared in `variables.tf` and populated from this file. `terraform.tfvars` is gitignored and stays local.
-
-2. Add images to the `images` map in `terraform.tfvars`. Point `path` relative to the `infrastructure/` folder:
-
-   ```hcl
-   images = {
-     name = { path = "../images/file.jpg", type = "image/jpeg" }
-   }
-   ```
-
-## Deployment
+Terraform stores state remotely in S3 so both local and CI share the same view.
 
 ```bash
-# 1. Initialize Terraform (downloads providers)
-terraform init
+aws s3api create-bucket \
+  --bucket wedding-tfstate-<unique-suffix> \
+  --region eu-north-1 \
+  --create-bucket-configuration LocationConstraint=eu-north-1
 
-# 2. Preview the changes
-terraform plan
+aws s3api put-bucket-versioning \
+  --bucket wedding-tfstate-<unique-suffix> \
+  --versioning-configuration Status=Enabled
 
-# 3. Apply
+aws s3api put-public-access-block \
+  --bucket wedding-tfstate-<unique-suffix> \
+  --public-access-block-configuration \
+    BlockPublicAcls=true,IgnorePublicAcls=true,BlockPublicPolicy=true,RestrictPublicBuckets=true
+```
+
+Pick any unique suffix — e.g. your initials + random digits: `wedding-tfstate-ms482`.
+
+### 2. Copy and fill in variables
+
+```bash
+cp terraform.tfvars.example terraform.tfvars
+```
+
+Edit `terraform.tfvars` — set `budget_alert_email` and verify `github_org` / `github_repo`.
+
+### 3. Run the initial apply locally
+
+```bash
+terraform init \
+  -backend-config="bucket=wedding-tfstate-<unique-suffix>" \
+  -backend-config="region=eu-north-1"
+
 terraform apply
 ```
 
-Type `yes` when prompted. Terraform uploads the images defined in `terraform.tfvars` and outputs their CloudFront URLs.
+This creates **all** resources, including:
+- S3 bucket + CloudFront distribution
+- OIDC IAM role for GitHub Actions
+- Budget alerts
+
+### 4. Store CI credentials in GitHub
+
+After `terraform apply`, run:
+
+```bash
+terraform output -raw github_actions_role_arn
+```
+
+Then add these to your GitHub repo (**Settings → Secrets and variables → Actions**):
+
+**Secrets** (encrypted, not visible in logs):
+
+| Secret | Value |
+|---|---|
+| `AWS_ROLE_ARN` | The role ARN from the output above |
+| `TF_STATE_BUCKET` | `wedding-tfstate-<unique-suffix>` |
+| `TF_BUDGET_ALERT_EMAIL` | Your email for budget alerts |
+| `GH_PAT` | Classic personal access token with `repo` scope |
+
+To create `GH_PAT`: GitHub → Settings → Developer settings → Personal access tokens → Tokens (classic) → Generate new token → check `repo` → copy the token.
+
+**Variables** (non-sensitive, visible in workflow runs):
+
+| Variable | Value |
+|---|---|
+| `AWS_REGION` | `eu-north-1` |
+| `TF_BUCKET_NAME_PREFIX` | `wedding-photos` |
+| `TF_CLOUDFRONT_PRICE_CLASS` | `PriceClass_100` |
+| `TF_CORS_ALLOWED_ORIGINS` | `["https://preludium.github.io","http://localhost:5173"]` |
+| `TF_TAGS` | `{"Project":"wedding-site","ManagedBy":"terraform"}` |
+
+`CF_DOMAIN` is set automatically by `infra.yml` — no need to create it manually.
+
+## How it works
+
+### Local development
+
+```bash
+terraform plan    # preview changes
+terraform apply   # apply (uploads images defined in terraform.tfvars)
+```
+
+`terraform.tfvars` is gitignored — it contains your email and local-only settings (like images to upload).
+
+### CI workflows
+
+| Workflow | File | Trigger | Does |
+|---|---|---|---|
+| PR Checks | `pr.yml` | Pull request to `main` | `fmt` → `validate` → `tflint` → `trivy` security scan |
+| Infra | `infra.yml` | Every push to `main` | Detects infra changes → conditionally applies Terraform → always triggers Pages |
+| Pages | `pages.yml` | Triggered by Infra only | Builds Vite site → deploys to GitHub Pages |
+
+`infra.yml` is the single orchestrator. Terraform only runs when `infrastructure/**` files changed. Pages always deploys — but only once per push. `CF_DOMAIN` is auto-set from Terraform output.
+
+### Image management
+
+Images are **gitignored** and uploaded locally:
+
+```bash
+just upload-images
+```
+
+Filenames use generic slot IDs (`couple.jpg`, `venue-1.jpg`, `venue-2.jpg`) — nothing personal in the repo. The Pages workflow constructs full URLs at build time from `CF_DOMAIN` + filename, so if you rename or add images, update `pages.yml` accordingly.
 
 ## Outputs
 
@@ -55,18 +135,12 @@ Type `yes` when prompted. Terraform uploads the images defined in `terraform.tfv
 | `cloudfront_domain_name` | CloudFront domain (e.g. `d123.cloudfront.net`) |
 | `s3_bucket_name` | S3 bucket name |
 | `cloudfront_distribution_id` | Distribution ID for CLI operations |
-| `image_urls` | Full `https://` URLs for every uploaded image |
-
-Show them with:
-
-```bash
-terraform output
-terraform output -json image_urls
-```
+| `image_urls` | Full `https://` URLs for uploaded images |
+| `github_actions_role_arn` | ARN of the IAM role for GitHub Actions OIDC |
 
 ## Budget alerts
 
-A $1/month budget is enforced. Alerts fire at **50%**, **85%** (actual spend), and **100%** (forecasted). After the first `terraform apply`, check your inbox for an SNS subscription confirmation email — you **must click the link** in that email to start receiving alerts.
+A $1/month budget is enforced. Alerts fire at **50%**, **85%** (actual spend), and **100%** (forecasted). After the first `terraform apply`, check your inbox for an SNS subscription confirmation email — you **must click the link** to start receiving alerts.
 
 ## Cleanup
 
