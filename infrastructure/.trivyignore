@@ -1,0 +1,6 @@
+# SSE-KMS costs $1/month/key — SSE-S3 is free and sufficient.
+AWS-0132
+# WAF costs $5/month base + per-request — unreasonable for a personal site.
+AWS-0011
+# Customer-managed KMS key costs $1/month — AWS-managed is free.
+AWS-0136

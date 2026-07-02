@@ -1,0 +1,82 @@
+name: Infra
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {}
+
+concurrency:
+  group: infra
+  cancel-in-progress: false
+
+jobs:
+  apply:
+    name: Apply
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Detect infra changes
+        id: diff
+        uses: dorny/paths-filter@v3
+        with:
+          filters: |
+            infra:
+              - infrastructure/**
+
+      - uses: hashicorp/setup-terraform@v3
+        if: steps.diff.outputs.infra == 'true'
+        with:
+          terraform_version: "~1.14"
+
+      - name: Auth to AWS
+        if: steps.diff.outputs.infra == 'true'
+        uses: aws-actions/configure-aws-credentials@v5
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          aws-region: ${{ vars.AWS_REGION }}
+
+      - name: Init
+        if: steps.diff.outputs.infra == 'true'
+        run: |
+          terraform init \
+            -backend-config="bucket=${{ secrets.TF_STATE_BUCKET }}" \
+            -backend-config="key=infrastructure/terraform.tfstate" \
+            -backend-config="region=${{ vars.AWS_REGION }}" \
+            -backend-config="encrypt=true"
+        working-directory: infrastructure
+
+      - name: Apply
+        if: steps.diff.outputs.infra == 'true'
+        run: terraform apply -auto-approve
+        working-directory: infrastructure
+        env:
+          TF_VAR_aws_region: ${{ vars.AWS_REGION }}
+          TF_VAR_bucket_name_prefix: ${{ vars.TF_BUCKET_NAME_PREFIX }}
+          TF_VAR_cloudfront_price_class: ${{ vars.TF_CLOUDFRONT_PRICE_CLASS }}
+          TF_VAR_tags: ${{ vars.TF_TAGS }}
+          TF_VAR_cors_allowed_origins: ${{ vars.TF_CORS_ALLOWED_ORIGINS }}
+          TF_VAR_budget_alert_email: ${{ secrets.TF_BUDGET_ALERT_EMAIL }}
+          TF_VAR_github_org: ${{ github.repository_owner }}
+          TF_VAR_github_repo: ${{ github.event.repository.name }}
+
+      - name: Get CloudFront domain
+        if: steps.diff.outputs.infra == 'true'
+        id: cf
+        run: echo "domain=$(terraform output -raw cloudfront_domain_name)" >> "$GITHUB_OUTPUT"
+        working-directory: infrastructure
+
+      - name: Update CF_DOMAIN
+        if: steps.diff.outputs.infra == 'true'
+        run: gh variable set CF_DOMAIN --body "${{ steps.cf.outputs.domain }}" --repo "${{ github.repository }}"
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+
+      - name: Trigger Pages deploy
+        run: gh workflow run pages.yml --ref main --repo "${{ github.repository }}"
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
