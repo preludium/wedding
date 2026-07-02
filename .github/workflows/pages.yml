@@ -12,9 +12,12 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: read
       pages: write
-    environment: production
+      id-token: write
+    environment:
+      name: production
+      url: ${{ steps.deploy.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
 
@@ -36,9 +39,11 @@ jobs:
           VITE_IMG_VENUE_1: https://${{ vars.CF_DOMAIN }}/venue-1.jpg
           VITE_IMG_VENUE_2: https://${{ vars.CF_DOMAIN }}/venue-2.jpg
 
-      - name: Publish
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: dist
-          force_orphan: true
+          path: dist
+
+      - name: Deploy
+        id: deploy
+        uses: actions/deploy-pages@v4
