@@ -35,6 +35,19 @@ jobs:
         run: pnpm build
         env:
           VITE_BASE_PATH: /wedding/
+          VITE_ACCESS_PIN: ${{ secrets.VITE_ACCESS_PIN }}
+          VITE_NAME_1: ${{ secrets.VITE_NAME_1 }}
+          VITE_NAME_2: ${{ secrets.VITE_NAME_2 }}
+          VITE_WEDDING_DATE: ${{ secrets.VITE_WEDDING_DATE }}
+          VITE_RSVP_DATE: ${{ secrets.VITE_RSVP_DATE }}
+          VITE_CONTACT_1: ${{ secrets.VITE_CONTACT_1 }}
+          VITE_CONTACT_2: ${{ secrets.VITE_CONTACT_2 }}
+          VITE_VENUE_1_NAME: ${{ secrets.VITE_VENUE_1_NAME }}
+          VITE_VENUE_1_ADDRESS: ${{ secrets.VITE_VENUE_1_ADDRESS }}
+          VITE_VENUE_1_DESC: ${{ secrets.VITE_VENUE_1_DESC }}
+          VITE_VENUE_2_NAME: ${{ secrets.VITE_VENUE_2_NAME }}
+          VITE_VENUE_2_ADDRESS: ${{ secrets.VITE_VENUE_2_ADDRESS }}
+          VITE_VENUE_2_DESC: ${{ secrets.VITE_VENUE_2_DESC }}
           VITE_IMG_COUPLE: https://${{ vars.CF_DOMAIN }}/couple.jpg
           VITE_IMG_VENUE_1: https://${{ vars.CF_DOMAIN }}/venue-1.jpg
           VITE_IMG_VENUE_2: https://${{ vars.CF_DOMAIN }}/venue-2.jpg
