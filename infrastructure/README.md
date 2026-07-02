@@ -85,15 +85,15 @@ Then add these to your GitHub repo (**Settings → Secrets and variables → Act
 
 To create `GH_PAT`: GitHub → Settings → Developer settings → Personal access tokens → Tokens (classic) → Generate new token → check `repo` → copy the token.
 
-**Variables** (non-sensitive):
+**Variables** (copied from your `terraform.tfvars`):
 
-| Variable | Value |
+| Variable | Maps to |
 |---|---|
-| `AWS_REGION` | `eu-north-1` |
-| `TF_BUCKET_NAME_PREFIX` | `wedding-photos` |
-| `TF_CLOUDFRONT_PRICE_CLASS` | `PriceClass_100` |
-| `TF_TAGS` | `{"Project":"wedding-site","ManagedBy":"terraform"}` |
-| `TF_CORS_ALLOWED_ORIGINS` | `["https://preludium.github.io","http://localhost:5173"]` |
+| `AWS_REGION` | `TF_VAR_aws_region` |
+| `TF_BUCKET_NAME_PREFIX` | `TF_VAR_bucket_name_prefix` |
+| `TF_CLOUDFRONT_PRICE_CLASS` | `TF_VAR_cloudfront_price_class` |
+| `TF_TAGS` | `TF_VAR_tags` |
+| `TF_CORS_ALLOWED_ORIGINS` | `TF_VAR_cors_allowed_origins` |
 
 `CF_DOMAIN` is set automatically by `infra.yml` — no need to create it manually.
 
