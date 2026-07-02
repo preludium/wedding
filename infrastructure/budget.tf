@@ -1,7 +1,8 @@
 # ── SNS topic for budget alerts ───────────────────────────────────────────
 resource "aws_sns_topic" "budget_alerts" {
-  name = "wedding-site-budget-alerts"
-  tags = var.tags
+  name              = "wedding-site-budget-alerts"
+  kms_master_key_id = "alias/aws/sns"
+  tags              = var.tags
 }
 
 resource "aws_sns_topic_subscription" "budget_alerts_email" {
