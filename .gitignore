@@ -8,3 +8,12 @@ dist-ssr
 .vscode/*
 !.vscode/extensions.json
 .DS_Store
+
+images/*
+
+# Terraform
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
