@@ -111,6 +111,20 @@
     transform: translateY(-16px) rotate(2deg);
   }
 }
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20%,
+  60% {
+    transform: translateX(-8px);
+  }
+  40%,
+  80% {
+    transform: translateX(8px);
+  }
+}
 
 /* ---------------------------------------------------------------------------
    Floating nav: docks to the bottom-center on narrow screens.

@@ -5,6 +5,7 @@
 // VITE_IMG_* keys (one per ImageSlot id) are looked up dynamically in
 // ImageSlot.tsx and aren't listed individually here.
 interface ImportMetaEnv {
+  readonly VITE_ACCESS_PIN?: string
   readonly VITE_NAME_1?: string
   readonly VITE_NAME_2?: string
   readonly VITE_WEDDING_DATE?: string
